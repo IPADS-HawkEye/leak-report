@@ -1,0 +1,7 @@
+drivers/net/ethernet/intel/ixgbe/ixgbe_main.c:758
+Variable: rx_buffer_info->skb
+758->				pr_info("RWB[0x%03X]     %016llX "
+759					"%016llX ---------------- %p", i,
+760					le64_to_cpu(u0->a),
+761					le64_to_cpu(u0->b),
+762					rx_buffer_info->skb);

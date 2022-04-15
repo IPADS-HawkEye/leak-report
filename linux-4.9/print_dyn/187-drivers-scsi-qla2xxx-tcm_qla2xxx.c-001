@@ -1,0 +1,7 @@
+drivers/scsi/qla2xxx/tcm_qla2xxx.c:1462
+Variable: sess
+1462->		pr_info("Updating session %p from port %8phC loop_id %d -> %d s_id %x:%x:%x -> %x:%x:%x\n",
+1463		    sess, sess->port_name,
+1464		    sess->loop_id, loop_id, sess->s_id.b.domain,
+1465		    sess->s_id.b.area, sess->s_id.b.al_pa, s_id.b.domain,
+1466		    s_id.b.area, s_id.b.al_pa);

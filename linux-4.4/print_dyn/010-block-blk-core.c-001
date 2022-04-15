@@ -1,0 +1,4 @@
+block/blk-core.c:169
+Variable: rq->bio
+169->	printk(KERN_INFO "  bio %p, biotail %p, len %u\n",
+170	       rq->bio, rq->biotail, blk_rq_bytes(rq));

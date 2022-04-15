@@ -1,0 +1,4 @@
+drivers/target/iscsi/cxgbit/cxgbit_target.c:1339
+Variable: skb
+1339->		pr_info("skb 0x%p, frag %d, off %u, sz %u.\n",
+1340			skb, i, ssi->frags[i].page_offset, ssi->frags[i].size);

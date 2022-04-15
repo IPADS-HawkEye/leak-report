@@ -1,0 +1,3 @@
+fs/sdcardfs/super.c:147
+Variable: mnt
+147->	pr_info("Remount options were %s for vfsmnt %p.\n", options, mnt);

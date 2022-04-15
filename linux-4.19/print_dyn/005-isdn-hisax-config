@@ -1,0 +1,5 @@
+drivers/isdn/hisax/config.c:1299
+Variable:cs
+[Patch]
+accepted-patches/print_dyn/003-isdn-hisax-config
+

@@ -1,0 +1,6 @@
+drivers/gpu/drm/i915/i915_debugfs.c:2490
+Variable: guc->execbuf_client
+2490->	seq_printf(m, "\nGuC execbuf client @ %p:\n", guc->execbuf_client);
+2491	i915_guc_client_info(m, dev_priv, guc->execbuf_client);
+2492
+2493	i915_guc_log_info(m, dev_priv);

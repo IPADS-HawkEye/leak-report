@@ -1,0 +1,4 @@
+drivers/isdn/hisax/config.c:1297
+Variable: HiSax_reportcard
+[Patch]
+accepted-patches/print_gv/001-isdn-hisax-config

@@ -1,0 +1,4 @@
+drivers/media/usb/stk1160/stk1160-v4l.c:629
+Variable: buf
+629->		stk1160_info("buffer [%p/%d] aborted\n",
+630				buf, buf->vb.v4l2_buf.index);

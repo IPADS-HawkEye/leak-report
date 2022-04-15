@@ -1,0 +1,3 @@
+drivers/net/irda/vlsi_ir.c:338
+Variable: rd->buf
+338->		seq_printf(seq, "skb=%p data=%p hw=%p\n", rd->skb, rd->buf, rd->hw);

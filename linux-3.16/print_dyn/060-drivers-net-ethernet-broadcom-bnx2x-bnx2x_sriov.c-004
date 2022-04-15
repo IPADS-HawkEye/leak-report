@@ -1,0 +1,9 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sriov.c:2029
+Variable: q->cxt
+2029->		DP(BNX2X_MSG_IOV, "VFQ[%d:%d]: index %d, cid 0x%x, cxt %p\n",
+2030		   vf->abs_vfid, i, q->index, q->cid, q->cxt);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

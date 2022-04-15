@@ -1,0 +1,7 @@
+fs/dlm/debug_fs.c:355
+Variable: r
+355->	rv = seq_printf(s, "rsb %p %d %d %d %d %lu %lx %d ",
+356			r,
+Function: print_format4(struct dlm_rsb *r, struct seq_file *s)
+429 print_format4(ri->rsb, seq);
+Function: table_seq_show

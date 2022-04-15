@@ -1,0 +1,5 @@
+drivers/media/platform/msm/sde/rotator/sde_rotator_debug.c:282
+Variable: dump_addr
+282->			pr_info("%s: start_addr:0x%p end_addr:0x%p reg_addr=0x%X\n",
+283				dump_name, dump_addr, dump_addr + (u32)len * 16,
+284				addr);

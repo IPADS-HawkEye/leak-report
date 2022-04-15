@@ -1,0 +1,4 @@
+Variable: hdr
+74->	pr_info("BIOS console v1 EBDA structure found at %p\n", hdr);
+Variable: hdr
+86->	pr_info("BIOS console v2 EBDA structure found at %p\n", hdr);

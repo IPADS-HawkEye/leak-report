@@ -1,0 +1,3 @@
+drivers/infiniband/ulp/srpt/ib_srpt.c:2614
+Variable: cm_id
+2614->	pr_info("Received IB REJ for cm_id %p.\n", cm_id);

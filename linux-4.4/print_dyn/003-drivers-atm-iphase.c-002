@@ -1,0 +1,4 @@
+drivers/atm/iphase.c:2825
+Variable: (long)ia_deque_rtn_q(&iadev->tx_return_q)
+[Patch]
+accepted-patches/print_dyn/001-atm-iphase

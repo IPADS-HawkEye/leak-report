@@ -1,0 +1,4 @@
+drivers/target/iscsi/cxgbit/cxgbit_target.c:1399
+Variable: skb, lro_cb->csk
+1399->	pr_info("skb 0x%p, lro_cb, csk 0x%p, pdu %u, %u.\n",
+1400		skb, lro_cb->csk, lro_cb->pdu_idx, lro_cb->pdu_totallen);

@@ -1,0 +1,3 @@
+drivers/video/fbdev/vesafb.c:328
+Variable: pmi_pal
+328->		printk(KERN_INFO "vesafb: pmi: set display start = %p, set palette = %p\n",pmi_start,pmi_pal);

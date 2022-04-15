@@ -1,0 +1,3 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:2129
+Variable: cdev
+2129->		pr_info("cdev 0x%p, UP.\n", cdev);

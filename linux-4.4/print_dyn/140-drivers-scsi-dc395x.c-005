@@ -1,0 +1,7 @@
+drivers/scsi/dc395x.c:1525
+Variable: srb->cmd
+1525->		dprintkl(KERN_DEBUG, "start_scsi: (0x%p) Attempt to start a"
+1526			"command while another command (0x%p) is active.",
+1527			srb->cmd,
+1528			acb->active_dcb->active_srb ?
+1529			    acb->active_dcb->active_srb->cmd : 0);

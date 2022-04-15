@@ -1,0 +1,3 @@
+drivers/scsi/esas2r/esas2r_main.c:402
+Variable: host
+402->	esas2r_log(ESAS2R_LOG_INFO, "scsi_host_alloc() OK host: %p", host);

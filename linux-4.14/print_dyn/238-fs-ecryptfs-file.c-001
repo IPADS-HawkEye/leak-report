@@ -1,0 +1,2 @@
+fs/ecryptfs/file.c:252
+Variable: inode

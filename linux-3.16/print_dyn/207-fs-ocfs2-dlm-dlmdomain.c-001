@@ -1,0 +1,3 @@
+fs/ocfs2/dlm/dlmdomain.c:568
+Variable: msg, data
+568->	mlog(0, "%p %u %p", msg, len, data);

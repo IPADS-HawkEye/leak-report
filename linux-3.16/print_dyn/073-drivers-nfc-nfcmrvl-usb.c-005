@@ -1,0 +1,3 @@
+drivers/nfc/nfcmrvl/usb.c:404
+Variable: intf
+404->	nfc_info(&drv_data->udev->dev, "intf %p", intf);

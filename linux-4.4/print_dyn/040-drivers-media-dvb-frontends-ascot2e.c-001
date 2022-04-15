@@ -1,0 +1,5 @@
+drivers/media/dvb-frontends/ascot2e.c:541
+Variable: priv->i2c
+541->	dev_info(&priv->i2c->dev,
+542		"Sony ASCOT2E attached on addr=%x at I2C adapter %p\n",
+543		priv->i2c_address, priv->i2c);

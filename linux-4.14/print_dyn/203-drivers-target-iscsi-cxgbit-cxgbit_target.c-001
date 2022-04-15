@@ -1,0 +1,5 @@
+drivers/target/iscsi/cxgbit/cxgbit_target.c:1396
+Variable: skb, skb->head, skb->data
+1396->	pr_info("skb 0x%p, head 0x%p, 0x%p, len %u,%u, frags %u.\n",
+1397		skb, skb->head, skb->data, skb->len, skb->data_len,
+1398		ssi->nr_frags);

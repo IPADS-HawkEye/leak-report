@@ -1,0 +1,4 @@
+drivers/video/fbdev/udlfb.c:1420
+Variable: buf
+1420->	pr_info("sysfs edid copy %p to %p, %d bytes\n",
+1421		dev->edid, buf, (int) count);

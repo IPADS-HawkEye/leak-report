@@ -1,0 +1,6 @@
+fs/dlm/debug_fs.c:81
+Variable: res
+81->	seq_printf(s, "\nResource %p Name (len=%d) \"", res, res->res_length);
+Function: print_format1(struct dlm_rsb *res, struct seq_file *s)
+389 print_format1(ri->rsb, seq);
+Function: table_seq_show

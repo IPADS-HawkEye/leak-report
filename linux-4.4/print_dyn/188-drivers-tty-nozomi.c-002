@@ -1,0 +1,3 @@
+drivers/tty/nozomi.c:1640
+Variable: tport
+1640->	printk("noz: shutdown %p\n", tport);

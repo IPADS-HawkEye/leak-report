@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:3196
+Variable: cmd
+3196->			dev_notice(&instance->pdev->dev, "%p scsi cmd [%02x]"
+3197			"detected on the internal queue, issue again.\n",
+3198			cmd, cmd->scmd->cmnd[0]);

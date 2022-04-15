@@ -1,0 +1,3 @@
+drivers/video/fbdev/s1d13xxxfb.c:875
+875->	printk(KERN_INFO PFX "regs mapped at 0x%p, fb %d KiB mapped at 0x%p\n",
+876	       default_par->regs, info->fix.smem_len / 1024, info->screen_base);

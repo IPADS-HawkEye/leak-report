@@ -1,0 +1,3 @@
+drivers/mtd/devices/docg3.c:1915
+1915->		doc_info("Found a G3 DiskOnChip at addr %p, floor %d\n",
+1916			 docg3->cascade->base, floor);

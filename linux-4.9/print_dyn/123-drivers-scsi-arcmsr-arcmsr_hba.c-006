@@ -1,0 +1,8 @@
+drivers/scsi/arcmsr/arcmsr_hba.c:3165
+Variable: ccb
+3165->				pr_notice("arcmsr%d: scsi id = %d "
+3166					"lun = %d ccb = '0x%p' poll command "
+3167					"abort successfully\n"
+3168					, acb->host->host_no
+3169					, pCCB->pcmd->device->id
+3170					, (u32)pCCB->pcmd->device->lun

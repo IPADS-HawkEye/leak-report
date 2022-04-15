@@ -1,0 +1,5 @@
+drivers/scsi/qla2xxx/qla_nvme.c:689
+Variable: vha->nvme_local_port
+689->			ql_log(ql_log_info, vha, 0x2116,
+690			    "unregistered localport=%p\n",
+691			    vha->nvme_local_port);

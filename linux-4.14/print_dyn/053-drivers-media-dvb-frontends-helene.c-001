@@ -1,0 +1,5 @@
+drivers/media/dvb-frontends/helene.c:1005
+Variable: priv->i2c
+1005->	dev_info(&priv->i2c->dev,
+1006			"Sony HELENE Sat attached on addr=%x at I2C adapter %p\n",
+1007			priv->i2c_address, priv->i2c);

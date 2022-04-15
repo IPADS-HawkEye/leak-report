@@ -1,0 +1,12 @@
+drivers/net/ethernet/intel/ixgbe/ixgbe_main.c:646
+Variable: tx_buffer->skb
+646->				pr_info("T [0x%03X]    %016llX %016llX %016llX %08X %p %016llX %p",
+647					i,
+648					le64_to_cpu(u0->a),
+649					le64_to_cpu(u0->b),
+650					(u64)dma_unmap_addr(tx_buffer, dma),
+651					dma_unmap_len(tx_buffer, len),
+652					tx_buffer->next_to_watch,
+653					(u64)tx_buffer->time_stamp,
+654					tx_buffer->skb,
+655					ring_desc);

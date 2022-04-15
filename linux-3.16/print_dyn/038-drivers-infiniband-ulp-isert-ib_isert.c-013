@@ -1,0 +1,3 @@
+drivers/infiniband/ulp/isert/ib_isert.c:3447
+Variable: isert_conn
+3447->	pr_info("Destroying conn %p\n", isert_conn);

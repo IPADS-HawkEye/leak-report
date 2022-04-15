@@ -1,0 +1,6 @@
+drivers/media/dvb-frontends/cxd2841er.c:2594
+Variable: priv->i2c
+2594->	dev_info(&priv->i2c->dev,
+2595		"%s(): I2C adapter %p SLVX addr %x SLVT addr %x\n",
+2596		__func__, priv->i2c,
+2597		priv->i2c_addr_slvx, priv->i2c_addr_slvt);

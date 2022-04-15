@@ -1,0 +1,3 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:2132
+Variable: cdev
+2132->		pr_info("cdev 0x%p, RECOVERY.\n", cdev);

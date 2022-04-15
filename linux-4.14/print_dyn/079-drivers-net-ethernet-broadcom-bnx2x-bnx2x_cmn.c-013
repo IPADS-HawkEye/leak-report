@@ -1,0 +1,11 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c:4600
+Variable: The allocated result
+4600->			BNX2X_PCI_ALLOC(&bnx2x_fp(bp, index, rx_sge_mapping),
+4601					BCM_PAGE_SIZE * NUM_RX_SGE_PAGES);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.h
+#define BNX2X_PCI_ALLOC(y, size) void *x = dma_zalloc_coheren(...), DP(...., x);
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

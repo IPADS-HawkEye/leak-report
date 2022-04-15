@@ -1,0 +1,6 @@
+drivers/misc/mic/scif/scif_debugfs.c:86
+Variable: pin->pages[j]
+86->			seq_printf(s, "page[%d] = pinned_pages %p address %p\n",
+87				   j, pin->pages[j],
+88				   page_address(pin->pages[j]));
+Function: scif_display_window

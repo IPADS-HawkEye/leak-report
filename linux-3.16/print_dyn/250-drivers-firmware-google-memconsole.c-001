@@ -1,0 +1,3 @@
+drivers/firmware/google/memconsole.c:74
+Variable: hdr
+74->	pr_info("BIOS console v1 EBDA structure found at %p\n", hdr);

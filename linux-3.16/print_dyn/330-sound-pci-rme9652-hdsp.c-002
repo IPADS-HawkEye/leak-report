@@ -1,0 +1,4 @@
+sound/pci/rme9652/hdsp.c:3420
+Variable: hdsp->iobase
+3420->	snd_iprintf(buffer, "IRQ: %d Registers bus: 0x%lx VM: 0x%lx\n",
+3421		    hdsp->irq, hdsp->port, (unsigned long)hdsp->iobase);

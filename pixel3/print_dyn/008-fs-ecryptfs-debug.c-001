@@ -1,0 +1,4 @@
+fs/ecryptfs/debug.c:37
+Variable: auth_tok
+37->	ecryptfs_printk(KERN_DEBUG, "Auth tok at mem loc [%p]:\n",
+38			auth_tok);

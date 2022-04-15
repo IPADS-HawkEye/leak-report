@@ -1,0 +1,4 @@
+drivers/net/can/sja1000/plx_pci.c:602
+602->			dev_info(&pdev->dev, "Channel #%d at 0x%p, irq %d "
+603				 "registered as %s\n", i + 1, priv->reg_base,
+604				 dev->irq, dev->name);

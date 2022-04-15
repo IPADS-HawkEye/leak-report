@@ -1,0 +1,28 @@
+net/ipv6/tcp_ipv6.c:1760
+Variable: sp
+1760->	seq_printf(seq,
+1761		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1762		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %lu %lu %u %u %d\n",
+1763		   i,
+1764		   src->s6_addr32[0], src->s6_addr32[1],
+1765		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+1766		   dest->s6_addr32[0], dest->s6_addr32[1],
+1767		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+1768		   state,
+1769		   tp->write_seq - tp->snd_una,
+1770		   rx_queue,
+1771		   timer_active,
+1772		   jiffies_delta_to_clock_t(timer_expires - jiffies),
+1773		   icsk->icsk_retransmits,
+1774		   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1775		   icsk->icsk_probes_out,
+1776		   sock_i_ino(sp),
+1777		   atomic_read(&sp->sk_refcnt), sp,
+1778		   jiffies_to_clock_t(icsk->icsk_rto),
+1779		   jiffies_to_clock_t(icsk->icsk_ack.ato),
+1780		   (icsk->icsk_ack.quick << 1) | icsk->icsk_ack.pingpong,
+1781		   tp->snd_cwnd,
+1782		   state == TCP_LISTEN ?
+1783			fastopenq->max_qlen :
+1784			(tcp_in_initial_slowstart(tp) ? -1 : tp->snd_ssthresh)
+1785		   );

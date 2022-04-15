@@ -1,0 +1,10 @@
+fs/ocfs2/cluster/netdebug.c:147
+Variable: nst
+147->	seq_printf(seq, "%p:\n"
+148		   "  pid:          %lu\n"
+...
+152		   "  sc:           %p\n"
+...
+159		   nst, (unsigned long) task_pid_nr(nst->st_task),
+...
+162		   nst->st_sc, nst->st_id, nst_st_msg_type,

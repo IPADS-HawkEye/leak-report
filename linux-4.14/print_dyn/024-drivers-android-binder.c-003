@@ -1,0 +1,8 @@
+drivers/android/binder.c:5151
+Variable: ref_death
+5151->	seq_printf(m, "  ref %d: desc %d %snode %d s %d w %d d %pK\n",
+5152		   ref->data.debug_id, ref->data.desc,
+5153		   ref->node->proc ? "" : "dead ",
+5154		   ref->node->debug_id, ref->data.strong,
+5155		   ref->data.weak, ref->death);
+Note: CVE-2018-20509

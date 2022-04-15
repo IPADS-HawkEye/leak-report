@@ -1,0 +1,8 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c:4164
+Variable: tx_data_bd
+4164->	DP(NETIF_MSG_TX_QUEUED, "last bd @%p\n", tx_data_bd);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

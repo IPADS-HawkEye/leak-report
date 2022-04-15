@@ -1,0 +1,5 @@
+drivers/scsi/dc395x.c:1303
+Variable: cmd
+1303->	dprintkl(KERN_INFO,
+1304		"eh_bus_reset: (0%p) target=<%02i-%i> cmd=%p\n",
+1305		cmd, cmd->device->id, (u8)cmd->device->lun, cmd);

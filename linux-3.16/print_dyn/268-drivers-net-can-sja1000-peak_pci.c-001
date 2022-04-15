@@ -1,0 +1,4 @@
+drivers/net/can/sja1000/peak_pci.c:672
+672->		dev_info(&pdev->dev,
+673			 "%s at reg_base=0x%p cfg_base=0x%p irq=%d\n",
+674			 dev->name, priv->reg_base, chan->cfg_base, dev->irq);

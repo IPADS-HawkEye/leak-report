@@ -1,0 +1,5 @@
+drivers/scsi/ips.c:2056
+Variable: ha->mem_ptr
+2056->		seq_printf(m,
+2057			  "\tShared memory address             : 0x%lx\n",
+2058			  (unsigned long)ha->mem_ptr);

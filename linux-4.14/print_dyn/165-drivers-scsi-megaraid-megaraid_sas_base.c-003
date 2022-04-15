@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:2605
+Variable: reset_cmd
+2605->				dev_notice(&instance->pdev->dev, "%p unexpected"
+2606					"cmds lst\n",
+2607					reset_cmd);

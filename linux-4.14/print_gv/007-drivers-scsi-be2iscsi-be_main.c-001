@@ -1,0 +1,6 @@
+drivers/scsi/be2iscsi/be_main.c:5847
+Variable: &beiscsi_iscsi_transport
+Type: struct iscsi_transport
+Note: Global object
+5847->	printk(KERN_INFO "In beiscsi_module_init, tt=%p\n",
+5848	       &beiscsi_iscsi_transport);

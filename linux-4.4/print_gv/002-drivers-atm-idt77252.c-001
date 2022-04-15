@@ -1,0 +1,3 @@
+drivers/atm/idt77252.c:3755
+Variable: idt77252_init
+3755->	printk("%s: at %p\n", __func__, idt77252_init);

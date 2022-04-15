@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:2424
+Variable: reset_cmd
+2424->				dev_notice(&instance->pdev->dev, "%d:%p reset [%02x]\n",
+2425					reset_index, reset_cmd,
+2426					reset_cmd->scmd->cmnd[0]);

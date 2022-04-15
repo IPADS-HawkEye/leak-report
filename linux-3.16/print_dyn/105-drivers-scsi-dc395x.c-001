@@ -1,0 +1,5 @@
+drivers/scsi/dc395x.c:1213
+Variable: srb->segment_x
+1213->		printk("  sglist=%p cnt=%i idx=%i len=%zu\n",
+1214		       srb->segment_x, srb->sg_count, srb->sg_index,
+1215		       srb->total_xfer_length);

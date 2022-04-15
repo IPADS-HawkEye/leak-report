@@ -1,0 +1,8 @@
+drivers/scsi/arcmsr/arcmsr_hba.c:3176
+Variable: pCCB
+3176->			pr_notice("arcmsr%d: polling an illegal "
+3177				"ccb command done ccb = '0x%p' "
+3178				"ccboutstandingcount = %d\n"
+3179				, acb->host->host_no
+3180				, pCCB
+3181				, atomic_read(&acb->ccboutstandingcount));

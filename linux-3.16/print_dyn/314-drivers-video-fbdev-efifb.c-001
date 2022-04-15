@@ -1,0 +1,5 @@
+drivers/video/fbdev/efifb.c:228
+228->	printk(KERN_INFO "efifb: framebuffer at 0x%lx, mapped to 0x%p, "
+229	       "using %dk, total %dk\n",
+230	       efifb_fix.smem_start, info->screen_base,
+231	       size_remap/1024, size_total/1024);

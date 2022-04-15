@@ -1,0 +1,5 @@
+drivers/scsi/qla2xxx/qla_nvme.c:110
+Variable: handle
+110->		ql_log(ql_log_info, vha, 0x2121,
+111		    "Returning existing qpair of %p for idx=%x\n",
+112		    *handle, qidx);

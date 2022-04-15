@@ -1,0 +1,5 @@
+drivers/scsi/libsas/sas_ata.c:462
+Variable: task
+462->	SAS_DPRINTK("%s: Task %p leaked.\n", __func__, task);
+definition:
+#define SAS_DPRINTK(fmt, ...) printk(KERN_DEBUG "sas: " fmt, ## __VA_ARGS__)

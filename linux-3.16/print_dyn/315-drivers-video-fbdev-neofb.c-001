@@ -1,0 +1,3 @@
+drivers/video/fbdev/neofb.c:1691
+1691->		printk(KERN_INFO "neofb: mapped io at %p\n",
+1692		       par->mmio_vbase);

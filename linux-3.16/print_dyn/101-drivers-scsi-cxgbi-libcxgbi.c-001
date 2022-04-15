@@ -1,0 +1,7 @@
+drivers/scsi/cxgbi/libcxgbi.c:636
+Variable: csk
+636->	pr_info("csk 0x%p,%u,%lx, %pI4:%u-%pI4:%u, err %d.\n",
+637			csk, csk->state, csk->flags,
+638			&csk->saddr.sin_addr.s_addr, csk->saddr.sin_port,
+639			&csk->daddr.sin_addr.s_addr, csk->daddr.sin_port,
+640			errno);

@@ -1,0 +1,6 @@
+mm/vmalloc.c:2710
+Variable: vm->va_start, va->va_end
+2710->		seq_printf(m, "0x%pK-0x%pK %7ld %s\n",
+2711			(void *)va->va_start, (void *)va->va_end,
+2712			va->va_end - va->va_start,
+2713			va->flags & VM_LAZY_FREE ? "unpurged vm_area" : "vm_map_ram");

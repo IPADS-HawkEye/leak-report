@@ -1,0 +1,4 @@
+net/unix/af_unix.c:2823
+Variable: s
+2823->		seq_printf(seq, "%pK: %08X %08X %08X %04X %02X %5lu",
+2824			s,

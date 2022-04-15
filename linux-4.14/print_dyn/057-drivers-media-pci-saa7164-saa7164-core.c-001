@@ -1,0 +1,3 @@
+drivers/media/pci/saa7164/saa7164-core.c:1071
+Variable:dev
+1071->		seq_printf(m, "%s = %p\n", dev->name, dev);

@@ -1,0 +1,4 @@
+drivers/net/ethernet/stmicro/stmmac/dwmac100_core.c:48
+48->	pr_info("\t----------------------------------------------\n"
+49		"\t  DWMAC 100 CSR (base addr = 0x%p)\n"
+50		"\t----------------------------------------------\n", ioaddr);

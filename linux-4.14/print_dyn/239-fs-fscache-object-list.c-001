@@ -1,0 +1,7 @@
+fs/fscache/object-list.c:271
+Variable: cookie->netfs_data
+271->		seq_printf(m, "%-16s %s %2lx %16p",
+272			   cookie->def->name,
+273			   type,
+274			   cookie->flags,
+275			   cookie->netfs_data);

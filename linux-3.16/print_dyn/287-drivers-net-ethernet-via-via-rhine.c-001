@@ -1,0 +1,3 @@
+drivers/net/ethernet/via/via-rhine.c:999
+999->	netdev_info(dev, "VIA %s at 0x%lx, %pM, IRQ %d\n",
+1000		    name, (long)ioaddr, dev->dev_addr, rp->irq);

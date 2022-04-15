@@ -1,0 +1,6 @@
+drivers/target/iscsi/cxgbit/cxgbit_target.c:1403
+Variable: skb
+1403->		pr_info("skb 0x%p, pdu %d, %u, f 0x%x, seq 0x%x, dcrc 0x%x, "
+1404			"frags %u.\n",
+1405			skb, i, pdu_cb->pdulen, pdu_cb->flags, pdu_cb->seq,
+1406			pdu_cb->ddigest, pdu_cb->frags);

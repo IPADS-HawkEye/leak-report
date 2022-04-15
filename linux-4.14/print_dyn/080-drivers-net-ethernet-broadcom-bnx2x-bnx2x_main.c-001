@@ -1,0 +1,11 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_main.c:6391
+Variable: bp, fp->status_blk.e2_sb
+6391->	DP(NETIF_MSG_IFUP,
+6392	   "queue[%d]:  bnx2x_init_sb(%p,%p)  cl_id %d  fw_sb %d  igu_sb %d\n",
+6393	   fp_idx, bp, fp->status_blk.e2_sb, fp->cl_id, fp->fw_sb_id,
+6394	   fp->igu_sb_id);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

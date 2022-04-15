@@ -1,0 +1,5 @@
+mm/percpu.c:2165
+Variable: vm.addr
+2165->	pr_info("%d %s pages/cpu @%p s%zu r%zu d%zu\n",
+2166		unit_pages, psize_str, vm.addr, ai->static_size,
+2167		ai->reserved_size, ai->dyn_size);

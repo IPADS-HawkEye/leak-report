@@ -1,0 +1,8 @@
+drivers/scsi/arcmsr/arcmsr_hba.c:2962
+Variable: ccb
+2962->			printk(KERN_NOTICE "arcmsr%d: polling get an illegal ccb"
+2963				" command done ccb = '0x%p'"
+2964				"ccboutstandingcount = %d \n"
+2965				, acb->host->host_no
+2966				, ccb
+2967				, atomic_read(&acb->ccboutstandingcount));

@@ -1,0 +1,32 @@
+fs/ocfs2/cluster/netdebug.c:352
+Variable: sc
+352->	seq_printf(seq, "%p:\n"
+353		   "  krefs:           %d\n"
+354		   "  sock:            %pI4:%u -> "
+355				      "%pI4:%u\n"
+356		   "  remote node:     %s\n"
+357		   "  page off:        %zu\n"
+358		   "  handshake ok:    %u\n"
+359		   "  timer:           %lld usecs\n"
+360		   "  data ready:      %lld usecs\n"
+361		   "  advance start:   %lld usecs\n"
+362		   "  advance stop:    %lld usecs\n"
+363		   "  func start:      %lld usecs\n"
+364		   "  func stop:       %lld usecs\n"
+365		   "  func key:        0x%08x\n"
+366		   "  func type:       %u\n",
+367		   sc,
+368		   atomic_read(&sc->sc_kref.refcount),
+369		   &saddr, inet ? ntohs(sport) : 0,
+370		   &daddr, inet ? ntohs(dport) : 0,
+371		   sc->sc_node->nd_name,
+372		   sc->sc_page_off,
+373		   sc->sc_handshake_ok,
+374		   (long long)ktime_to_us(sc->sc_tv_timer),
+375		   (long long)ktime_to_us(sc->sc_tv_data_ready),
+376		   (long long)ktime_to_us(sc->sc_tv_advance_start),
+377		   (long long)ktime_to_us(sc->sc_tv_advance_stop),
+378		   (long long)ktime_to_us(sc->sc_tv_func_start),
+379		   (long long)ktime_to_us(sc->sc_tv_func_stop),
+380		   sc->sc_msg_key,
+381		   sc->sc_msg_type);

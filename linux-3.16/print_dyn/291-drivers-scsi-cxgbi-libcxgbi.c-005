@@ -1,0 +1,4 @@
+drivers/scsi/cxgbi/libcxgbi.c:1558
+Variable: skb
+1558->		pr_info("skb 0x%p, off %u, %d, TCP_SKB_DONE.\n",
+1559			skb, offset, offloaded);

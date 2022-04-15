@@ -1,0 +1,4 @@
+drivers/misc/genwqe/card_debugfs.c:228
+Variable: queue->ddcb_vaddr
+[Patch]
+accepted-patches/print_dyn/004-misc-genwqe-card_debugfs

@@ -1,0 +1,6 @@
+drivers/usb/core/devio.c:380
+Variable: userurb
+380->			dev_info(&udev->dev, "userurb %pK, ep%d %s-%s, "
+381					"actual_length %u status %d\n",
+382					userurb, ep, t, d, length,
+383					timeout_or_status);

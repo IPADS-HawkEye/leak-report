@@ -1,0 +1,11 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sriov.c:1565
+Variable: base_cxt
+1565->		DP(BNX2X_MSG_IOV,
+1566		   "VF[%d] Max IGU SBs: %d, base vf cid 0x%x, base cid 0x%x, base cxt %p\n",
+1567		   vf->abs_vfid, vf_sb_count(vf), base_vf_cid,
+1568		   BNX2X_FIRST_VF_CID + base_vf_cid, base_cxt);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

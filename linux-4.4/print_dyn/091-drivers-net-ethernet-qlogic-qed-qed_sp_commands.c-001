@@ -1,0 +1,11 @@
+drivers/net/ethernet/qlogic/qed/qed_sp_commands.c:79
+Variable: &p_ent->ramrod
+79->	DP_VERBOSE(p_hwfn, QED_MSG_SPQ,
+80		   "Initialized: CID %08x cmd %02x protocol %02x data_addr %lu comp_mode [%s]\n",
+81		   opaque_cid, cmd, protocol,
+82		   (unsigned long)&p_ent->ramrod,
+83		   D_TRINE(p_ent->comp_mode, QED_SPQ_MODE_EBLOCK,
+84			   QED_SPQ_MODE_BLOCK, "MODE_EBLOCK", "MODE_BLOCK",
+Definition:
+include/linux/qed/qed_if.h:309
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

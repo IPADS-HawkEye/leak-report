@@ -1,0 +1,5 @@
+fs/ecryptfs/file.c:252
+Variable: inode
+252->	ecryptfs_printk(KERN_DEBUG, "inode w/ addr = [0x%p], i_ino = "
+253			"[0x%.16lx] size: [0x%.16llx]\n", inode, inode->i_ino,
+254			(unsigned long long)i_size_read(inode));

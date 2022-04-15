@@ -1,0 +1,3 @@
+drivers/staging/irda/drivers/vlsi_ir.c:326
+Variable: rd->skb, rd->buf, rd->hw
+326->		seq_printf(seq, "skb=%p data=%p hw=%p\n", rd->skb, rd->buf, rd->hw);

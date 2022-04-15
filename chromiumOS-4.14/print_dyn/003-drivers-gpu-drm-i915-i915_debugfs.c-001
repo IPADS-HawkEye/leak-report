@@ -1,0 +1,5 @@
+drivers/gpu/drm/i915/i915_debugfs.c:132
+Variable: &obj->base
+132->	seq_printf(m, "%pK: %c%c%c%c%c %8zdKiB %02x %02x %s%s%s",
+133		   &obj->base,
+134		   get_active_flag(obj),

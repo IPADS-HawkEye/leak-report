@@ -1,0 +1,6 @@
+drivers/staging/cxt1e1/hwprobe.c:76
+76->	pr_info("%s: %s at v/p=%lx/%lx (%02x:%02x.%x) irq %d\n",
+77		hi->devname, "MUSYCC",
+78		(unsigned long) hi->addr_mapped[0], hi->addr[0],
+79		hi->pci_busno, (u_int8_t) PCI_SLOT(pdev->devfn),
+80		(u_int8_t) PCI_FUNC(pdev->devfn), pdev->irq);

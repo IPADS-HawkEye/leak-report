@@ -1,0 +1,7 @@
+drivers/net/ethernet/qlogic/qed/qed_roce.c:93
+Variable: bmap->bitmap
+93->	DP_VERBOSE(p_hwfn, QED_MSG_RDMA, "Allocated bitmap %p\n",
+94		   bmap->bitmap);
+Definition:
+include/linux/qed/qed_if.h:602
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

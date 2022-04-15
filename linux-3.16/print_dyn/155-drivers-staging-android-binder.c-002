@@ -1,0 +1,5 @@
+drivers/staging/android/binder.c:3179
+Variable: t->buffer->data
+3179->	seq_printf(m, " size %zd:%zd data %pK\n",
+3180		   t->buffer->data_size, t->buffer->offsets_size,
+3181		   t->buffer->data);

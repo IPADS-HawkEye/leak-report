@@ -1,0 +1,5 @@
+net/netlink/af_netlink.c:2506
+Variable: s
+2506->		seq_printf(seq, "%pK %-3d %-6u %08x %-8d %-8d %d %-8d %-8d %-8lu\n",
+2507			   s,
+2508			   s->sk_protocol,

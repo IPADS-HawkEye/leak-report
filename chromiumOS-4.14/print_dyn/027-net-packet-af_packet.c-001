@@ -1,0 +1,5 @@
+net/packet/af_packet.c:4557
+Variable: s
+4557->		seq_printf(seq,
+4558			   "%pK %-6d %-4d %04x   %-5d %1d %-6u %-6u %-6lu\n",
+4559			   s,

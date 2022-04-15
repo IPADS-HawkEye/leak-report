@@ -1,0 +1,4 @@
+drivers/usb/dwc2/gadget.c:3269
+Variable: ep->queue.next, ep->queue.prev
+3269->	seq_printf(seq, "request list (%p,%p):\n",
+3270		   ep->queue.next, ep->queue.prev);

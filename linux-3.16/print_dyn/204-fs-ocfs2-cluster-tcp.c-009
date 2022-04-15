@@ -1,0 +1,4 @@
+fs/ocfs2/cluster/tcp.c:892
+Variable: nmh->nh_func
+892->		mlog(ML_TCP, "unregistering handler func %p type %u key %08x\n",
+893		     nmh->nh_func, nmh->nh_msg_type, nmh->nh_key);

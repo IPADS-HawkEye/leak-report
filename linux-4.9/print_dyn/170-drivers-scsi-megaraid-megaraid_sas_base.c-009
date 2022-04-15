@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:3361
+Variable: cmd, cmd->scmd
+3361->			dev_notice(&instance->pdev->dev, "moving cmd[%d]:%p:%d:%p"
+3362					"on the defer queue as internal\n",
+3363				defer_index, cmd, cmd->sync_cmd, cmd->scmd);

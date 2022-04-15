@@ -1,0 +1,4 @@
+drivers/scsi/qla2xxx/qla_nvme.c:551
+Variable: vha->nvme_local_port
+551->	ql_log(ql_log_info, vha, 0x210f,
+552	    "localport delete of %p completed.\n", vha->nvme_local_port);

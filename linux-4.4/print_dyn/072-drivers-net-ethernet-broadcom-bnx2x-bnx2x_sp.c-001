@@ -1,0 +1,9 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sp.c:624
+Variable: next
+624->			DP(BNX2X_MSG_SP, "copied element number %d to address %p element was:\n",
+625			   counter, next);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

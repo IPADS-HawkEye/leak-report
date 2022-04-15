@@ -1,0 +1,3 @@
+drivers/net/can/sja1000/kvaser_pci.c:269
+269->	dev_info(&pdev->dev, "reg_base=%p conf_addr=%p irq=%d\n",
+270		 priv->reg_base, board->conf_addr, dev->irq);

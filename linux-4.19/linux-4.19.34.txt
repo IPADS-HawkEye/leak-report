@@ -1,0 +1,52 @@
+linux 4.19.34
+drivers/atm/iphase.c:2829
+Variables: (long)skb_peek(&iadev->tx_backlog)
+
+drivers/atm/iphase.c:2830
+Variables: (long)ia_deque_rtn_q(&iadev->tx_return_q)
+
+drivers/isdn/hardware/mISDN/hfcpci.c:2035
+Variables: hc->hw.fifos
+
+drivers/isdn/hardware/mISDN/hfcpci.c:2035
+Variables: hc->hw.dmahandle
+
+drivers/isdn/hisax/config.c:1297
+Variables: HiSax_reportcard
+
+drivers/isdn/hisax/config.c:1299
+Variables: cs
+
+drivers/misc/genwqe/card_debugfs.c:241
+Variables: queue->ddcb_vaddr
+
+drivers/net/hippi/rrunner.c:1301
+Variables: rrpriv->tx_skbuff[cons]->data
+
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1543
+Variables: instance
+
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1551
+Variables: instance
+
+kernel/cgroup/debug.c:67
+Variables: css
+
+kernel/cgroup/debug.c:227
+Variables: css
+
+net/ax25/af_ax25.c:1891
+Variables: ax25
+
+sound/isa/gus/gus_mem.c:313
+Variables: block
+
+drivers/tty/rocket.c:1287
+Variables: info
+
+drivers/atm/iphase.c:2772
+Variables: iadev
+
+drivers/mtd/maps/l440gx.c:88
+Variables: l440gx_map.virt
+[Confirmed & Patches submitted]

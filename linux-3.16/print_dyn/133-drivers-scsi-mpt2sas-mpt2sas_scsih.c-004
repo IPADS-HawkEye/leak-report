@@ -1,0 +1,5 @@
+drivers/scsi/mpt2sas/mpt2sas_scsih.c:8308
+Variable: pdev
+8308->	printk(MPT2SAS_INFO_FMT "pdev=0x%p, slot=%s, previous "
+8309	    "operating state [D%d]\n", ioc->name, pdev,
+8310	    pci_name(pdev), device_state);

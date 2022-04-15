@@ -1,0 +1,3 @@
+drivers/misc/mic/scif/scif_debugfs.c:115
+Variable: ep
+115->		seq_printf(s, "ep %p self windows\n", ep);

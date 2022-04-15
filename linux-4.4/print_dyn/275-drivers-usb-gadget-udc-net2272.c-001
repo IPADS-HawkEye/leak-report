@@ -1,0 +1,5 @@
+drivers/usb/gadget/udc/net2272.c:2289
+Variable: dev->base_addr
+2289->	dev_info(dev->dev, "irq %i, mem %p, chip rev %04x, dma %s\n",
+2290		dev->irq, dev->base_addr, dev->chiprev,
+2291		dma_mode_string());

@@ -1,0 +1,4 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1792
+Variable: cdev
+1792->	pr_info("cdev 0x%p, offload up, added.\n", cdev);
+Function: cxgb4i_ofld_init <- cxgb4i_dev_open

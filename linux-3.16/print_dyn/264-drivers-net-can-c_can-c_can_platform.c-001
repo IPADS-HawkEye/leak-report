@@ -1,0 +1,3 @@
+drivers/net/can/c_can/c_can_platform.c:318
+318->	dev_info(&pdev->dev, "%s device registered (regs=%p, irq=%d)\n",
+319		 KBUILD_MODNAME, priv->base, dev->irq);

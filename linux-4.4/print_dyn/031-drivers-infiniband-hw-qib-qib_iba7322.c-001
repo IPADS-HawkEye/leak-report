@@ -1,0 +1,4 @@
+drivers/infiniband/hw/qib/qib_iba7322.c:2832
+Variable: ref
+2832->	qib_devinfo(dd->pcidev,
+2833		"release on HCA notify 0x%p n 0x%p\n", ref, n);

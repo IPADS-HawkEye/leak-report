@@ -1,0 +1,5 @@
+net/sctp/probe.c:158
+Variable: asoc
+158->		printl("%p %5d %5d %5d %8d %5d ", asoc,
+159		       ep->base.bind_addr.port, asoc->peer.port,
+160		       asoc->pathmtu, asoc->peer.rwnd, asoc->unack_data);

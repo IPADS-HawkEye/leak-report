@@ -1,0 +1,8 @@
+drivers/usb/host/sl811-hcd.c:1470
+Variable: ep
+1470->			seq_printf(s,
+1471				"   %s%sqh%d/%p (%sdev%d ep%d%s max %d) "
+1472					"err %d\n",
+1473				(ep == sl811->active_a) ? "(A) " : "",
+1474				(ep == sl811->active_b) ? "(B) " : "",
+1475				ep->period, ep,

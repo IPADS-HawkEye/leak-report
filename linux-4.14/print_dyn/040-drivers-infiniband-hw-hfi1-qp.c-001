@@ -1,0 +1,10 @@
+drivers/infiniband/hw/hfi1/qp.c:565
+Variable: sde, send_context
+565->	seq_printf(s,
+566		   "N %d %s QP %x R %u %s %u %u %u f=%x %u %u %u %u %u %u SPSN %x %x %x %x %x RPSN %x S(%u %u %u %u %u %u %u) R(%u %u %u) RQP %x LID %x SL %u MTU %u %u %u %u %u SDE %p,%u SC %p,%u SCQ %u %u PID %d OS %x %x E %x %x %x\n",
+567		   iter->n,
+...
+601		   sde,
+...
+603		   send_context,
+Function: qb_iter_print <- _qp_stats_seq_show

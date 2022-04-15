@@ -1,0 +1,5 @@
+drivers/scsi/qla2xxx/qla_init.c:4434
+Variable: ha->mctp_dump
+4434->		ql_log(ql_log_info, vha, 0x5070,
+4435		    "Mctp dump capture for host (%ld/%p).\n",
+4436		    vha->host_no, ha->mctp_dump);

@@ -1,0 +1,44 @@
+From 1900da520c9fdc3a7cf00d21638f7c8721d5ac7f Mon Sep 17 00:00:00 2001
+From: 
+Date: 
+Subject: kernel: cgroup: fix misuse of %x
+
+Pointers should be printed with %p or %px rather than
+cast to unsigned long type and printed with %lx.
+Change %lx to %p to print the pointers.
+
+Signed-off-by: 
+Signed-off-by: 
+---
+ kernel/cgroup/debug.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/kernel/cgroup/debug.c b/kernel/cgroup/debug.c
+index 5f1b873..80aa3f0 100644
+--- a/kernel/cgroup/debug.c
++++ b/kernel/cgroup/debug.c
+@@ -64,8 +64,8 @@ static int current_css_set_read(struct seq_file *seq, void *v)
+ 		css = cset->subsys[ss->id];
+ 		if (!css)
+ 			continue;
+-		seq_printf(seq, "%2d: %-4s\t- %lx[%d]\n", ss->id, ss->name,
+-			  (unsigned long)css, css->id);
++		seq_printf(seq, "%2d: %-4s\t- %p[%d]\n", ss->id, ss->name,
++			  css, css->id);
+ 	}
+ 	rcu_read_unlock();
+ 	spin_unlock_irq(&css_set_lock);
+@@ -224,8 +224,8 @@ static int cgroup_subsys_states_read(struct seq_file *seq, void *v)
+ 		if (css->parent)
+ 			snprintf(pbuf, sizeof(pbuf) - 1, " P=%d",
+ 				 css->parent->id);
+-		seq_printf(seq, "%2d: %-4s\t- %lx[%d] %d%s\n", ss->id, ss->name,
+-			  (unsigned long)css, css->id,
++		seq_printf(seq, "%2d: %-4s\t- %p[%d] %d%s\n", ss->id, ss->name,
++			  css, css->id,
+ 			  atomic_read(&css->online_cnt), pbuf);
+ 	}
+ 
+-- 
+cgit v1.1
+

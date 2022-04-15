@@ -1,0 +1,4 @@
+drivers/isdn/hardware/mISDN/hfcpci.c:2034
+Variable: hc->hw.fifos
+[Patch]
+accepted-patches/print_dyn/002-isdn-mISDN-hfcpci

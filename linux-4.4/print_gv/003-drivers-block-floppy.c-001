@@ -1,0 +1,8 @@
+drivers/block/floppy.c:1813
+Variable: fd_timer.work.func
+Value: fd_timer_workfn
+1813->		pr_info("delayed work.function=%p expires=%ld\n",
+1814		       fd_timer.work.func,
+1815		       fd_timer.timer.expires - jiffies);
+Definition:
+988 static DECLARE_DELAYED_WORK(fd_timer, fd_timer_workfn);

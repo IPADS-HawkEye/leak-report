@@ -1,0 +1,5 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1753
+Variable: cdev
+1753->	pr_info("cxgb4i 0x%p max payload size: %u/%u, %u/%u.\n",
+1754		cdev, cdev->tx_max_size, ddp->max_txsz, cdev->rx_max_size,
+1755		ddp->max_rxsz);

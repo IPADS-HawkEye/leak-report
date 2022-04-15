@@ -1,0 +1,3 @@
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:1305
+Variable: cdev
+1305->		pr_info("0x%p, updating.\n", cdev);

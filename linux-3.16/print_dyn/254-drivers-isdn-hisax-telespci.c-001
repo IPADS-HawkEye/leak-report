@@ -1,0 +1,8 @@
+drivers/isdn/hisax/telespci.c:325
+Variable: cs->hw.teles0.mem_base
+325->	printk(KERN_INFO
+326	       "HiSax: Teles PCI config irq:%d mem:%p\n",
+327	       cs->irq,
+328	       cs->hw.teles0.membase);
+329
+330	setup_isac(cs);

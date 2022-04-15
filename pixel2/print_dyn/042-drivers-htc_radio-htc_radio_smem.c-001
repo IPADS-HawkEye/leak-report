@@ -1,0 +1,4 @@
+drivers/htc_radio/htc_radio_smem.c:46
+Variable: htc_radio_smem
+46->		pr_info("[smem]%s: smem_via_smd=0x%p.\n", __func__,
+47				htc_radio_smem);

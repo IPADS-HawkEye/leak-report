@@ -1,0 +1,3 @@
+drivers/dma/qcom/hidma_dbg.c:47
+Variable: tre->data
+47->	seq_printf(s, "data=%p\n", tre->data);

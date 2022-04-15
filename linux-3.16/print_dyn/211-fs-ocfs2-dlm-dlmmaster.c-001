@@ -1,0 +1,3 @@
+fs/ocfs2/dlm/dlmmaster.c:828
+Variable: res
+828->	mlog(0, "no lockres found, allocated our own: %p\n", res);

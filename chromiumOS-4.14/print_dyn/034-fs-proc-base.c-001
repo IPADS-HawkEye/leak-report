@@ -1,0 +1,4 @@
+fs/proc/base.c:469
+469->			seq_printf(m, "[<%pK>] %pB\n",
+470				   (void *)entries[i], (void *)entries[i]);
+Note: CVE-2018-17972

@@ -1,0 +1,2 @@
+drivers/usb/gadget/goku_udc.c:1765
+1765->	INFO(dev, "irq %d, pci mem %p\n", pdev->irq, base);

@@ -1,0 +1,10 @@
+fs/ocfs2/cluster/netdebug.c:336
+Variable: sc
+336->	seq_printf(seq, "%p:\n"
+337		   "  krefs:           %d\n"
+338		   "  sock:            %pI4:%u -> "
+339				      "%pI4:%u\n"
+340		   "  remote node:     %s\n"
+341		   "  page off:        %zu\n"
+...
+351		   sc,

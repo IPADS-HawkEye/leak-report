@@ -1,0 +1,5 @@
+drivers/mtd/devices/pmc551.c:802
+Variable: priv->start, priv->start + priv->asize
+802->		printk(KERN_NOTICE "Mapped %dMiB of memory from 0x%p to 0x%p\n",
+803			priv->asize >> 20,
+804			priv->start, priv->start + priv->asize);

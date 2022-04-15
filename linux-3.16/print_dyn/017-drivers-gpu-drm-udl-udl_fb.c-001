@@ -1,0 +1,4 @@
+drivers/gpu/drm/udl/udl_fb.c:358
+Variable: info
+358->	pr_notice("open /dev/fb%d user=%d fb_info=%p count=%d\n",
+359		  info->node, user, info, ufbdev->fb_count);

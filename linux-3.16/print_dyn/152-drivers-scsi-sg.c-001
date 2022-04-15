@@ -1,0 +1,5 @@
+drivers/scsi/sg.c:1909
+Variable: schp->pages[k]
+1909->				SCSI_LOG_TIMEOUT(5, printk(
+1910				    "sg_remove_scat: k=%d, pg=0x%p\n",
+1911				    k, schp->pages[k]));

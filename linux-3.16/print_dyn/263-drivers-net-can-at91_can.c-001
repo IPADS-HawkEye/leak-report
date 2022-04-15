@@ -1,0 +1,3 @@
+drivers/net/can/at91_can.c:1377
+1377->	dev_info(&pdev->dev, "device registered (reg_base=%p, irq=%d)\n",
+1378		 priv->reg_base, dev->irq);

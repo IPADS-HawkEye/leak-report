@@ -1,0 +1,6 @@
+lib/swiotlb.c:160
+160->	printk(KERN_INFO "software IO TLB [mem %#010llx-%#010llx] (%luMB) mapped at [%p-%p]\n",
+161	       (unsigned long long)io_tlb_start,
+162	       (unsigned long long)io_tlb_end,
+163	       bytes >> 20, vstart, vend - 1);
+Note: CVE-2018-5953

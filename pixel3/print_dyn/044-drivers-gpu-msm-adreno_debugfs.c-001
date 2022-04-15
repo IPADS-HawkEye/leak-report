@@ -1,0 +1,4 @@
+drivers/gpu/msm/adreno_debugfs.c:140
+Variable: sync_event->handle
+140->		seq_printf(s, "sync: [%pK] %s", sync_event->handle,
+141				sync_event->fence_name);

@@ -1,0 +1,4 @@
+drivers/scsi/qla2xxx/qla_mr.c:1204
+Variable: fcport
+1204->				ql_log(ql_log_info, vha, 0x208d,
+1205				   "TGT-ID: New fcport Added: %p\n", fcport);

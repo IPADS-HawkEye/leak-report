@@ -1,0 +1,8 @@
+drivers/gpu/msm/kgsl_iommu.c:131
+Variable: memdesc->gpuaddr
+131->		seq_printf(s, "0x%pK-0x%pK %16llu %s\n",
+132			(uint64_t *)(uintptr_t) memdesc->gpuaddr,
+133			(uint64_t *)(uintptr_t) (memdesc->gpuaddr +
+134			memdesc->size - 1), memdesc->size,
+135			global_pt_entries[i].name);
+136	}

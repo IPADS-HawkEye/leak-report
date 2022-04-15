@@ -1,0 +1,12 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c:4158
+Variable: tx_data_bd
+4158->		DP(NETIF_MSG_TX_QUEUED,
+4159		   "frag %d  bd @%p  addr (%x:%x)  nbytes %d\n",
+4160		   i, tx_data_bd, tx_data_bd->addr_hi, tx_data_bd->addr_lo,
+4161		   le16_to_cpu(tx_data_bd->nbytes));
+4162	}
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

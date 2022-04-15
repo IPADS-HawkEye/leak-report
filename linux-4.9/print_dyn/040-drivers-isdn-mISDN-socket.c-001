@@ -1,0 +1,2 @@
+drivers/isdn/mISDN/socket.c:633
+Variable: sock, sk

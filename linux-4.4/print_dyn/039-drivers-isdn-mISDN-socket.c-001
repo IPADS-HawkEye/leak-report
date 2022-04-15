@@ -1,0 +1,3 @@
+drivers/isdn/mISDN/socket.c:633
+Variable: sock, sk
+633->	printk(KERN_DEBUG "%s(%p) sk=%p\n", __func__, sock, sk);

@@ -1,0 +1,7 @@
+drivers/media/platform/msm/camera_v2/pproc/cpp/msm_cpp.c:3450
+3450->		if (copy_to_user((void __user *)ioctl_ptr->ioctl_ptr,
+3451				process_frame,
+3452				sizeof(struct msm_cpp_frame_info_t))) {
+3453					mutex_unlock(&cpp_dev->mutex);
+3454					kfree(process_frame->cpp_cmd_msg);
+3455					kfree(process_frame);

@@ -1,0 +1,4 @@
+net/key/af_key.c:3771
+Variable:s 
+3771->		seq_printf(f, "%pK %-6d %-6u %-6u %-6u %-6lu\n",
+3772			       s,

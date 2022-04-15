@@ -1,0 +1,8 @@
+drivers/gpu/drm/i915/i915_debugfs.c:128
+Variable: &obj->base
+128->	seq_printf(m, "%pK: %s%s%s %8zdKiB %02x %02x %u %u %u%s%s%s",
+129		   &obj->base,
+130		   get_pin_flag(obj),
+131		   get_tiling_flag(obj),
+132		   get_global_flag(obj),
+133		   obj->base.size / 1024,

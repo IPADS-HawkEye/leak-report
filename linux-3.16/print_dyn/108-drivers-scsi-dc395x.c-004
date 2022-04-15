@@ -1,0 +1,3 @@
+drivers/scsi/dc395x.c:4716
+Variable: srb->cmd
+4716->			SPRINTF(" %p", srb->cmd);

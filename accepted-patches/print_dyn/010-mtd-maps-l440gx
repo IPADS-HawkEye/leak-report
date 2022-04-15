@@ -1,0 +1,31 @@
+From 73dc67becc1b799fc286d4b319349094e518a34d Mon Sep 17 00:00:00 2001
+From: 
+Date: 
+Subject: [PATCH v3] mtd: maps: l440gx: Avoid printing address to dmesg
+
+Avoid printing the address of l440gx_map.virt every time l440gx init.
+
+Signed-off-by: 
+---
+Changes in v3:
+  -- use pr_debug instead of printk(KERN_DEBUG)
+
+ drivers/mtd/maps/l440gx.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/mtd/maps/l440gx.c b/drivers/mtd/maps/l440gx.c
+index 876f12f40018..0eeadfeb620d 100644
+--- a/drivers/mtd/maps/l440gx.c
++++ b/drivers/mtd/maps/l440gx.c
+@@ -86,7 +86,7 @@ static int __init init_l440gx(void)
+ 		return -ENOMEM;
+ 	}
+ 	simple_map_init(&l440gx_map);
+-	printk(KERN_NOTICE "window_addr = 0x%08lx\n", (unsigned long)l440gx_map.virt);
++	pr_debug("window_addr = %p\n", l440gx_map.virt);
+ 
+ 	/* Setup the pm iobase resource
+ 	 * This code should move into some kind of generic bridge
+-- 
+2.11.0
+

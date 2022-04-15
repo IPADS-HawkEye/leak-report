@@ -1,0 +1,3 @@
+drivers/net/can/cc770/cc770_isa.c:278
+278->	dev_info(&pdev->dev, "device registered (reg_base=0x%p, irq=%d)\n",
+279		 priv->reg_base, dev->irq);

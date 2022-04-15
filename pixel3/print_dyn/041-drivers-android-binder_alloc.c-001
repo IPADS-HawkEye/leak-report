@@ -1,0 +1,7 @@
+drivers/android/binder_alloc.c:805
+Variable: buffer->data
+805->	seq_printf(m, "%s %d: %pK size %zd:%zd:%zd %s\n",
+806		   prefix, buffer->debug_id, buffer->data,
+807		   buffer->data_size, buffer->offsets_size,
+808		   buffer->extra_buffers_size,
+809		   buffer->transaction ? "active" : "delivered");

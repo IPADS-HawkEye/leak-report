@@ -1,0 +1,4 @@
+net/sunrpc/xprtrdma/backchannel.c:223
+Variable: headerp
+223->	pr_info("RPC:       %s: rpclen %zd headerp 0x%p lkey 0x%x\n",
+224		__func__, rpclen, headerp, rdmab_lkey(req->rl_rdmabuf));

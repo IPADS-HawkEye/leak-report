@@ -1,0 +1,4 @@
+fs/ocfs2/aops.c:145
+Variable: inode
+145->		mlog(ML_NOTICE, "get_block on system inode 0x%p (%lu)\n",
+146		     inode, inode->i_ino);

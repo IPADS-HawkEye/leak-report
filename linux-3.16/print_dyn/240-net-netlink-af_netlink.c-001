@@ -1,0 +1,8 @@
+net/netlink/af_netlink.c:2374
+Variable: s
+2374->		seq_printf(seq, "%pK %-3d %-6u %08x %-8d %-8d %d %-8d %-8d %-8lu\n",
+2375			   s,
+2376			   s->sk_protocol,
+2377			   nlk->portid,
+2378			   nlk->groups ? (u32)nlk->groups[0] : 0,
+2379			   sk_rmem_alloc_get(s),

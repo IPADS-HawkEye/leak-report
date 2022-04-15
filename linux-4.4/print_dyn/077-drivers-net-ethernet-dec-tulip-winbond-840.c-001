@@ -1,0 +1,3 @@
+drivers/net/ethernet/dec/tulip/winbond-840.c:938
+Variable: np->rx_ring
+938->		printk(KERN_DEBUG "  Rx ring %p: ", np->rx_ring);

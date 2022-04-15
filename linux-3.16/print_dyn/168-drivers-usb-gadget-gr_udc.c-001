@@ -1,0 +1,4 @@
+drivers/usb/gadget/gr_udc.c:171
+Variable: req, &req->req.buf
+171->		seq_printf(seq, "    0x%p: 0x%p %d %d\n", req,
+172			   &req->req.buf, req->req.actual, req->req.length);

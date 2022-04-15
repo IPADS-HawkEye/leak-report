@@ -1,0 +1,5 @@
+drivers/video/fbdev/msm/mdss_hdmi_tx.c:4141
+Variable: pdata->io[i].base
+4141->		DEV_INFO("%s: '%s': start = 0x%pK, len=0x%x\n", __func__,
+4142			hdmi_tx_io_name(i), pdata->io[i].base,
+4143			pdata->io[i].len);

@@ -1,0 +1,3 @@
+net/can/bcm.c:173
+Variable: bo
+173->	seq_printf(m, " / bo %pK", bo);

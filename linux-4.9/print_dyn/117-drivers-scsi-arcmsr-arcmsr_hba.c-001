@@ -1,0 +1,8 @@
+drivers/scsi/arcmsr/arcmsr_hba.c:2970
+Variable: ccb
+2970->				printk(KERN_NOTICE "arcmsr%d: scsi id = %d lun = %d ccb = '0x%p'"
+2971					" poll command abort successfully \n"
+2972					, acb->host->host_no
+2973					, ccb->pcmd->device->id
+2974					, (u32)ccb->pcmd->device->lun
+2975					, ccb);

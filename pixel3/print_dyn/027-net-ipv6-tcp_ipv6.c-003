@@ -1,0 +1,13 @@
+net/ipv6/tcp_ipv6.c:1831
+Variable: tw
+1831->	seq_printf(seq,
+1832		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1833		   "%02X %08X:%08X %02X:%08lX %08X %5d %8d %d %d %pK\n",
+1834		   i,
+1835		   src->s6_addr32[0], src->s6_addr32[1],
+1836		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+1837		   dest->s6_addr32[0], dest->s6_addr32[1],
+1838		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+1839		   tw->tw_substate, 0, 0,
+1840		   3, jiffies_delta_to_clock_t(delta), 0, 0, 0, 0,
+1841		   atomic_read(&tw->tw_refcnt), tw);

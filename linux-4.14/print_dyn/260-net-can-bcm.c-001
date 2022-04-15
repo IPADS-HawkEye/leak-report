@@ -1,0 +1,3 @@
+net/can/bcm.c:177
+Variable: sk->sk_socket
+177->	seq_printf(m, ">>> socket %pK", sk->sk_socket);

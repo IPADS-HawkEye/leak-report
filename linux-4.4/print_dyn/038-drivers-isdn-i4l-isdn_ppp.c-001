@@ -1,0 +1,3 @@
+drivers/isdn/i4l/isdn_ppp.c:2295
+Variable: r
+2295->	printk(KERN_DEBUG "ippp_ccp: allocated reset data structure %p\n", r);

@@ -1,0 +1,11 @@
+net/ipv4/raw.c:1035
+Variable: sp
+1035->	seq_printf(seq, "%4d: %08X:%04X %08X:%04X"
+1036		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d\n",
+1037		i, src, srcp, dest, destp, sp->sk_state,
+1038		sk_wmem_alloc_get(sp),
+1039		sk_rmem_alloc_get(sp),
+1040		0, 0L, 0,
+1041		from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1042		0, sock_i_ino(sp),
+1043		refcount_read(&sp->sk_refcnt), sp, atomic_read(&sp->sk_drops));

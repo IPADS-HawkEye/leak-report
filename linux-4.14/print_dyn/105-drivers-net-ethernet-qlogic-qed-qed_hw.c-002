@@ -1,0 +1,8 @@
+drivers/net/ethernet/qlogic/qed/qed_hw.c:297
+Variable: src
+297->	DP_VERBOSE(p_hwfn, NETIF_MSG_HW,
+298		   "hw_addr 0x%x, hw_addr 0x%x, src %p size %lu\n",
+299		   hw_addr, hw_addr, src, (unsigned long)n);
+Definition:
+include/linux/qed/qed_if.h:783
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

@@ -1,0 +1,10 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c:3939
+Variable: tx_buf, tx_start_bd
+3939->	DP(NETIF_MSG_TX_QUEUED,
+3940	   "sending pkt %u @%p  next_idx %u  bd %u @%p\n",
+3941	   pkt_prod, tx_buf, txdata->tx_pkt_prod, bd_prod, tx_start_bd);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

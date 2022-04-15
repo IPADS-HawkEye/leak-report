@@ -1,0 +1,22 @@
+fs/ocfs2/cluster/netdebug.c:147
+Variable: nst
+147->	seq_printf(seq, "%p:\n"
+148		   "  pid:          %lu\n"
+149		   "  tgid:         %lu\n"
+150		   "  process name: %s\n"
+151		   "  node:         %u\n"
+152		   "  sc:           %p\n"
+153		   "  message id:   %d\n"
+154		   "  message type: %u\n"
+155		   "  message key:  0x%08x\n"
+156		   "  sock acquiry: %lld usecs ago\n"
+157		   "  send start:   %lld usecs ago\n"
+158		   "  wait start:   %lld usecs ago\n",
+159		   nst, (unsigned long)task_pid_nr(nst->st_task),
+160		   (unsigned long)nst->st_task->tgid,
+161		   nst->st_task->comm, nst->st_node,
+162		   nst->st_sc, nst->st_id, nst->st_msg_type,
+163		   nst->st_msg_key,
+164		   (long long)sock,
+165		   (long long)send,
+166		   (long long)status);

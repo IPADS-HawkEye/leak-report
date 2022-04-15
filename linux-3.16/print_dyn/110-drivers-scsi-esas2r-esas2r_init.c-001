@@ -1,0 +1,6 @@
+drivers/scsi/esas2r/esas2r_init.c:636
+Variable: a->pcid
+636->		esas2r_log_dev(ESAS2R_LOG_INFO,
+637			       &(a->pcid->dev),
+638			       "pci_set_drv_data(%p, NULL) called",
+639			       a->pcid);

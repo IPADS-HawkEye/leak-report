@@ -1,0 +1,11 @@
+drivers/scsi/arcmsr/arcmsr_hba.c:918
+Variable: acb, pCCB, pCCB->acb
+918->		printk(KERN_NOTICE "arcmsr%d: isr get an illegal ccb command \
+919				done acb = '0x%p'"
+920				"ccb = '0x%p' ccbacb = '0x%p' startdone = 0x%x"
+921				" ccboutstandingcount = %d \n"
+922				, acb->host->host_no
+923				, acb
+924				, pCCB
+925				, pCCB->acb
+926				, pCCB

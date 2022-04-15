@@ -1,0 +1,9 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c:210
+Variable: tx_buf, skb
+210->	DP(NETIF_MSG_TX_DONE, "fp[%d]: pkt_idx %d  buff @(%p)->skb %p\n",
+211	   txdata->txq_index, idx, tx_buf, skb);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

@@ -1,0 +1,4 @@
+drivers/scsi/mvsas/mv_sas.c:1961
+Variable: task
+1961->		mv_printk("Release slot [%x] tag[%x], task [%p]:\n",
+1962			slot_idx, slot->slot_tag, task);

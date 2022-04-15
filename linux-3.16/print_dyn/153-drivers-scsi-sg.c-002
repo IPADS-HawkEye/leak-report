@@ -1,0 +1,3 @@
+drivers/scsi/sg.c:2135
+Variable: sfp
+2135->	SCSI_LOG_TIMEOUT(3, printk("sg_add_sfp: sfp=0x%p\n", sfp));

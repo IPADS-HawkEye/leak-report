@@ -1,0 +1,4 @@
+drivers/message/fusion/mptbase.c:6762
+Variable: (void *)ioc->alloc, (void *)(ulong)ioc->alloc_dma
+6762->	seq_printf(m, "  Frames   @ 0x%p (Dma @ 0x%p)\n",
+6763					(void *)ioc->alloc, (void *)(ulong)ioc->alloc_dma);

@@ -1,0 +1,4 @@
+drivers/gpu/drm/drm_dp_mst_topology.c:2779
+Variable: prefix
+2779->	seq_printf(m, "%smst: %p, %d\n", prefix, mstb, mstb->num_ports);
+Function: drm_dp_mst_dump_mstb <- drm_dp_mst_dump_topology <- i915_dp_mst_info (drivers/gpu/drm/i915/i915debugfs.c)

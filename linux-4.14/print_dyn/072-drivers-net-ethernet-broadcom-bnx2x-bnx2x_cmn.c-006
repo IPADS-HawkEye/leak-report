@@ -1,0 +1,10 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c:4128
+Variable: pbd_e1x
+4128->		DP(NETIF_MSG_TX_QUEUED,
+4129		   "PBD (E1X) @%p  ip_data %x  ip_hlen %u  ip_id %u  lso_mss %u  tcp_flags %x  xsum %x  seq %u  hlen %u\n",
+4130		   pbd_e1x, pbd_e1x->global_data, pbd_e1x->ip_hlen_w,
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

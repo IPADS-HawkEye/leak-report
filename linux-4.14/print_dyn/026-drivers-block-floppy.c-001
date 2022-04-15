@@ -1,0 +1,3 @@
+drivers/block/floppy.c:1823
+Variable: current_req
+1823->	pr_info("current_req=%p\n", current_req);

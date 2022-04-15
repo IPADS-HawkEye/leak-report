@@ -1,0 +1,4 @@
+drivers/infiniband/ulp/isert/ib_isert.c:859
+Variable: isert_conn
+859->		pr_warn("conn %p teminating in state %d\n",
+860			   isert_conn, isert_conn->state);

@@ -1,0 +1,8 @@
+fs/btrfs/check-integrity.c:832
+Variable: superblock_bdev
+832->			btrfs_info_in_rcu(fs_info,
+833				"new initial S-block (bdev %p, %s) @%llu (%s/%llu/%d)",
+834				     superblock_bdev,
+835				     rcu_str_deref(device->name), dev_bytenr,
+836				     dev_state->name, dev_bytenr,
+837				     superblock_mirror_num);

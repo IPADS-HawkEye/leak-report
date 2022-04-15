@@ -1,0 +1,3 @@
+drivers/net/ethernet/brocade/bna/bnad.c:3610
+3610->	pr_info("bnad_pci_probe : (0x%p, 0x%p) PCI Func : (%d)\n",
+3611	       pdev, pcidev_id, PCI_FUNC(pdev->devfn));

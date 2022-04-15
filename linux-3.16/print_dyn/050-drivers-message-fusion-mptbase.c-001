@@ -1,0 +1,5 @@
+drivers/message/fusion/mptbase.c:2131
+Variable: pdev
+2131->	printk(MYIOC_s_INFO_FMT "pci-suspend: pdev=0x%p, slot=%s, Entering "
+2132	    "operating state [D%d]\n", ioc->name, pdev, pci_name(pdev),
+2133	    device_state);

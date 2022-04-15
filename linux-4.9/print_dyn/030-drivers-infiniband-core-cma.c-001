@@ -1,0 +1,5 @@
+drivers/infiniband/core/cma.c:4148
+Variable: &id_priv->id
+4148->		pr_info("RDMA CM addr change for ndev %s used by id %p\n",
+4149			ndev->name, &id_priv->id);
+Function:cma_netdev_change <- cma_netdev_callback

@@ -1,0 +1,10 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_main.c:8338
+Variable: bp->t2
+8338->		bp->t2 = BNX2X_PCI_ALLOC(&bp->t2_mapping, SRC_T2_SZ);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.h
+#define BNX2X_PCI_ALLOC(y, size) void *x = dma_zalloc_coheren(...), DP(...., x);
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

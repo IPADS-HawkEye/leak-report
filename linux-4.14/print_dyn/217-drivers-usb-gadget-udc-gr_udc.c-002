@@ -1,0 +1,5 @@
+drivers/usb/gadget/udc/gr_udc.c:178
+Variable: desc
+178->			seq_printf(seq, "    %c 0x%p (0x%08x): 0x%05x 0x%08x\n",
+179				   desc == req->curr_desc ? 'c' : ' ',
+180				   desc, desc->paddr, desc->ctrl, desc->data);

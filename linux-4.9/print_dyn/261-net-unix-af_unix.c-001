@@ -1,0 +1,8 @@
+net/unix/af_unix.c:2806
+Variable: s
+2806->		seq_printf(seq, "%pK: %08X %08X %08X %04X %02X %5lu",
+2807			s,
+2808			atomic_read(&s->sk_refcnt),
+2809			0,
+2810			s->sk_state == TCP_LISTEN ? __SO_ACCEPTCON : 0,
+2811			s->sk_type,

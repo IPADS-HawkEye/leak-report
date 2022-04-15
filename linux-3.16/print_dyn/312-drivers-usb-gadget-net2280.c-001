@@ -1,0 +1,3 @@
+drivers/usb/gadget/net2280.c:2828
+2828->	INFO (dev, "irq %d, pci mem %p, chip rev %04x\n",
+2829			pdev->irq, base, dev->chiprev);

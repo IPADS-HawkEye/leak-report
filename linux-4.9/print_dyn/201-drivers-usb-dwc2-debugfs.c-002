@@ -1,0 +1,5 @@
+drivers/usb/dwc2/debugfs.c:303
+Variable: req, req->req.buf
+303->		seq_printf(seq, "%c req %p: %d bytes @%p, ",
+304			   req == ep->req ? '*' : ' ',
+305			   req, req->req.length, req->req.buf);

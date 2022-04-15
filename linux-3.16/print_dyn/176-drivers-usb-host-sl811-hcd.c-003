@@ -1,0 +1,8 @@
+drivers/usb/host/sl811-hcd.c:1437
+Variable: ep
+1437->		seq_printf(s, "%s%sqh%p, ep%d%s, maxpacket %d"
+1438					" nak %d err %d\n",
+1439			(ep == sl811->active_a) ? "(A) " : "",
+1440			(ep == sl811->active_b) ? "(B) " : "",
+1441			ep, ep->epnum,
+1442			({ char *s; switch (ep->nextpid) {

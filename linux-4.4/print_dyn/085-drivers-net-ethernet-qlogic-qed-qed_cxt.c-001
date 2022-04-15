@@ -1,0 +1,8 @@
+drivers/net/ethernet/qlogic/qed/qed_cxt.c:345
+Variable: p_virt
+345->		DP_VERBOSE(p_hwfn, QED_MSG_ILT,
+346			   "ILT shadow: Line [%d] Physical 0x%llx Virtual %p Size %d\n",
+347			    line, (u64)p_phys, p_virt, size);
+Definition:
+include/linux/qed/qed_if.h:309
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

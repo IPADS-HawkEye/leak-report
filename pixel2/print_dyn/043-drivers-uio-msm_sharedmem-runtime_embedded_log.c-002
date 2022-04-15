@@ -1,0 +1,4 @@
+drivers/uio/msm_sharedmem/runtime_embedded_log.c:180
+Variable: handle
+180->				pr_info("[rtel] registering notif for '%s', handle=0x%p\n",
+181					nb->name, handle);

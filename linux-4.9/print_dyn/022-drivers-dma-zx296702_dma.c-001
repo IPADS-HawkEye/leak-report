@@ -1,0 +1,4 @@
+drivers/dma/zx296702_dma.c:752
+Variable: &c->vc
+752->	dev_info(d->slave.dev, "zx_dma: pchan %u: alloc vchan %p\n",
+753		 c->id, &c->vc);

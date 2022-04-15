@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:2802
+Variable: cmd
+2802->			printk(KERN_NOTICE "megasas: %p scsi cmd [%02x]"
+2803			"detected on the internal queue, issue again.\n",
+2804			cmd, cmd->scmd->cmnd[0]);

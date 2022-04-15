@@ -1,0 +1,4 @@
+drivers/net/ethernet/fealnx.c:667
+667->	printk(KERN_INFO "%s: %s at %p, %pM, IRQ %d.\n",
+668	       dev->name, skel_netdrv_tbl[chip_id].chip_name, ioaddr,
+669	       dev->dev_addr, irq);

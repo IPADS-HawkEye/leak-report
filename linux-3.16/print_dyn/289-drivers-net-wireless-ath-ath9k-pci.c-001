@@ -1,0 +1,3 @@
+drivers/net/wireless/ath/ath9k/pci.c:876
+876->	wiphy_info(hw->wiphy, "%s mem=0x%lx, irq=%d\n",
+877		   hw_name, (unsigned long)sc->mem, pdev->irq);

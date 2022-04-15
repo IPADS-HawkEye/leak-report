@@ -1,0 +1,6 @@
+drivers/staging/xgifb/XGI_main_26.c:1779
+1779->	dev_info(&pdev->dev,
+1780		 "Framebuffer at 0x%Lx, mapped to 0x%p, size %dk\n",
+1781		 (u64) xgifb_info->video_base,
+1782		 xgifb_info->video_vbase,
+1783		 xgifb_info->video_size / 1024);

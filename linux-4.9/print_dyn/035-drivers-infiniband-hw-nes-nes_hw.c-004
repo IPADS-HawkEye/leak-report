@@ -1,0 +1,5 @@
+drivers/infiniband/hw/nes/nes_hw.c:2711
+Variable: nesvnic->netdev
+2711->				printk(PFX "The Link is now down for port %s, netdev %p.\n",
+2712						nesvnic->netdev->name, nesvnic->netdev);
+Function: nes_process_mac_intr <- nes_dpc (registered in drivers/infiniband/hw/nes/nes.c:608)

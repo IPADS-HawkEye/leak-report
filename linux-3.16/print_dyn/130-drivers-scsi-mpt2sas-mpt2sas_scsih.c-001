@@ -1,0 +1,4 @@
+drivers/scsi/mpt2sas/mpt2sas_scsih.c:2777
+Variable: scmd
+2777->	printk(MPT2SAS_INFO_FMT "attempting host reset! scmd(%p)\n",
+2778	    ioc->name, scmd);

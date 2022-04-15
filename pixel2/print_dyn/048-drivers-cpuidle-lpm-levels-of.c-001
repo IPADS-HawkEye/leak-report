@@ -1,0 +1,4 @@
+drivers/cpuidle/lpm-levels-of.c:1031
+Variable: &cluster->name[j], &l->mode[i]
+1031->			pr_info("%sDevice: %p id:%p\n", str,
+1032					&cluster->name[j], &l->mode[i]);

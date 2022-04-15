@@ -1,0 +1,4 @@
+drivers/media/pci/cx88/cx88-video.c:1429
+Variable: buf
+1429->		printk("%s/0: [%p/%d] timeout - dma=0x%08lx\n", core->name,
+1430		       buf, buf->vb.i, (unsigned long)buf->risc.dma);

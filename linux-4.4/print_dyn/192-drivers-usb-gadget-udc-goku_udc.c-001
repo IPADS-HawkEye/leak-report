@@ -1,0 +1,5 @@
+drivers/usb/gadget/udc/goku_udc.c:1231
+Variable: &req->req, req->req.buf
+1231->			seq_printf(m, "\treq %p len %u/%u buf %p\n",
+1232				   &req->req, tmp, req->req.length,
+1233				   req->req.buf);

@@ -1,0 +1,325 @@
+chromium-os/v4.14/
+#DYN
+drivers/gpu/drm/drm_dp_mst_topology.c:2939
+Variable: prefix
+2939->	seq_printf(m, "%smst: %p, %d\n", prefix, mstb, mstb->num_ports);
+Function: drm_dp_mst_dump_mstb <- drm_dp_mst_dump_topology <- i915_dp_mst_info (drivers/gpu/drm/i915/i915debugfs.c)
+ =============================================
+drivers/gpu/drm/drm_dp_mst_topology.c:2941
+Variable: port, port->connector
+2941->		seq_printf(m, "%sport: %d: input: %d: pdt: %d, ddps: %d ldps: %d, sdp: %d/%d, %p, conn: %p\n", prefix, port->port_num, port->input, port->pdt, port->ddps, port->ldps, port->num_sdp_streams, port->num_sdp_stream_sinks, port, port->connector);
+Function: drm_dp_mst_dump_mstb <- drm_dp_mst_dump_topology <- i915_dp_mst_info (drivers/gpu/drm/i915/i915debugfs.c)
+ =============================================
+drivers/gpu/drm/i915/i915_debugfs.c:132
+Variable: &obj->base
+132->	seq_printf(m, "%pK: %c%c%c%c%c %8zdKiB %02x %02x %s%s%s",
+133		   &obj->base,
+134		   get_active_flag(obj),
+ =============================================
+drivers/gpu/drm/i915/i915_debugfs.c:2442
+Variable: guc->execbuf_client
+2442->	seq_printf(m, "\nGuC execbuf client @ %p:\n", guc->execbuf_client);
+ =============================================
+drivers/gpu/drm/udl/udl_fb.c:239
+Variable: info
+239->	pr_notice("open /dev/fb%d user=%d fb_info=%p count=%d\n",
+240		  info->node, user, info, ufbdev->fb_count);
+Function: udl_fb_open
+ =============================================
+drivers/android/binder.c:5004
+Variable: t
+5004->	seq_printf(m,
+5005		   "%s %d: %pK from %d:%d to %d:%d code %x flags %x pri %ld r%d",
+5006		   prefix, t->debug_id, t,
+5007		   t->from ? t->from->proc->pid : 0,
+5008		   t->from ? t->from->pid : 0,
+5009		   to_proc ? to_proc->pid : 0,
+Note: CVE-2018-20510
+ =============================================
+drivers/android/binder.c:5029
+Variable: buffer->data
+5029->	seq_printf(m, " size %zd:%zd data %pK\n",
+5030		   buffer->data_size, buffer->offsets_size,
+5031		   buffer->data);
+5032}
+ =============================================
+drivers/android/binder.c:5151
+Variable: ref_death
+5151->	seq_printf(m, "  ref %d: desc %d %snode %d s %d w %d d %pK\n",
+5152		   ref->data.debug_id, ref->data.desc,
+5153		   ref->node->proc ? "" : "dead ",
+5154		   ref->node->debug_id, ref->data.strong,
+5155		   ref->data.weak, ref->death);
+Note: CVE-2018-20509
+ =============================================
+drivers/android/binder_alloc.c:827
+Variable: buffer->data
+827->	seq_printf(m, "%s %d: %pK size %zd:%zd:%zd %s\n",
+828		   prefix, buffer->debug_id, buffer->data,
+829		   buffer->data_size, buffer->offsets_size,
+830		   buffer->extra_buffers_size,
+831		   buffer->transaction ? "active" : "delivered");
+ =============================================
+block/blk-core.c:216
+Variable: rq->bio, rq->biotail
+216->	printk(KERN_INFO "  bio %p, biotail %p, len %u\n",
+217	       rq->bio, rq->biotail, blk_rq_bytes(rq));
+218}
+ =============================================
+mm/percpu.c:2632
+Variable: vm.addr
+2632->	pr_info("%d %s pages/cpu @%p s%zu r%zu d%zu\n",
+2633		unit_pages, psize_str, vm.addr, ai->static_size,
+2634		ai->reserved_size, ai->dyn_size);
+ =============================================
+mm/vmalloc.c:2710
+Variable: vm->va_start, va->va_end
+2710->		seq_printf(m, "0x%pK-0x%pK %7ld %s\n",
+2711			(void *)va->va_start, (void *)va->va_end,
+2712			va->va_end - va->va_start,
+2713			va->flags & VM_LAZY_FREE ? "unpurged vm_area" : "vm_map_ram");
+ =============================================
+mm/vmalloc.c:2720
+Variable: v->addr, v->addr + v->size
+2720->	seq_printf(m, "0x%pK-0x%pK %7ld",
+2721		v->addr, v->addr + v->size, v->size);
+ =============================================
+net/ipv4/ping.c:1125
+Variable: sp 
+1125->	seq_printf(f, "%5d: %08X:%04X %08X:%04X"
+1126		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d",
+1127		bucket, src, srcp, dest, destp, sp->sk_state,
+1128		sk_wmem_alloc_get(sp),
+1129		sk_rmem_alloc_get(sp),
+1130		0, 0L, 0,
+1131		from_kuid_munged(seq_user_ns(f), sock_i_uid(sp)),
+1132		0, sock_i_ino(sp),
+1133		refcount_read(&sp->sk_refcnt), sp,
+1134		atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv4/raw.c:1069
+Variable: sp
+1069->	seq_printf(seq, "%4d: %08X:%04X %08X:%04X"
+1070		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d\n",
+1071		i, src, srcp, dest, destp, sp->sk_state,
+1072		sk_wmem_alloc_get(sp),
+1073		sk_rmem_alloc_get(sp),
+1074		0, 0L, 0,
+1075		from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1076		0, sock_i_ino(sp),
+1077		refcount_read(&sp->sk_refcnt), sp, atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv4/tcp_ipv4.c:2225
+Variable: req
+2225->	seq_printf(f, "%4d: %08X:%04X %08X:%04X"
+2226		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %u %d %pK",
+2227		i,
+2228		ireq->ir_loc_addr,
+2229		ireq->ir_num,
+2230		ireq->ir_rmt_addr,
+2231		ntohs(ireq->ir_rmt_port),
+2232		TCP_SYN_RECV,
+2233		0, 0, /* could print option size, but that is af dependent. */
+2234		1,    /* timers active (only the expire timer) */
+2235		jiffies_delta_to_clock_t(delta),
+2236		req->num_timeout,
+2237		from_kuid_munged(seq_user_ns(f),
+2238				 sock_i_uid(req->rsk_listener)),
+2239		0,  /* non standard timer */
+2240		0, /* open_requests have no inode */
+2241		0,
+2242		req);
+ =============================================
+net/ipv4/tcp_ipv4.c:2285
+Variable: sk
+2285->	seq_printf(f, "%4d: %08X:%04X %08X:%04X %02X %08X:%08X %02X:%08lX "
+2286			"%08X %5u %8d %lu %d %pK %lu %lu %u %u %d",
+2287		i, src, srcp, dest, destp, state,
+2288		tp->write_seq - tp->snd_una,
+2289		rx_queue,
+2290		timer_active,
+2291		jiffies_delta_to_clock_t(timer_expires - jiffies),
+2292		icsk->icsk_retransmits,
+2293		from_kuid_munged(seq_user_ns(f), sock_i_uid(sk)),
+2294		icsk->icsk_probes_out,
+2295		sock_i_ino(sk),
+2296		refcount_read(&sk->sk_refcnt), sk,
+2297		jiffies_to_clock_t(icsk->icsk_rto),
+2298		jiffies_to_clock_t(icsk->icsk_ack.ato),
+2299		(icsk->icsk_ack.quick << 1) | icsk->icsk_ack.pingpong,
+2300		tp->snd_cwnd,
+2301		state == TCP_LISTEN ?
+2302		    fastopenq->max_qlen :
+2303		    (tcp_in_initial_slowstart(tp) ? -1 : tp->snd_ssthresh));
+ =============================================
+net/ipv4/tcp_ipv4.c:2318
+Variable: tw
+2318->	seq_printf(f, "%4d: %08X:%04X %08X:%04X"
+2319		" %02X %08X:%08X %02X:%08lX %08X %5d %8d %d %d %pK",
+2320		i, src, srcp, dest, destp, tw->tw_substate, 0, 0,
+2321		3, jiffies_delta_to_clock_t(delta), 0, 0, 0, 0,
+2322		refcount_read(&tw->tw_refcnt), tw);
+ =============================================
+net/ipv4/udp.c:2738
+Variable: sp
+2738->	seq_printf(f, "%5d: %08X:%04X %08X:%04X"
+2739		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d",
+2740		bucket, src, srcp, dest, destp, sp->sk_state,
+2741		sk_wmem_alloc_get(sp),
+2742		udp_rqueue_get(sp),
+2743		0, 0L, 0,
+2744		from_kuid_munged(seq_user_ns(f), sock_i_uid(sp)),
+2745		0, sock_i_ino(sp),
+2746		refcount_read(&sp->sk_refcnt), sp,
+2747		atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv6/datagram.c:1038
+Variable: sp
+1038->	seq_printf(seq,
+1039		   "%5d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1040		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d\n",
+1041		   bucket,
+1042		   src->s6_addr32[0], src->s6_addr32[1],
+1043		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+1044		   dest->s6_addr32[0], dest->s6_addr32[1],
+1045		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+1046		   sp->sk_state,
+1047		   sk_wmem_alloc_get(sp),
+1048		   rqueue,
+1049		   0, 0L, 0,
+1050		   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1051		   0,
+1052		   sock_i_ino(sp),
+1053		   refcount_read(&sp->sk_refcnt), sp,
+1054		   atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv6/tcp_ipv6.c:1741
+Variable: req
+1741->	seq_printf(seq,
+1742		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1743		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %d %d %pK\n",
+1744		   i,
+1745		   src->s6_addr32[0], src->s6_addr32[1],
+1746		   src->s6_addr32[2], src->s6_addr32[3],
+1747		   inet_rsk(req)->ir_num,
+1748		   dest->s6_addr32[0], dest->s6_addr32[1],
+1749		   dest->s6_addr32[2], dest->s6_addr32[3],
+1750		   ntohs(inet_rsk(req)->ir_rmt_port),
+1751		   TCP_SYN_RECV,
+1752		   0, 0, /* could print option size, but that is af dependent. */
+1753		   1,   /* timers active (only the expire timer) */
+1754		   jiffies_to_clock_t(ttd),
+1755		   req->num_timeout,
+1756		   from_kuid_munged(seq_user_ns(seq),
+1757				    sock_i_uid(req->rsk_listener)),
+1758		   0,  /* non standard timer */
+1759		   0, /* open_requests have no inode */
+1760		   0, req);
+ =============================================
+net/ipv6/tcp_ipv6.c:1806
+Variable: sp
+1806->	seq_printf(seq,
+1807		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1808		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %lu %lu %u %u %d\n",
+1809		   i,
+1810		   src->s6_addr32[0], src->s6_addr32[1],
+1811		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+1812		   dest->s6_addr32[0], dest->s6_addr32[1],
+1813		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+1814		   state,
+1815		   tp->write_seq - tp->snd_una,
+1816		   rx_queue,
+1817		   timer_active,
+1818		   jiffies_delta_to_clock_t(timer_expires - jiffies),
+1819		   icsk->icsk_retransmits,
+1820		   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1821		   icsk->icsk_probes_out,
+1822		   sock_i_ino(sp),
+1823		   refcount_read(&sp->sk_refcnt), sp,
+1824		   jiffies_to_clock_t(icsk->icsk_rto),
+1825		   jiffies_to_clock_t(icsk->icsk_ack.ato),
+1826		   (icsk->icsk_ack.quick << 1) | icsk->icsk_ack.pingpong,
+1827		   tp->snd_cwnd,
+1828		   state == TCP_LISTEN ?
+1829			fastopenq->max_qlen :
+1830			(tcp_in_initial_slowstart(tp) ? -1 : tp->snd_ssthresh)
+1831		   );
+ =============================================
+net/ipv6/tcp_ipv6.c:1846
+Variable: tw
+1846->	seq_printf(seq,
+1847		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1848		   "%02X %08X:%08X %02X:%08lX %08X %5d %8d %d %d %pK\n",
+1849		   i,
+1850		   src->s6_addr32[0], src->s6_addr32[1],
+1851		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+1852		   dest->s6_addr32[0], dest->s6_addr32[1],
+1853		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+1854		   tw->tw_substate, 0, 0,
+1855		   3, jiffies_delta_to_clock_t(delta), 0, 0, 0, 0,
+1856		   refcount_read(&tw->tw_refcnt), tw);
+ =============================================
+net/key/af_key.c:3761
+Variable:s 
+3761->		seq_printf(f, "%pK %-6d %-6u %-6u %-6u %-6lu\n",
+3762			       s,
+3763			       refcount_read(&s->sk_refcnt),
+3764			       sk_rmem_alloc_get(s),
+3765			       sk_wmem_alloc_get(s),
+3766			       from_kuid_munged(seq_user_ns(f), sock_i_uid(s)),
+ =============================================
+net/netfilter/xt_qtaguid.c:2073
+Variable: sock_tag_entry->sk
+2073->		seq_printf(m, "sock=%pK tag=0x%llx (uid=%u) pid=%u "
+2074			   "f_count=%d\n",
+2075			   sock_tag_entry->sk,
+2076			   sock_tag_entry->tag, uid,
+2077			   sock_tag_entry->pid, sk_ref_count);
+ =============================================
+net/netlink/af_netlink.c:2598
+Variable: s
+2598->		seq_printf(seq, "%pK %-3d %-6u %08x %-8d %-8d %d %-8d %-8d %-8lu\n",
+2599			   s,
+ =============================================
+net/packet/af_packet.c:4557
+Variable: s
+4557->		seq_printf(seq,
+4558			   "%pK %-6d %-4d %04x   %-5d %1d %-6u %-6u %-6lu\n",
+4559			   s,
+ =============================================
+net/unix/af_unix.c:2832
+Variable: s
+2832->		seq_printf(seq, "%pK: %08X %08X %08X %04X %02X %5lu",
+2833			s,
+ =============================================
+sound/core/timer.c:935
+Variable: timer
+935->		pr_warn("ALSA: timer %p is busy?\n", timer);
+ =============================================
+fs/ecryptfs/debug.c:37
+Variable: auth_tok
+37->	ecryptfs_printk(KERN_DEBUG, "Auth tok at mem loc [%p]:\n",
+38			auth_tok);
+ =============================================
+fs/ecryptfs/file.c:252
+Variable: inode
+252->	ecryptfs_printk(KERN_DEBUG, "inode w/ addr = [0x%p], i_ino = "
+253			"[0x%.16lx] size: [0x%.16llx]\n", inode, inode->i_ino,
+254			(unsigned long long)i_size_read(inode));
+ =============================================
+kernel/time/timer_list.c:121
+Variable: base
+121->	SEQ_printf(m, "  .base:       %pK\n", base);
+ =============================================
+mm/percpu.c:2510
+Variable: base
+2510->	pr_info("Embedded %zu pages/cpu @%p s%zu r%zu d%zu u%zu\n",
+2511		PFN_DOWN(size_sum), base, ai->static_size, ai->reserved_size,
+2512		ai->dyn_size, ai->unit_size);
+Note: CVE-2018-5995
+ =============================================
+fs/proc/base.c:469
+469->			seq_printf(m, "[<%pK>] %pB\n",
+470				   (void *)entries[i], (void *)entries[i]);
+Note: CVE-2018-17972
+ =============================================

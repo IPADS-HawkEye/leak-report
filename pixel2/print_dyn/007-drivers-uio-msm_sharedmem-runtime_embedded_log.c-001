@@ -1,0 +1,8 @@
+drivers/uio/msm_sharedmem/runtime_embedded_log.c:159
+Variable: rtel_ramdump_segments->v_address
+159->			pr_info("[rtel] rtel addr= 0x%lx, size= 0x%lx, v_addr= 0x%p\n",
+160					rtel_ramdump_segments->address,
+161					rtel_ramdump_segments->size,
+162					rtel_ramdump_segments->v_address);
+163		}
+164

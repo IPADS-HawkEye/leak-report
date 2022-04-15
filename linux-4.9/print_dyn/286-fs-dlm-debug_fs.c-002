@@ -1,0 +1,8 @@
+fs/dlm/debug_fs.c:265
+Variable: r
+265->	seq_printf(s, "rsb %p %d %x %lx %d %d %u %d ",
+266		   r,
+267		   r->res_nodeid,
+Function: print_format3(struct dlm_rsb *r, struct seq_file *s)
+403 print_format3(ri->rsb, seq);
+Function: table_seq_show

@@ -1,0 +1,4 @@
+net/atm/proc.c:220
+Variable: vcc
+220->		seq_printf(seq, sizeof(void *) == 4 ?
+221			   "N/A@%pK%10s" : "N/A@%pK%2s", vcc, "");

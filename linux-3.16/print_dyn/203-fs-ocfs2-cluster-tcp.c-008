@@ -1,0 +1,4 @@
+fs/ocfs2/cluster/tcp.c:866
+Variable: func
+866->		mlog(ML_TCP, "registered handler func %p type %u key %08x\n",
+867		     func, msg_type, key);

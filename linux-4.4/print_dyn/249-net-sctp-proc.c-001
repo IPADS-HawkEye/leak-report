@@ -1,0 +1,7 @@
+net/sctp/proc.c:228
+Variable: sctp_sk(sk)->type sk->sk_state
+228->		seq_printf(seq, "%8pK %8pK %-3d %-3d %-4d %-5d %5u %5lu ", ep, sk,
+229			   sctp_sk(sk)->type, sk->sk_state, hash,
+230			   epb->bind_addr.port,
+231			   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sk)),
+232			   sock_i_ino(sk));

@@ -1,0 +1,4 @@
+drivers/target/iscsi/cxgbit/cxgbit_ddp.c:253
+Variable: csk
+253->		pr_info("csk 0x%p, cmd 0x%p, xfer len %u, sgcnt %u no ddp.\n",
+254			csk, cmd, cmd->se_cmd.data_length, ttinfo->nents);

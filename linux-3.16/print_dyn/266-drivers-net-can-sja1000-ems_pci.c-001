@@ -1,0 +1,3 @@
+drivers/net/can/sja1000/ems_pci.c:348
+348->			dev_info(&pdev->dev, "Channel #%d at 0x%p, irq %d\n",
+349					i + 1, priv->reg_base, dev->irq);

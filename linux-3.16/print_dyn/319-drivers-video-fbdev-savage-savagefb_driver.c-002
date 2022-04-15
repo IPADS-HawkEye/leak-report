@@ -1,0 +1,3 @@
+drivers/video/fbdev/savage/savagefb_driver.c:1784
+1784->		printk(KERN_INFO "savagefb: mapped framebuffer at %p, "
+1785		       "pbase == %x\n", par->video.vbase, par->video.pbase);

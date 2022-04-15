@@ -1,0 +1,3 @@
+drivers/net/can/sja1000/sja1000_isa.c:219
+219->	dev_info(&pdev->dev, "%s device registered (reg_base=0x%p, irq=%d)\n",
+220		 DRV_NAME, priv->reg_base, dev->irq);

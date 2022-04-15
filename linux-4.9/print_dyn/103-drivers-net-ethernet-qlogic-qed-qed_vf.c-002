@@ -1,0 +1,8 @@
+drivers/net/ethernet/qlogic/qed/qed_vf.c:450
+Variable: *pp_prod
+450->		DP_VERBOSE(p_hwfn, QED_MSG_IOV,
+451			   "Rxq[0x%02x]: producer at %p [offset 0x%08x]\n",
+452			   rx_qid, *pp_prod, resp->offset);
+Definition:
+include/linux/qed/qed_if.h:602
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

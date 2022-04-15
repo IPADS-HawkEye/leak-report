@@ -1,0 +1,4 @@
+drivers/scsi/mpt3sas/mpt3sas_base.c:1864
+Variable: chip_phys, ioc->chip
+1864->	pr_info(MPT3SAS_FMT "iomem(0x%016llx), mapped(0x%p), size(%d)\n",
+1865	    ioc->name, (unsigned long long)chip_phys, ioc->chip, memap_sz);

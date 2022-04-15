@@ -1,0 +1,3 @@
+drivers/video/fbdev/vga16fb.c:1333
+Variable: info->screen_base
+1333->	printk(KERN_INFO "vga16fb: mapped to 0x%p\n", info->screen_base);

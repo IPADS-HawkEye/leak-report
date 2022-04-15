@@ -1,0 +1,8 @@
+drivers/net/ethernet/qlogic/qed/qed_vf.c:551
+Variable: *pp_doorbell
+551->		DP_VERBOSE(p_hwfn, QED_MSG_IOV,
+552			   "Txq[0x%02x]: doorbell at %p [offset 0x%08x]\n",
+553			   tx_queue_id, *pp_doorbell, resp->offset);
+Definition:
+include/linux/qed/qed_if.h:602
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

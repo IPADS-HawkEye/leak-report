@@ -1,0 +1,6 @@
+drivers/scsi/esas2r/esas2r_main.c:547
+Variable: pdev, host
+547->	esas2r_log_dev(ESAS2R_LOG_INFO, &(pdev->dev),
+548		       "esas2r_remove(%p) called; "
+549		       "host:%p", pdev,
+550		       host);

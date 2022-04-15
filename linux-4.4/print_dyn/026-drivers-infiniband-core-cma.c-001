@@ -1,0 +1,4 @@
+drivers/infiniband/core/cma.c:3835
+Variable: &id_priv->id
+3835->		printk(KERN_INFO "RDMA CM addr change for ndev %s used by id %p\n",
+3836		       ndev->name, &id_priv->id);

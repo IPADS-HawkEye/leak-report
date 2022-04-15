@@ -1,0 +1,3 @@
+drivers/dma/qcom/hidma_dbg.c:79
+Variable: lldev->evre_ring
+79->	seq_printf(s, "evre_ring=%p\n", lldev->evre_ring);

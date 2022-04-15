@@ -1,0 +1,3 @@
+drivers/net/ethernet/qlogic/qla3xxx.c:3408
+3408->	netdev_info(ndev, "mem  IO base address adjusted = 0x%p\n",
+3409		    qdev->mem_map_registers);

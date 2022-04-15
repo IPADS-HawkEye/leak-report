@@ -1,0 +1,5 @@
+drivers/media/platform/vivid/vivid-osd.c:378
+Variable: dev->video_vbase
+378->	pr_info("Framebuffer at 0x%lx, mapped to 0x%p, size %dk\n",
+379			dev->video_pbase, dev->video_vbase,
+380			dev->video_buffer_size / 1024);

@@ -1,0 +1,4 @@
+drivers/usb/gadget/net2272.c:2271
+2271->	dev_info(dev->dev, "irq %i, mem %p, chip rev %04x, dma %s\n",
+2272		dev->irq, dev->base_addr, dev->chiprev,
+2273		dma_mode_string());

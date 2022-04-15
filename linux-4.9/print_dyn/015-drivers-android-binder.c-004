@@ -1,0 +1,5 @@
+drivers/android/binder.c:3400
+Variable: ref->death
+3400->	seq_printf(m, "  ref %d: desc %d %snode %d s %d w %d d %p\n",
+3401		   ref->debug_id, ref->desc, ref->node->proc ? "" : "dead ",
+3402		   ref->node->debug_id, ref->strong, ref->weak, ref->death);

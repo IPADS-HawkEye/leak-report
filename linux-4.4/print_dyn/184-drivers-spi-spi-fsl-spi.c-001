@@ -1,0 +1,4 @@
+drivers/spi/spi-fsl-spi.c:686
+Variable: reg_base
+686->	dev_info(dev, "at 0x%p (irq = %d), %s mode\n", reg_base,
+687		 mpc8xxx_spi->irq, mpc8xxx_spi_strmode(mpc8xxx_spi->flags));

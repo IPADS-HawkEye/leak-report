@@ -1,0 +1,7 @@
+drivers/isdn/hardware/eicon/divasproc.c:300
+Variable: a->resources.pci.addr[i]
+300->				seq_printf(m,
+301					   "Mem / I/O %d : 0x%x / mapped : 0x%lx",
+302					   i, a->resources.pci.bar[i],
+303					   (unsigned long) a->resources.
+304					   pci.addr[i]);

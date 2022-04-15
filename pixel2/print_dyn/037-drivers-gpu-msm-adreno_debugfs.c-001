@@ -1,0 +1,7 @@
+drivers/gpu/msm/adreno_debugfs.c:145
+145->		seq_printf(s, "sync: [%pK] %s", sync_event->handle,
+146		(sync_event->handle && sync_event->handle->fence)
+147				? sync_event->handle->fence->name : "NULL");
+148
+149		spin_unlock_irqrestore(&sync_event->handle_lock, flags);
+150		break;

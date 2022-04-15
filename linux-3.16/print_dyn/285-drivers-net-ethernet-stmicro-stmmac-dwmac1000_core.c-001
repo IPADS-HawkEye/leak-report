@@ -1,0 +1,2 @@
+drivers/net/ethernet/stmicro/stmmac/dwmac1000_core.c:70
+70->	pr_info("\tDWMAC1000 regs (base addr = 0x%p)\n", ioaddr);

@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:3165
+Variable: cmd, cmd->scmd
+3165->			dev_notice(&instance->pdev->dev, "command %p, %p:%d"
+3166				"detected to be pending while HBA reset\n",
+3167					cmd, cmd->scmd, cmd->sync_cmd);

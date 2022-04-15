@@ -1,0 +1,3 @@
+drivers/usb/host/isp1362-hcd.c:2095
+Variable: ep
+2095->		seq_printf(s, "%p, ep%d%s, maxpacket %d:\n", ep, ep->epnum,

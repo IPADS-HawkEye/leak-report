@@ -1,0 +1,3 @@
+drivers/dma/qcom/hidma_dbg.c:134
+Variable: &dmadev->dev_evca
+134->	seq_printf(s, "dev_evca=%p\n", &dmadev->dev_evca);

@@ -1,0 +1,8 @@
+drivers/usb/host/isp1362-hcd.c:2141
+Variable: ep
+2141->		seq_printf(s, "   %d/%p (%sdev%d ep%d%s max %d)\n",
+2142			   ep->interval, ep,
+2143			   (ep->udev->speed == USB_SPEED_FULL) ? "" : "ls ",
+2144			   ep->udev->devnum, ep->epnum,
+2145			   (ep->epnum == 0) ? "" :
+2146			   ((ep->nextpid == USB_PID_IN) ?

@@ -1,0 +1,4 @@
+drivers/media/pci/cx88/cx88-vbi.c:134
+Variable: buf
+134->		printk("%s/0: [%p/%d] timeout - dma=0x%08lx\n", dev->core->name,
+135		       buf, buf->vb.i, (unsigned long)buf->risc.dma);

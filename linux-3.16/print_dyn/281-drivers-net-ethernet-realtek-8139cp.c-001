@@ -1,0 +1,3 @@
+drivers/net/ethernet/realtek/8139cp.c:2013
+2013->	netdev_info(dev, "RTL-8139C+ at 0x%p, %pM, IRQ %d\n",
+2014		    regs, dev->dev_addr, pdev->irq);

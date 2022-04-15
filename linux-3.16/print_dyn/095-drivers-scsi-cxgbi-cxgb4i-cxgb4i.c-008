@@ -1,0 +1,6 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1573
+Variable: pgl->va
+1573->			pr_info("? FL 0x%p,RSS%#llx,FL %#llx,len %u.\n",
+1574				pgl->va, be64_to_cpu(*rsp),
+1575				be64_to_cpu(*(u64 *)pgl->va),
+1576				pgl->tot_len);

@@ -1,0 +1,43 @@
+From e9f1040f47276ef38402963117925d756e40363d Mon Sep 17 00:00:00 2001
+From: 
+Date: 
+Subject: staging: vchiq_arm: Fix misuse of %x
+
+Pointers should be printed with %p or %px rather than
+cast to unsigned long type and printed with %lx.
+Change %lx to %pK to print the pointers.
+
+Signed-off-by: 
+Signed-off-by: 
+---
+ drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c b/drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c
+index 120e9b0..ab7d6a0 100644
+--- a/drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c
++++ b/drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c
+@@ -1458,16 +1458,16 @@ vchiq_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
+ 	if ((status == VCHIQ_SUCCESS) && (ret < 0) && (ret != -EINTR) &&
+ 		(ret != -EWOULDBLOCK))
+ 		vchiq_log_info(vchiq_arm_log_level,
+-			"  ioctl instance %lx, cmd %s -> status %d, %ld",
+-			(unsigned long)instance,
++			"  ioctl instance %pK, cmd %s -> status %d, %ld",
++			instance,
+ 			(_IOC_NR(cmd) <= VCHIQ_IOC_MAX) ?
+ 				ioctl_names[_IOC_NR(cmd)] :
+ 				"<invalid>",
+ 			status, ret);
+ 	else
+ 		vchiq_log_trace(vchiq_arm_log_level,
+-			"  ioctl instance %lx, cmd %s -> status %d, %ld",
+-			(unsigned long)instance,
++			"  ioctl instance %pK, cmd %s -> status %d, %ld",
++			instance,
+ 			(_IOC_NR(cmd) <= VCHIQ_IOC_MAX) ?
+ 				ioctl_names[_IOC_NR(cmd)] :
+ 				"<invalid>",
+-- 
+cgit v1.1
+

@@ -1,0 +1,8 @@
+drivers/gpu/msm/kgsl_debugfs.c:166
+Variable: m->gpuaddr
+166->	seq_printf(s, "%pK %pK %16llu %5d %9s %10s %16s %5d %16llu %6d %6d",
+167			(uint64_t *)(uintptr_t) m->gpuaddr,
+168			(unsigned long *) m->useraddr,
+169			m->size, entry->id, flags,
+170			memtype_str(usermem_type),
+171			usage, (m->sgt ? m->sgt->nents : 0), m->mapsize,

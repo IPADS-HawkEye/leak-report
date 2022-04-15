@@ -1,0 +1,6 @@
+drivers/net/ethernet/qlogic/qlcnic/qlcnic_minidump.c:1390
+Variable: fw_dump->data, fw_dump->tmpl_hdr
+1390->	netdev_info(adapter->netdev,
+1391		    "Dump data %d bytes captured, dump data address = %p, template header size %d bytes, template address = %p\n",
+1392		    fw_dump->size, fw_dump->data, fw_dump->tmpl_hdr_size,
+1393		    fw_dump->tmpl_hdr);

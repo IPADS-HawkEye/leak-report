@@ -1,0 +1,6 @@
+drivers/android/binder.c:3274
+Variable: buffer->data
+3274->	seq_printf(m, "%s %d: %p size %zd:%zd %s\n",
+3275		   prefix, buffer->debug_id, buffer->data,
+3276		   buffer->data_size, buffer->offsets_size,
+3277		   buffer->transaction ? "active" : "delivered");

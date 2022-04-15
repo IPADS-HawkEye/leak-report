@@ -1,0 +1,3 @@
+drivers/usb/dwc2/gadget.c:2996
+Variable: ep
+2996->	dev_info(hs->dev, "%s(ep %p %s, %d)\n", __func__, ep, ep->name, value);

@@ -1,0 +1,5 @@
+drivers/isdn/hisax/hfc_pci.c:75
+Variable: cs->hw.hfcpci.pci_io
+75->	printk(KERN_INFO "HiSax: release hfcpci at %p\n",
+76	       cs->hw.hfcpci.pci_io);
+Function: release_io_hfcpci <- hfcpci_card_msg 

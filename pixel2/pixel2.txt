@@ -1,0 +1,437 @@
+Pixel2/
+#DYN
+lib/swiotlb.c:156
+156->	printk(KERN_INFO "software IO TLB [mem %#010llx-%#010llx] (%luMB) mapped at [%p-%p]\n",
+157	       (unsigned long long)io_tlb_start,
+158	       (unsigned long long)io_tlb_end,
+159	       bytes >> 20, vstart, vend - 1);
+Note: CVE-2018-5953
+ =============================================
+mm/percpu.c:2052
+Variable: base
+2052->	pr_info("PERCPU: Embedded %zu pages/cpu @%p s%zu r%zu d%zu u%zu\n",
+2053		PFN_DOWN(size_sum), base, ai->static_size, ai->reserved_size,
+2054		ai->dyn_size, ai->unit_size);
+Note: CVE-2018-5995
+ =============================================
+fs/proc/base.c:489
+489->			seq_printf(m, "[<%pK>] %pS\n",
+490				   (void *)entries[i], (void *)entries[i]);
+Note: CVE-2018-17972
+ =============================================
+drivers/video/fbdev/msm/mdss_hdmi_tx.c:4141
+Variable: pdata->io[i].base
+4141->		DEV_INFO("%s: '%s': start = 0x%pK, len=0x%x\n", __func__,
+4142			hdmi_tx_io_name(i), pdata->io[i].base,
+4143			pdata->io[i].len);
+ =============================================
+drivers/video/fbdev/msm/mdss_dsi.c:4123
+Variable: ctrl->ctrl_base
+4123->	pr_info("%s: ctrl_base=%pK ctrl_size=%x phy_base=%pK phy_size=%x\n",
+4124		__func__, ctrl->ctrl_base, ctrl->reg_size, ctrl->phy_io.base,
+4125		ctrl->phy_io.len);
+ =============================================
+mm/vmalloc.c:2720
+Variable: v->addr, v->addr + v->size
+2720->	seq_printf(m, "0x%pK-0x%pK %7ld",
+2721		v->addr, v->addr + v->size, v->size);
+ =============================================
+drivers/uio/msm_sharedmem/runtime_embedded_log.c:159
+Variable: rtel_ramdump_segments->v_address
+159->			pr_info("[rtel] rtel addr= 0x%lx, size= 0x%lx, v_addr= 0x%p\n",
+160					rtel_ramdump_segments->address,
+161					rtel_ramdump_segments->size,
+162					rtel_ramdump_segments->v_address);
+163		}
+164
+ =============================================
+drivers/media/v4l2-core/v4l2-ioctl.c:345
+Variable: p->base
+345->	pr_cont("capability=0x%x, flags=0x%x, base=0x%p, width=%u, "
+346		"height=%u, pixelformat=%c%c%c%c, "
+347		"bytesperline=%u, sizeimage=%u, colorspace=%d\n",
+348			p->capability, p->flags, p->base,
+349			p->fmt.width, p->fmt.height,
+350			(p->fmt.pixelformat & 0xff),
+ =============================================
+sound/core/timer.c:868
+Variable: timer
+868->		pr_warn("ALSA: timer %p is busy?\n", timer);
+ =============================================
+drivers/usb/gadget/function/f_cdev.c:1575
+Variable: port->name
+1575->	pr_info("port_name:%s (%pK) portno:(%d)\n",
+1576			port->name, port, port->port_num);
+ =============================================
+fs/sdcardfs/main.c:267
+Variable: mnt
+267->	pr_info("sdcardfs: mnt -> %p\n", mnt);
+ =============================================
+fs/sdcardfs/super.c:147
+Variable: mnt
+147->	pr_info("Remount options were %s for vfsmnt %p.\n", options, mnt);
+ =============================================
+net/bluetooth/af_bluetooth.c:653
+Variable: sk
+653->		seq_printf(seq,
+654			   "%pK %-6d %-6u %-6u %-6u %-6lu %-6lu",
+655			   sk,
+656			   atomic_read(&sk->sk_refcnt),
+657			   sk_rmem_alloc_get(sk),
+658			   sk_wmem_alloc_get(sk),
+ =============================================
+net/ipv4/ping.c:1124
+Variable: sp
+1124->	seq_printf(f, "%5d: %08X:%04X %08X:%04X"
+1125		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d",
+1126		bucket, src, srcp, dest, destp, sp->sk_state,
+1127		sk_wmem_alloc_get(sp),
+1128		sk_rmem_alloc_get(sp),
+1129		0, 0L, 0,
+1130		from_kuid_munged(seq_user_ns(f), sock_i_uid(sp)),
+1131		0, sock_i_ino(sp),
+1132		refcount_read(&sp->sk_refcnt), sp,
+1133		atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv4/raw.c:1035
+Variable: sp
+1035->	seq_printf(seq, "%4d: %08X:%04X %08X:%04X"
+1036		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d\n",
+1037		i, src, srcp, dest, destp, sp->sk_state,
+1038		sk_wmem_alloc_get(sp),
+1039		sk_rmem_alloc_get(sp),
+1040		0, 0L, 0,
+1041		from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1042		0, sock_i_ino(sp),
+1043		refcount_read(&sp->sk_refcnt), sp, atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv4/tcp_ipv4.c:2174
+Variable: req
+2174->	seq_printf(f, "%4d: %08X:%04X %08X:%04X"
+2175		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %u %d %pK",
+2176		i,
+2177		ireq->ir_loc_addr,
+2178		ireq->ir_num,
+2179		ireq->ir_rmt_addr,
+2180		ntohs(ireq->ir_rmt_port),
+2181		TCP_SYN_RECV,
+2182		0, 0, /* could print option size, but that is af dependent. */
+2183		1,    /* timers active (only the expire timer) */
+2184		jiffies_delta_to_clock_t(delta),
+2185		req->num_timeout,
+2186		from_kuid_munged(seq_user_ns(f),
+2187				 sock_i_uid(req->rsk_listener)),
+2188		0,  /* non standard timer */
+2189		0, /* open_requests have no inode */
+2190		0,
+2191		req);
+ =============================================
+net/ipv4/tcp_ipv4.c:2238
+Variable: sk
+2238->	seq_printf(f, "%4d: %08X:%04X %08X:%04X %02X %08X:%08X %02X:%08lX "
+2239			"%08X %5u %8d %lu %d %pK %lu %lu %u %u %d",
+2240		i, src, srcp, dest, destp, seq_state,
+2241		tp->write_seq - tp->snd_una,
+2242		rx_queue,
+2243		timer_active,
+2244		jiffies_delta_to_clock_t(timer_expires - jiffies),
+2245		icsk->icsk_retransmits,
+2246		from_kuid_munged(seq_user_ns(f), sock_i_uid(sk)),
+2247		icsk->icsk_probes_out,
+2248		sock_i_ino(sk),
+2249		refcount_read(&sk->sk_refcnt), sk,
+2250		jiffies_to_clock_t(icsk->icsk_rto),
+2251		jiffies_to_clock_t(icsk->icsk_ack.ato),
+2252		(icsk->icsk_ack.quick << 1) | icsk->icsk_ack.pingpong,
+2253		tp->snd_cwnd,
+2254		state == TCP_LISTEN ?
+2255		    fastopenq->max_qlen :
+2256		    (tcp_in_initial_slowstart(tp) ? -1 : tp->snd_ssthresh));
+ =============================================
+net/ipv4/tcp_ipv4.c:2271
+Variable: tw
+2271->	seq_printf(f, "%4d: %08X:%04X %08X:%04X"
+2272		" %02X %08X:%08X %02X:%08lX %08X %5d %8d %d %d %pK",
+2273		i, src, srcp, dest, destp, tw->tw_substate, 0, 0,
+2274		3, jiffies_delta_to_clock_t(delta), 0, 0, 0, 0,
+2275		atomic_read(&tw->tw_refcnt), tw);
+ =============================================
+net/ipv4/udp.c:2475
+Variable: sp
+2475->	seq_printf(f, "%5d: %08X:%04X %08X:%04X"
+2476		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d",
+2477		bucket, src, srcp, dest, destp, state,
+2478		sk_wmem_alloc_get(sp),
+2479		sk_rmem_alloc_get(sp),
+2480		0, 0L, 0,
+2481		from_kuid_munged(seq_user_ns(f), sock_i_uid(sp)),
+2482		0, sock_i_ino(sp),
+2483		refcount_read(&sp->sk_refcnt), sp,
+2484		atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv6/datagram.c:987
+Variable: sp
+987->	seq_printf(seq,
+988		   "%5d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+989		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d\n",
+990		   bucket,
+991		   src->s6_addr32[0], src->s6_addr32[1],
+992		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+993		   dest->s6_addr32[0], dest->s6_addr32[1],
+994		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+995		   sp->sk_state,
+996		   sk_wmem_alloc_get(sp),
+997		   rqueue,
+998		   0, 0L, 0,
+999		   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1000		   0,
+1001		   sock_i_ino(sp),
+1002		   refcount_read(&sp->sk_refcnt), sp,
+1003		   atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv6/tcp_ipv6.c:1696
+Variable: req
+1696->	seq_printf(seq,
+1697		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1698		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %d %d %pK\n",
+1699		   i,
+1700		   src->s6_addr32[0], src->s6_addr32[1],
+1701		   src->s6_addr32[2], src->s6_addr32[3],
+1702		   inet_rsk(req)->ir_num,
+1703		   dest->s6_addr32[0], dest->s6_addr32[1],
+1704		   dest->s6_addr32[2], dest->s6_addr32[3],
+1705		   ntohs(inet_rsk(req)->ir_rmt_port),
+1706		   TCP_SYN_RECV,
+1707		   0, 0, /* could print option size, but that is af dependent. */
+1708		   1,   /* timers active (only the expire timer) */
+1709		   jiffies_to_clock_t(ttd),
+1710		   req->num_timeout,
+1711		   from_kuid_munged(seq_user_ns(seq),
+1712				    sock_i_uid(req->rsk_listener)),
+1713		   0,  /* non standard timer */
+1714		   0, /* open_requests have no inode */
+1715		   0, req);
+ =============================================
+net/ipv6/tcp_ipv6.c:1765
+Variable: sp
+1765->	seq_printf(seq,
+1766		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1767		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %lu %lu %u %u %d\n",
+1768		   i,
+1769		   src->s6_addr32[0], src->s6_addr32[1],
+1770		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+1771		   dest->s6_addr32[0], dest->s6_addr32[1],
+1772		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+1773		   state_seq,
+1774		   tp->write_seq - tp->snd_una,
+1775		   rx_queue,
+1776		   timer_active,
+1777		   jiffies_delta_to_clock_t(timer_expires - jiffies),
+1778		   icsk->icsk_retransmits,
+1779		   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1780		   icsk->icsk_probes_out,
+1781		   sock_i_ino(sp),
+1782		   atomic_read(&sp->sk_refcnt), sp,
+1783		   jiffies_to_clock_t(icsk->icsk_rto),
+1784		   jiffies_to_clock_t(icsk->icsk_ack.ato),
+1785		   (icsk->icsk_ack.quick << 1) | icsk->icsk_ack.pingpong,
+1786		   tp->snd_cwnd,
+1787		   state == TCP_LISTEN ?
+1788			fastopenq->max_qlen :
+1789			(tcp_in_initial_slowstart(tp) ? -1 : tp->snd_ssthresh)
+1790		   );
+ =============================================
+net/ipv6/tcp_ipv6.c:1805
+Variable: tw
+1805->	seq_printf(seq,
+1806		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1807		   "%02X %08X:%08X %02X:%08lX %08X %5d %8d %d %d %pK\n",
+1808		   i,
+1809		   src->s6_addr32[0], src->s6_addr32[1],
+1810		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+1811		   dest->s6_addr32[0], dest->s6_addr32[1],
+1812		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+1813		   tw->tw_substate, 0, 0,
+1814		   3, jiffies_delta_to_clock_t(delta), 0, 0, 0, 0,
+1815		   atomic_read(&tw->tw_refcnt), tw);
+ =============================================
+net/key/af_key.c:3783
+Variable: s 
+3783->		seq_printf(f, "%pK %-6d %-6u %-6u %-6u %-6lu\n",
+3784			       s,
+3785			       atomic_read(&s->sk_refcnt),
+3786			       sk_rmem_alloc_get(s),
+3787			       sk_wmem_alloc_get(s),
+3788			       from_kuid_munged(seq_user_ns(f), sock_i_uid(s)),
+ =============================================
+net/netfilter/xt_qtaguid.c:1927
+Variable: sock_tag_entry->sk
+1927->		seq_printf(m, "sock=%pK tag=0x%llx (uid=%u) pid=%u "
+1928			   "f_count=%d\n",
+1929			   sock_tag_entry->sk,
+1930			   sock_tag_entry->tag, uid,
+1931			   sock_tag_entry->pid, sk_ref_count);
+ =============================================
+net/netlink/af_netlink.c:2506
+Variable: s
+2506->		seq_printf(seq, "%pK %-3d %-6u %08x %-8d %-8d %d %-8d %-8d %-8lu\n",
+2507			   s,
+2508			   s->sk_protocol,
+ =============================================
+net/packet/af_packet.c:4446
+Variable: s
+4446->		seq_printf(seq,
+4447			   "%pK %-6d %-4d %04x   %-5d %1d %-6u %-6u %-6lu\n",
+4448			   s,
+4449			   atomic_read(&s->sk_refcnt),
+4450			   s->sk_type,
+4451			   ntohs(po->num),
+ =============================================
+net/unix/af_unix.c:2815
+Variable: s
+2815->		seq_printf(seq, "%pK: %08X %08X %08X %04X %02X %5lu",
+2816			s,
+2817			atomic_read(&s->sk_refcnt),
+2818			0,
+2819			s->sk_state == TCP_LISTEN ? __SO_ACCEPTCON : 0,
+2820			s->sk_type,
+ =============================================
+block/blk-core.c:183
+Variable: rq->bio, rq->biotail
+183->	printk(KERN_INFO "  bio %p, biotail %p, len %u\n",
+184	       rq->bio, rq->biotail, blk_rq_bytes(rq));
+ =============================================
+drivers/android/binder.c:5303
+Variable: t
+5303->	seq_printf(m,
+5304		   "%s %d: %p from %d:%d to %d:%d code %x flags %x pri %d:%d r%d",
+5305		   prefix, t->debug_id, t,
+5306		   t->from ? t->from->proc->pid : 0,
+5307		   t->from ? t->from->pid : 0,
+5308		   to_proc ? to_proc->pid : 0,
+Note: CVE-2018-20510
+ =============================================
+drivers/android/binder.c:5329
+Variable: t->buffer->data
+5329->	seq_printf(m, " size %zd:%zd data %p\n",
+5330		   buffer->data_size, buffer->offsets_size,
+5331		   buffer->data);
+ =============================================
+drivers/android/binder.c:5452
+Variable: ref->death
+5452->	seq_printf(m, "  ref %d: desc %d %snode %d s %d w %d d %pK\n",
+5453		   ref->data.debug_id, ref->data.desc,
+5454		   ref->node->proc ? "" : "dead ",
+5455		   ref->node->debug_id, ref->data.strong,
+5456		   ref->data.weak, ref->death);
+ =============================================
+drivers/android/binder_alloc.c:806
+Variable: buffer->data
+806->	seq_printf(m, "%s %d: %pK size %zd:%zd:%zd %s\n",
+807		   prefix, buffer->debug_id, buffer->data,
+808		   buffer->data_size, buffer->offsets_size,
+809		   buffer->extra_buffers_size,
+810		   buffer->transaction ? "active" : "delivered");
+ =============================================
+drivers/crypto/msm/ice.c:1587
+Variable: ice_dev
+1587->			pr_info("%s: found ice device %p\n", __func__, ice_dev);
+ =============================================
+drivers/crypto/msm/ice.c:1593
+Variable: ice_pdev
+1593->	pr_info("%s: matching platform device %p\n", __func__, ice_pdev);
+ =============================================
+arch/arm64/mm/mmu.c:790
+790->		pr_warn("pmd %p != %p, %p\n",
+791			pmd, fixmap_pmd(fix_to_virt(FIX_BTMAP_BEGIN)),
+792			fixmap_pmd(fix_to_virt(FIX_BTMAP_END)));
+ =============================================
+drivers/gpu/msm/adreno_debugfs.c:145
+145->		seq_printf(s, "sync: [%pK] %s", sync_event->handle,
+146		(sync_event->handle && sync_event->handle->fence)
+147				? sync_event->handle->fence->name : "NULL");
+148
+149		spin_unlock_irqrestore(&sync_event->handle_lock, flags);
+150		break;
+ =============================================
+drivers/usb/dwc3/debugfs.c:674
+Variable: req
+674->		seq_printf(s,
+675			"req:0x%pK len: %d sts: %d dma:0x%pa num_sgs: %d\n",
+676			req, req->request.length, req->request.status,
+677			&req->request.dma, req->request.num_sgs);
+ =============================================
+drivers/usb/dwc3/debugfs.c:713
+Variable: req
+713->		seq_printf(s,
+714			"req:0x%pK len:%d sts:%d dma:%pa nsg:%d trb:0x%pK\n",
+715			req, req->request.length, req->request.status,
+716			&req->request.dma, req->request.num_sgs, req->trb);
+ =============================================
+drivers/usb/dwc3/debugfs.c:754
+Variable: trb
+754->		seq_printf(s, "trb:0x%pK bph:0x%x bpl:0x%x size:0x%x ctrl: %x\n",
+755			trb, trb->bph, trb->bpl, trb->size, trb->ctrl);
+ =============================================
+drivers/gpu/msm/kgsl_debugfs.c:163
+Variable: m->gpuaddr, m->useraddr
+163->	seq_printf(s, "%pK %pK %16llu %5d %9s %10s %16s %5d %16llu %6d %6d",
+164			(uint64_t *)(uintptr_t) m->gpuaddr,
+165			(unsigned long *) m->useraddr,
+166			m->size, entry->id, flags,
+167			memtype_str(usermem_type),
+168			usage, (m->sgt ? m->sgt->nents : 0), m->mapsize,
+ =============================================
+drivers/htc_radio/htc_radio_smem.c:46
+Variable: htc_radio_smem
+46->		pr_info("[smem]%s: smem_via_smd=0x%p.\n", __func__,
+47				htc_radio_smem);
+ =============================================
+drivers/uio/msm_sharedmem/runtime_embedded_log.c:180
+Variable: handle
+180->				pr_info("[rtel] registering notif for '%s', handle=0x%p\n",
+181					nb->name, handle);
+ =============================================
+kernel/cgroup.c:5978
+Variable: cset
+5978->		seq_printf(seq, "css_set %pK\n", cset);
+ =============================================
+kernel/time/timer_list.c:131
+Variable: base
+131->	SEQ_printf(m, "  .base:       %pK\n", base);
+ =============================================
+drivers/video/fbdev/msm/mdss_debug_xlog.c:454
+Variable: dump_addr
+454->			pr_info("%s: start_addr:0x%pK end_addr:0x%pK reg_addr=0x%pK\n",
+455				dump_name, dump_addr, dump_addr + (u32)len * 16,
+456				addr);
+ =============================================
+drivers/media/platform/msm/sde/rotator/sde_rotator_debug.c:282
+Variable: dump_addr
+282->			pr_info("%s: start_addr:0x%p end_addr:0x%p reg_addr=0x%X\n",
+283				dump_name, dump_addr, dump_addr + (u32)len * 16,
+284				addr);
+ =============================================
+drivers/cpuidle/lpm-levels-of.c:1031
+Variable: &cluster->name[j], &l->mode[i]
+1031->			pr_info("%sDevice: %p id:%p\n", str,
+1032					&cluster->name[j], &l->mode[i]);
+ =============================================
+#GlobalVariable
+arch/arm64/mm/init.c:374
+374->	pr_notice("Virtual kernel memory layout:\n"
+375#ifdef CONFIG_KASAN
+376		  "    kasan   : 0x%16lx - 0x%16lx   (%6ld GB)\n"
+377#endif
+378		  "    modules : 0x%16lx - 0x%16lx   (%6ld MB)\n"
+379		  "    vmalloc : 0x%16lx - 0x%16lx   (%6ld GB)\n"
+ =============================================
+#COPY_TO_USER
+drivers/media/platform/msm/camera_v2/pproc/cpp/msm_cpp.c:3450
+3450->		if (copy_to_user((void __user *)ioctl_ptr->ioctl_ptr,
+3451				process_frame,
+3452				sizeof(struct msm_cpp_frame_info_t))) {
+3453					mutex_unlock(&cpp_dev->mutex);
+3454					kfree(process_frame->cpp_cmd_msg);
+3455					kfree(process_frame);
+ =============================================

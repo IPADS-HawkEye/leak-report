@@ -1,0 +1,3 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1622
+Variable: cdev
+1622->		pr_info("cdev 0x%p, unknown state %d.\n", cdev, state);

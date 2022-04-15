@@ -1,0 +1,6 @@
+drivers/scsi/cxgbi/libcxgbi.c:1043
+Variable: csk
+1043->			pr_warn("csk 0x%p,%u,0x%lx,%u, cr %u,%u+%u, < %u.\n",
+1044				csk, csk->state, csk->flags, csk->tid,
+1045				credits, csk->wr_cred, csk->wr_una_cred,
+1046				p->csum);

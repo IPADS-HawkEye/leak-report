@@ -1,0 +1,4 @@
+drivers/net/ethernet/sis/sis900.c:559
+559->	printk(KERN_INFO "%s: %s at 0x%p, IRQ %d, %pM\n",
+560	       net_dev->name, card_name, ioaddr, pci_dev->irq,
+561	       net_dev->dev_addr);

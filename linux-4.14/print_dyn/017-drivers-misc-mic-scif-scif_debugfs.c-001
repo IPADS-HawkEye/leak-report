@@ -1,0 +1,5 @@
+drivers/misc/mic/scif/scif_debugfs.c:71
+Variable: window
+71->	seq_printf(s, "window %p type %d temp %d offset 0x%llx ",
+72		   window, window->type, window->temp, window->offset);
+Function: scif_display_window

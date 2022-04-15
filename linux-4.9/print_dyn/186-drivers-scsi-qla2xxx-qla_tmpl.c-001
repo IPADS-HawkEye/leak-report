@@ -1,0 +1,5 @@
+drivers/scsi/qla2xxx/qla_tmpl.c:975
+Variable: vha->hw->fw_dump
+975->		ql_log(ql_log_warn, vha, 0xd300,
+976		    "Firmware has been previously dumped (%p),"
+977		    " -- ignoring request\n", vha->hw->fw_dump);

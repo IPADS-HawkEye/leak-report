@@ -1,0 +1,3 @@
+arch/x86/platform/uv/uv_nmi.c:707
+Variable: uv_hub_nmi_list
+707->	pr_info("UV: NMI hub list @ 0x%p (%d)\n", uv_hub_nmi_list, size);

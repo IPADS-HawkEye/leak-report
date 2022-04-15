@@ -1,0 +1,5 @@
+drivers/scsi/qla2xxx/qla_target.c:4241
+Variable: sess
+4241->				ql_log(ql_log_warn, sess->vha, 0xf095,
+4242				    "sess %p PRLI received, before plogi ack.\n",
+4243				    sess);

@@ -1,0 +1,4 @@
+drivers/usb/host/whci/debug.c:71
+Variable: urb
+71->			seq_printf(s, "  urb %p transferred: %d bytes\n", urb,
+72				urb->actual_length);

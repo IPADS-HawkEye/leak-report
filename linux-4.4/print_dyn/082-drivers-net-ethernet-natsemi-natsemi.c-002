@@ -1,0 +1,3 @@
+drivers/net/ethernet/natsemi/natsemi.c:1870
+Variable: np->rx_ring
+1870->		printk(KERN_DEBUG "  Rx ring %p:\n", np->rx_ring);

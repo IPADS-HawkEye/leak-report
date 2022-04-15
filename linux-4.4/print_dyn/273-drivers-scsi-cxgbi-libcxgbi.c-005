@@ -1,0 +1,4 @@
+drivers/scsi/cxgbi/libcxgbi.c:2763
+Variable: csk
+2763->		pr_info("csk 0x%p is closing.\n", csk);
+2764		goto release_conn;

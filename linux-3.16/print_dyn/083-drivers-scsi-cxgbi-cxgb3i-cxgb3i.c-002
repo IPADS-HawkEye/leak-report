@@ -1,0 +1,3 @@
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:1060
+Variable: cdev
+1060->	pr_info("cdev 0x%p, offload up, added.\n", cdev);

@@ -1,0 +1,3 @@
+drivers/crypto/msm/ice.c:1593
+Variable: ice_pdev
+1593->	pr_info("%s: matching platform device %p\n", __func__, ice_pdev);

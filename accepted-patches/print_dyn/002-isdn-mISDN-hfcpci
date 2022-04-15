@@ -1,0 +1,36 @@
+From 0fa4122b2dc4732e35ea11cf065bc54e0e45ed1d Mon Sep 17 00:00:00 2001
+From: 
+Date: 
+Subject: isdn:mISDN: fix misuse of %x in hfcpci.c
+
+Pointers should be printed with %p or %px rather than
+cast to (u_long) and printed with %lx.
+Change %lx to %p to print the pointer.
+Change %lx to %pad to print the dma_addr_t.
+
+Signed-off-by: 
+Signed-off-by: 
+---
+ drivers/isdn/hardware/mISDN/hfcpci.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/isdn/hardware/mISDN/hfcpci.c b/drivers/isdn/hardware/mISDN/hfcpci.c
+index 362aa54..29c22d7 100644
+--- a/drivers/isdn/hardware/mISDN/hfcpci.c
++++ b/drivers/isdn/hardware/mISDN/hfcpci.c
+@@ -2041,9 +2041,9 @@ setup_hw(struct hfc_pci *hc)
+ 	}
+ 
+ 	printk(KERN_INFO
+-	       "HFC-PCI: defined at mem %#lx fifo %#lx(%#lx) IRQ %d HZ %d\n",
+-	       (u_long) hc->hw.pci_io, (u_long) hc->hw.fifos,
+-	       (u_long) hc->hw.dmahandle, hc->irq, HZ);
++	       "HFC-PCI: defined at mem %#lx fifo %p(%pad) IRQ %d HZ %d\n",
++	       (u_long) hc->hw.pci_io, hc->hw.fifos,
++	       &hc->hw.dmahandle, hc->irq, HZ);
+ 
+ 	/* enable memory mapped ports, disable busmaster */
+ 	pci_write_config_word(hc->pdev, PCI_COMMAND, PCI_ENA_MEMIO);
+-- 
+cgit v1.1
+

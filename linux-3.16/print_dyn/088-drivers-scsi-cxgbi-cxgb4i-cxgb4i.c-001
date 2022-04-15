@@ -1,0 +1,6 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:706
+Variable: csk
+706->	pr_info("%pI4:%u-%pI4:%u, atid %u,%u, status %u, csk 0x%p,%u,0x%lx.\n",
+707		&csk->saddr.sin_addr.s_addr, ntohs(csk->saddr.sin_port),
+708		&csk->daddr.sin_addr.s_addr, ntohs(csk->daddr.sin_port),
+709		atid, tid, status, csk, csk->state, csk->flags);

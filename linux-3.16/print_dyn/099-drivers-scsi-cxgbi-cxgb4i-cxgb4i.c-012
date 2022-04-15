@@ -1,0 +1,3 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1618
+Variable: cdev
+1618->		pr_info("cdev 0x%p, DETACH.\n", cdev);

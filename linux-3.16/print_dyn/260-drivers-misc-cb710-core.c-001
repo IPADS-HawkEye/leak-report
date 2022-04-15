@@ -1,0 +1,3 @@
+drivers/misc/cb710/core.c:272
+272->	dev_info(&pdev->dev, "id %d, IO 0x%p, IRQ %d\n",
+273		chip->platform_id, chip->iobase, pdev->irq);

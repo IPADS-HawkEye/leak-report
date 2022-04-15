@@ -1,0 +1,4 @@
+drivers/atm/iphase.c:2764
+Variable: iadev
+[Patch]
+accepted-patches/copy_to_user/002-atm-iphase

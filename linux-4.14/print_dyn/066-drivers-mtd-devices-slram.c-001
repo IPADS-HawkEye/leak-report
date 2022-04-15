@@ -1,0 +1,6 @@
+drivers/mtd/devices/slram.c:196
+Variable: ((slram_priv_t *)(*curmtd)->mtdinfo->priv)->start, ((slram_priv_t *)(*curmtd)->mtdinfo->priv)->end
+196->	T("slram: Mapped from 0x%p to 0x%p\n",
+197			((slram_priv_t *)(*curmtd)->mtdinfo->priv)->start,
+198			((slram_priv_t *)(*curmtd)->mtdinfo->priv)->end);
+Definition:

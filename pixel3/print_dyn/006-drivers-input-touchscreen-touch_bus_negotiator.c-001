@@ -1,0 +1,3 @@
+drivers/input/touchscreen/touch_bus_negotiator.c:235
+Variable: tbn
+235->	dev_info(tbn->dev, "bus negotiator initialized: %p\n", tbn);

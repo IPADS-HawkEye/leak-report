@@ -1,0 +1,7 @@
+net/netfilter/xt_qtaguid.c:1933
+Variable: sock_tag_entry->sk
+1933->		seq_printf(m, "sock=%pK tag=0x%llx (uid=%u) pid=%u "
+1934			   "f_count=%d\n",
+1935			   sock_tag_entry->sk,
+1936			   sock_tag_entry->tag, uid,
+1937			   sock_tag_entry->pid, sk_ref_count);

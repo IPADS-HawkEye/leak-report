@@ -1,0 +1,3 @@
+drivers/net/ethernet/fealnx.c:1211
+Variable: np->rx_ring
+1211->		printk(KERN_DEBUG "  Rx ring %p: ", np->rx_ring);

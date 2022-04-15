@@ -1,0 +1,4 @@
+drivers/bluetooth/hci_intel.c:330
+Variable: hu
+330->		BT_INFO("hu %p, Switching compatible pm device (%s) to %u",
+331			hu, dev_name(&idev->pdev->dev), powered);

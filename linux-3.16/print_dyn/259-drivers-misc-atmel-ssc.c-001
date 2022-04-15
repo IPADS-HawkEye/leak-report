@@ -1,0 +1,3 @@
+drivers/misc/atmel-ssc.c:190
+190->	dev_info(&pdev->dev, "Atmel SSC device at 0x%p (irq %d)\n",
+191			ssc->regs, ssc->irq);

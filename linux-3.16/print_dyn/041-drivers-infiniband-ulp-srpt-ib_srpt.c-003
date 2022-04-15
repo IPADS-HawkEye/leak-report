@@ -1,0 +1,4 @@
+drivers/infiniband/ulp/srpt/ib_srpt.c:2710
+Variable: cm_id
+2710->	printk(KERN_INFO "Received InfiniBand DREP message for cm_id %p.\n",
+2711	       cm_id);

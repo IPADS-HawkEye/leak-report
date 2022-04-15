@@ -1,0 +1,8 @@
+drivers/net/ethernet/qlogic/qed/qed_cxt.c:827
+Variable: p_info->p_cxt;
+827->	DP_VERBOSE(p_hwfn, (QED_MSG_ILT | QED_MSG_CXT),
+828		   "Accessing ILT shadow[%d]: CXT pointer is at %p (for iid %d)\n",
+829		   p_info->iid / cxts_per_p, p_info->p_cxt, p_info->iid);
+Definition:
+include/linux/qed/qed_if.h:309
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

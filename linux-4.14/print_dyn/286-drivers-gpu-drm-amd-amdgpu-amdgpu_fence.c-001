@@ -1,0 +1,5 @@
+drivers/gpu/drm/amd/amdgpu/amdgpu_fence.c:343
+Variable: ring->fence_drv.cpu_addr
+343->	dev_info(adev->dev, "fence driver on ring %d use gpu addr 0x%016llx, "
+344		 "cpu addr 0x%p\n", ring->idx,
+345		 ring->fence_drv.gpu_addr, ring->fence_drv.cpu_addr);

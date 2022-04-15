@@ -1,0 +1,4 @@
+sound/pci/rme9652/rme9652.c:1578
+Variable: rme9652->capture_buffer, rme9652->playback_buffer
+1578->	snd_iprintf(buffer, "Buffers: capture %p playback %p\n",
+1579		    rme9652->capture_buffer, rme9652->playback_buffer);

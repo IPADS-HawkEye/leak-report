@@ -1,0 +1,5 @@
+net/key/af_key.c:3783
+Variable: s 
+3783->		seq_printf(f, "%pK %-6d %-6u %-6u %-6u %-6lu\n",
+3784			       s,
+3785			       atomic_read(&s->sk_refcnt),

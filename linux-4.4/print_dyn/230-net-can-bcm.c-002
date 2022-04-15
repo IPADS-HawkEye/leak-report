@@ -1,0 +1,3 @@
+net/can/bcm.c:172
+Variable: sk
+172->	seq_printf(m, " / sk %pK", sk);

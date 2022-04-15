@@ -1,0 +1,11 @@
+drivers/net/ethernet/qlogic/qed/qed_iwarp.c:2350
+Variable: listener->event_cb, listener
+2350->	DP_VERBOSE(p_hwfn,
+2351		   QED_MSG_RDMA,
+2352		   "callback=%p handle=%p ip=%x:%x:%x:%x port=0x%x vlan=0x%x\n",
+2353		   listener->event_cb,
+2354		   listener,
+2355		   listener->ip_addr[0],
+Definition:
+include/linux/qed/qed_if.h:783
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

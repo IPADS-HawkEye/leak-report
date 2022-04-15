@@ -1,0 +1,4 @@
+drivers/net/ethernet/realtek/8139too.c:1038
+1038->	netdev_info(dev, "%s at 0x%p, %pM, IRQ %d\n",
+1039		    board_info[ent->driver_data].name,
+1040		    ioaddr, dev->dev_addr, pdev->irq);

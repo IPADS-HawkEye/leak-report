@@ -1,0 +1,20 @@
+net/ipv4/tcp_ipv4.c:2225
+Variable: req
+2225->	seq_printf(f, "%4d: %08X:%04X %08X:%04X"
+2226		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %u %d %pK",
+2227		i,
+2228		ireq->ir_loc_addr,
+2229		ireq->ir_num,
+2230		ireq->ir_rmt_addr,
+2231		ntohs(ireq->ir_rmt_port),
+2232		TCP_SYN_RECV,
+2233		0, 0, /* could print option size, but that is af dependent. */
+2234		1,    /* timers active (only the expire timer) */
+2235		jiffies_delta_to_clock_t(delta),
+2236		req->num_timeout,
+2237		from_kuid_munged(seq_user_ns(f),
+2238				 sock_i_uid(req->rsk_listener)),
+2239		0,  /* non standard timer */
+2240		0, /* open_requests have no inode */
+2241		0,
+2242		req);

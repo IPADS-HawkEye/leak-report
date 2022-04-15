@@ -1,0 +1,3 @@
+drivers/input/serio/apbps2.c:188
+Variable: priv->regs
+188->	dev_info(&ofdev->dev, "irq = %d, base = 0x%p\n", irq, priv->regs);

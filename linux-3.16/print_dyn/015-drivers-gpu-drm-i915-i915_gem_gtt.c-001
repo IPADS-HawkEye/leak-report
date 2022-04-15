@@ -1,0 +1,4 @@
+drivers/gpu/drm/i915/i915_gem_gtt.c:647
+Variable: vm
+647->	seq_printf(m, "  VM %p (pd_offset %x-%x):\n", vm,
+648		   ppgtt->pd_offset, ppgtt->pd_offset + ppgtt->num_pd_entries);

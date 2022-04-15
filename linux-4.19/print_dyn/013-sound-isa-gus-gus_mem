@@ -1,0 +1,5 @@
+sound/isa/gus/gus_mem.c:313
+Variable: block
+[Patch]
+accepted-patches/print_dyn/009-sound-isa-gus-gus_mem
+

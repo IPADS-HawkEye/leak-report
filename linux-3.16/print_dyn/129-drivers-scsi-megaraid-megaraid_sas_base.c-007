@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:2858
+Variable: cmd
+2858->			printk(KERN_NOTICE "megasas: moving cmd[%d]:%p:%d:%p"
+2859					"on the defer queue as internal\n",
+2860				defer_index, cmd, cmd->sync_cmd, cmd->scmd);

@@ -1,0 +1,6 @@
+drivers/net/ethernet/3com/3c59x.c:1163
+1163->	pr_info("%s: 3Com %s %s at %p.\n",
+1164	       print_name,
+1165	       pdev ? "PCI" : "EISA",
+1166	       vci->name,
+1167	       ioaddr);

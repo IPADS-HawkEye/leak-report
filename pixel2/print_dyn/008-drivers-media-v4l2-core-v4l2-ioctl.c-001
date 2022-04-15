@@ -1,0 +1,8 @@
+drivers/media/v4l2-core/v4l2-ioctl.c:345
+Variable: p->base
+345->	pr_cont("capability=0x%x, flags=0x%x, base=0x%p, width=%u, "
+346		"height=%u, pixelformat=%c%c%c%c, "
+347		"bytesperline=%u, sizeimage=%u, colorspace=%d\n",
+348			p->capability, p->flags, p->base,
+349			p->fmt.width, p->fmt.height,
+350			(p->fmt.pixelformat & 0xff),

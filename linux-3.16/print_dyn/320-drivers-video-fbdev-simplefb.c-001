@@ -1,0 +1,4 @@
+drivers/video/fbdev/simplefb.c:230
+230->	dev_info(&pdev->dev, "framebuffer at 0x%lx, 0x%x bytes, mapped to 0x%p\n",
+231			     info->fix.smem_start, info->fix.smem_len,
+232			     info->screen_base);

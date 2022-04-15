@@ -1,0 +1,6 @@
+drivers/staging/cxt1e1/hwprobe.c:83
+83->	pr_info("%s: %s at v/p=%lx/%lx (%02x:%02x.%x) irq %d\n",
+84		hi->devname, "EBUS  ",
+85		(unsigned long) hi->addr_mapped[1], hi->addr[1],
+86		hi->pci_busno, (u_int8_t) PCI_SLOT(pdev->devfn),
+87		(u_int8_t) PCI_FUNC(pdev->devfn), pdev->irq);

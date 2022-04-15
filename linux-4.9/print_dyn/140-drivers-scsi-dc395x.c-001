@@ -1,0 +1,4 @@
+drivers/scsi/dc395x.c:1203
+Variable: srb
+1203->			dprintkl(KERN_INFO, "dump: srb=%p cmd=%p OOOPS!\n",
+1204				srb, srb->cmd);

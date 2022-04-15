@@ -1,0 +1,4 @@
+drivers/scsi/qla2xxx/qla_mr.c:1404
+Variable: ha
+1404->	ql_log(ql_log_info, vha, 0x0140,
+1405	    "%s Done done - ha=%p.\n", __func__, ha);

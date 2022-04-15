@@ -1,0 +1,8 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sriov.c:1320
+Variable: bp->vfdb->vfqs
+1320->	DP(BNX2X_MSG_IOV, "bp->vfdb->vfqs was %p\n", bp->vfdb->vfqs);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

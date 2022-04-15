@@ -1,0 +1,2 @@
+drivers/net/ethernet/packetengines/hamachi.c:1057
+Variable: hmp->rx_ring

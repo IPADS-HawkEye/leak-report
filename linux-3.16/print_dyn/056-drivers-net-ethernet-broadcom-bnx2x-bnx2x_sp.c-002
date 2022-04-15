@@ -1,0 +1,9 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sp.c:4552
+Variable: init->cxts[cos]
+4552->		DP(BNX2X_MSG_SP, "context pointer %p\n", init->cxts[cos]);
+4553		bnx2x_set_ctx_validation(bp, init->cxts[cos], o->cids[cos]);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

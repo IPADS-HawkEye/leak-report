@@ -1,0 +1,7 @@
+drivers/net/ethernet/qlogic/qed/qed_iwarp.c:1615
+Variable: listener
+1615->		DP_VERBOSE(p_hwfn, QED_MSG_RDMA, "listener found = %p\n",
+1616			   listener);
+Definition:
+include/linux/qed/qed_if.h:783
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

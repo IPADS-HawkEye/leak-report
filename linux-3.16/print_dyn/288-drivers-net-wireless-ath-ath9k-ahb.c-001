@@ -1,0 +1,3 @@
+drivers/net/wireless/ath/ath9k/ahb.c:145
+145->	wiphy_info(hw->wiphy, "%s mem=0x%lx, irq=%d\n",
+146		   hw_name, (unsigned long)mem, irq);

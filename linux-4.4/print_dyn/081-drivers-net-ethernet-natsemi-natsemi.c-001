@@ -1,0 +1,3 @@
+drivers/net/ethernet/natsemi/natsemi.c:1863
+Variable: np->tx_ring
+1863->		printk(KERN_DEBUG "  Tx ring at %p:\n", np->tx_ring);

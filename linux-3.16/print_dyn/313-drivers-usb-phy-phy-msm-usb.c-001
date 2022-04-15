@@ -1,0 +1,2 @@
+drivers/usb/phy/phy-msm-usb.c:1610
+1610->	dev_info(&pdev->dev, "OTG regs = %p\n", motg->regs);

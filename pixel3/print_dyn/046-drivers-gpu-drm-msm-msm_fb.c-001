@@ -1,0 +1,4 @@
+drivers/gpu/drm/msm/msm_fb.c:154
+Variable: msm_fb->vaddr[i]
+154->		DRM_INFO("FB[%u]: vaddr[%d]:%ux%u:0x%llx\n", fb->base.id, i,
+155				fb->width, fb->height, (u64) msm_fb->vaddr[i]);

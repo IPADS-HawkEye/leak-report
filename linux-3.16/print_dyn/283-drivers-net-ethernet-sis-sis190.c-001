@@ -1,0 +1,5 @@
+drivers/net/ethernet/sis/sis190.c:1894
+1894->		netdev_info(dev, "%s: %s at %p (IRQ: %d), %pM\n",
+1895			    pci_name(pdev),
+1896			    sis_chip_info[ent->driver_data].name,
+1897			    ioaddr, pdev->irq, dev->dev_addr);

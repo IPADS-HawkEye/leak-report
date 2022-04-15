@@ -1,0 +1,6 @@
+drivers/video/fbdev/udlfb.c:1615
+Variable: dev
+1615->	pr_info("vid_%04x&pid_%04x&rev_%04x driver's dlfb_data struct at %p\n",
+1616		le16_to_cpu(usbdev->descriptor.idVendor),
+1617		le16_to_cpu(usbdev->descriptor.idProduct),
+1618		le16_to_cpu(usbdev->descriptor.bcdDevice), dev);

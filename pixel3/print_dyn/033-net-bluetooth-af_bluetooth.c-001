@@ -1,0 +1,8 @@
+net/bluetooth/af_bluetooth.c:682
+Variable: sk
+682->		seq_printf(seq,
+683			   "%pK %-6d %-6u %-6u %-6u %-6lu %-6lu",
+684			   sk,
+685			   atomic_read(&sk->sk_refcnt),
+686			   sk_rmem_alloc_get(sk),
+687			   sk_wmem_alloc_get(sk),

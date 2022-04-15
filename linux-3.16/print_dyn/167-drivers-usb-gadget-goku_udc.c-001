@@ -1,0 +1,7 @@
+drivers/usb/gadget/goku_udc.c:1191
+Variable: &req->req
+1191->			if (seq_printf(m,
+1192				"\treq %p len %u/%u buf %p\n",
+1193				&req->req, tmp, req->req.length,
+1194				req->req.buf) < 0)
+1195				goto done;

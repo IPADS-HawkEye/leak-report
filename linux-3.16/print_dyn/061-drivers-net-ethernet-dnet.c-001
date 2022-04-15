@@ -1,0 +1,4 @@
+drivers/net/ethernet/dnet.c:910
+Variable: mem_base
+910->	dev_info(&pdev->dev, "Dave DNET at 0x%p (0x%08x) irq %d %pM\n",
+911	       bp->regs, mem_base, dev->irq, dev->dev_addr);

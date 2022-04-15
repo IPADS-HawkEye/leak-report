@@ -1,0 +1,3 @@
+drivers/crypto/msm/ice.c:1587
+Variable: ice_dev
+1587->			pr_info("%s: found ice device %p\n", __func__, ice_dev);

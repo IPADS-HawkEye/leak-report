@@ -1,0 +1,5 @@
+drivers/usb/host/isp1362-hcd.c:2113
+Variable: urb
+2113->			seq_printf(s, "  urb%p, %d/%d\n", urb,
+2114				   urb->actual_length,
+2115				   urb->transfer_buffer_length);

@@ -1,0 +1,3 @@
+drivers/usb/dwc2/gadget.c:2630
+Variable: ep, req
+2630->	dev_info(hs->dev, "ep_dequeue(%p,%p)\n", ep, req);

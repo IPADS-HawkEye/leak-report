@@ -1,0 +1,6 @@
+drivers/net/ethernet/qlogic/qed/qed_roce.c:101
+Variable: bmap
+101->	DP_VERBOSE(p_hwfn, QED_MSG_RDMA, "bmap = %p\n", bmap);
+Definition:
+include/linux/qed/qed_if.h:602
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

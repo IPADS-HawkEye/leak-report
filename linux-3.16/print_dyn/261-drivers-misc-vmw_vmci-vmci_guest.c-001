@@ -1,0 +1,3 @@
+drivers/misc/vmw_vmci/vmci_guest.c:484
+484->	dev_info(&pdev->dev, "Found VMCI PCI device at %#lx, irq %u\n",
+485		 (unsigned long)iobase, pdev->irq);

@@ -1,0 +1,9 @@
+drivers/android/binder.c:3251
+Variable: t
+3251->	seq_printf(m,
+3252		   "%s %d: %p from %d:%d to %d:%d code %x flags %x pri %ld r%d",
+3253		   prefix, t->debug_id, t,
+3254		   t->from ? t->from->proc->pid : 0,
+3255		   t->from ? t->from->pid : 0,
+3256		   t->to_proc ? t->to_proc->pid : 0,
+Note: CVE-2018-20510

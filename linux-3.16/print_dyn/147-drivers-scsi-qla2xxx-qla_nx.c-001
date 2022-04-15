@@ -1,0 +1,5 @@
+drivers/scsi/qla2xxx/qla_nx.c:4346
+Variable: ha->md_tmplt_hdr, ha->md_dump
+4346->	ql_log(ql_log_info, vha, 0xb044,
+4347	    "Firmware dump saved to temp buffer (%ld/%p %ld/%p).\n",
+4348	    vha->host_no, ha->md_tmplt_hdr, vha->host_no, ha->md_dump);

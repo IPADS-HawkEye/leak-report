@@ -1,0 +1,4 @@
+drivers/scsi/qla2xxx/qla_nvme.c:677
+Variable: fcport
+677->		ql_log(ql_log_info, fcport->vha, 0x2114, "%s: fcport=%p\n",
+678		    __func__, fcport);

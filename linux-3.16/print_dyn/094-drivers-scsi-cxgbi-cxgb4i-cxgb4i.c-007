@@ -1,0 +1,4 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1525
+Variable: cdev
+1525->	pr_info("cdev 0x%p,%s, pfvf %u.\n",
+1526		cdev, lldi->ports[0]->name, cdev->pfvf);

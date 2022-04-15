@@ -1,0 +1,6 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1770
+Variable:cdev
+1770->	pr_info("0x%p,0x%x, ports %u,%s, chan %u, q %u,%u, wr %u.\n",
+1771		cdev, lldi->adapter_type, lldi->nports,
+1772		lldi->ports[0]->name, lldi->nchan, lldi->ntxq,
+1773		lldi->nrxq, lldi->wr_cred);

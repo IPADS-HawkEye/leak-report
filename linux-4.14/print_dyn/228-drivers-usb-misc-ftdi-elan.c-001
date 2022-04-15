@@ -1,0 +1,5 @@
+drivers/usb/misc/ftdi-elan.c:2730
+Variable: ftdi
+2730->			dev_info(&ftdi->udev->dev, "USB FDTI=%p JTAG interface %d now attached to ftdi%d\n",
+2731				 ftdi, iface_desc->desc.bInterfaceNumber,
+2732				 interface->minor);

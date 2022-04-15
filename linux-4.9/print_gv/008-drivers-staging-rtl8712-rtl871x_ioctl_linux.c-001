@@ -1,0 +1,6 @@
+drivers/staging/rtl8712/rtl871x_ioctl_linux.c:1931
+Variable: phandler->handler
+Type: unsigned int (*handler)(struct oid_par_priv *poid_par_priv)
+1931->		netdev_info(dev, "r8712u: %s: err!, subcode=%d, oid=%d, handler=%p\n",
+1932			    __func__, poidparam->subcode, phandler->oid,
+1933			    phandler->handler);

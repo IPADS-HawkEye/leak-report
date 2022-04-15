@@ -1,0 +1,4 @@
+drivers/scsi/pm8001/pm8001_init.c:1199
+Variable: pdev
+1199->	pm8001_printk("pdev=0x%p, slot=%s, resuming from previous "
+1200		"operating state [D%d]\n", pdev, pm8001_ha->name, device_state);

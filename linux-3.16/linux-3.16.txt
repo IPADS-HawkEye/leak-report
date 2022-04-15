@@ -1,0 +1,2053 @@
+linux-3.16.65
+#DYN
+drivers/atm/iphase.c:2821
+Variable: (long)skb_peek(&iadev->tx_backlog)
+[Patch]
+accepted-patches/print_dyn/001-atm-iphase
+ =============================================
+drivers/atm/iphase.c:2822
+Variable: (long)ia_deque_rtn_q(&iadev->tx_return_q)
+[Patch]
+accepted-patches/print_dyn/001-atm-iphase
+ =============================================
+drivers/isdn/hardware/mISDN/hfcpci.c:2035
+Variable: hc->hw.fifos
+[Patch]
+accepted-patches/print_dyn/002-isdn-mISDN-hfcpci
+ =============================================
+drivers/isdn/hardware/mISDN/hfcpci.c:2035
+Variable: hc->hw.dmahandle
+[Patch]
+accepted-patches/print_dyn/002-isdn-mISDN-hfcpci
+ =============================================
+drivers/isdn/hisax/config.c:1299
+Variable: cs
+[Patch]
+accepted-patches/print_dyn/003-isdn-hisax-config
+ =============================================
+drivers/net/hippi/rrunner.c:1303
+Variable: rrpriv->tx_skbuff[cons]->data
+[Patch]
+accepted-patches/print_dyn/005-net-hippi-rrunner
+ =============================================
+net/ax25/af_ax25.c:1885
+Variable: ax25
+[Patch]
+accepted-patches/print_dyn/008-net-ax25-af_ax25
+ =============================================
+drivers/mtd/maps/l440gx.c:88
+Variable: l440gx_map.virt
+[Submitted]
+ =============================================
+net/tipc/link.c:1300
+1300->		pr_cont("Outstanding acks: %lu\n",
+1301			(unsigned long) TIPC_SKB_CB(buf)->handle);
+ =============================================
+arch/x86/platform/uv/uv_nmi.c:712
+Variable: uv_hub_nmi_list
+712->	pr_info("UV: NMI hub list @ 0x%p (%d)\n", uv_hub_nmi_list, size);
+ =============================================
+block/blk-core.c:150
+Variable: rq->bio, rq->biotail
+150->	printk(KERN_INFO "  bio %p, biotail %p, len %u\n",
+151	       rq->bio, rq->biotail, blk_rq_bytes(rq));
+ =============================================
+drivers/block/DAC960.c:1931
+Variable: Controller->BaseAddress
+1931->  DAC960_Info("  PCI Address: 0x%X mapped at 0x%lX, IRQ Channel: %d\n",
+1932	      Controller, Controller->PCI_Address,
+1933	      (unsigned long) Controller->BaseAddress,
+1934	      Controller->IRQ_Channel);
+ =============================================
+drivers/block/floppy.c:1822
+Variable: current_req
+1822->	pr_info("current_req=%p\n", current_req);
+ =============================================
+drivers/gpu/drm/i915/i915_debugfs.c:128
+Variable: &obj->base
+128->	seq_printf(m, "%pK: %s%s%s %8zdKiB %02x %02x %u %u %u%s%s%s",
+129		   &obj->base,
+130		   get_pin_flag(obj),
+131		   get_tiling_flag(obj),
+132		   get_global_flag(obj),
+133		   obj->base.size / 1024,
+ =============================================
+drivers/gpu/drm/i915/i915_gem_gtt.c:647
+Variable: vm
+647->	seq_printf(m, "  VM %p (pd_offset %x-%x):\n", vm,
+648		   ppgtt->pd_offset, ppgtt->pd_offset + ppgtt->num_pd_entries);
+ =============================================
+drivers/gpu/drm/radeon/radeon_fence.c:688
+Variable: rdev->fence_drv[ring].gpu_addr, rdev->fence_drv[ring].cpu_addr
+688->	dev_info(rdev->dev, "fence driver on ring %d use gpu addr 0x%016llx and cpu addr 0x%p\n",
+689		 ring, rdev->fence_drv[ring].gpu_addr, rdev->fence_drv[ring].cpu_addr);
+ =============================================
+drivers/gpu/drm/udl/udl_fb.c:358
+Variable: info
+358->	pr_notice("open /dev/fb%d user=%d fb_info=%p count=%d\n",
+359		  info->node, user, info, ufbdev->fb_count);
+ =============================================
+drivers/infiniband/core/cma.c:3454
+Variable: &id_priv->id
+3454->		printk(KERN_INFO "RDMA CM addr change for ndev %s used by id %p\n",
+3455		       ndev->name, &id_priv->id);
+ =============================================
+drivers/infiniband/hw/nes/nes_hw.c:2628
+Variable: nesvnic->netdev
+2628->					printk(PFX "The Link is now up for port %s, netdev %p.\n",
+2629							nesvnic->netdev->name, nesvnic->netdev);
+Function: nes_process_mac_intr <- nes_dpc (registered in drivers/infiniband/hw/nes/nes.c:608)
+ =============================================
+drivers/infiniband/hw/nes/nes_hw.c:2662
+Variable: nesvnic->netdev
+2662->					printk(PFX "The Link is now down for port %s, netdev %p.\n",
+2663							nesvnic->netdev->name, nesvnic->netdev);
+Function: nes_process_mac_intr <- nes_dpc (registered in drivers/infiniband/hw/nes/nes.c:608)
+ =============================================
+drivers/infiniband/hw/nes/nes_hw.c:2723
+Variable: nesvnic->netdev
+2723->				printk(PFX "The Link is now up for port %s, netdev %p.\n",
+2724						nesvnic->netdev->name, nesvnic->netdev);
+Function: nes_process_mac_intr <- nes_dpc (registered in drivers/infiniband/hw/nes/nes.c:608)
+ =============================================
+drivers/infiniband/hw/nes/nes_hw.c:2745
+Variable: nesvnic->netdev
+2745->				printk(PFX "The Link is now down for port %s, netdev %p.\n",
+2746						nesvnic->netdev->name, nesvnic->netdev);
+Function: nes_process_mac_intr <- nes_dpc (registered in drivers/infiniband/hw/nes/nes.c:608)
+ =============================================
+drivers/infiniband/hw/qib/qib_iba7322.c:2824
+Variable: ref
+2824->	qib_devinfo(dd->pcidev,
+2825		"release on HCA notify 0x%p n 0x%p\n", ref, n);
+ =============================================
+drivers/infiniband/hw/qib/qib_iba7322.c:3370
+Variable: &n->notify
+3370->		qib_devinfo(dd->pcidev,
+3371			"set notifier irq %d rcv %d notify %p\n",
+3372			n->notify.irq, n->rcv, &n->notify);
+ =============================================
+drivers/infiniband/hw/usnic/usnic_ib_verbs.c:439
+Variable: context
+439->	usnic_info("domain 0x%p allocated for context 0x%p and device %s\n",
+440			pd, context, ibdev->name);
+Definition: 
+drivers/infiniband/hw/usnic/usnic_log.h
+#define usnic_info(args...) ... usnic_printk(KERN_INFO, args)
+#define usnic_printk ... printk
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:791
+Variable: isert_conn
+791->	pr_info("conn %p\n", isert_conn);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:794
+Variable: isert_conn
+794->		pr_warn("conn %p connect_release is running\n", isert_conn);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:850
+Variable: isert_conn
+850->		pr_info("Terminating conn %p state %d\n",
+851			   isert_conn, isert_conn->state);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:859
+Variable: isert_conn
+859->		pr_warn("conn %p teminating in state %d\n",
+860			   isert_conn, isert_conn->state);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:908
+Variable: isert_conn
+908->	pr_info("conn %p completing conn_wait\n", isert_conn);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:1233
+Variable: isert_conn
+1233->	pr_info("conn %p\n", isert_conn);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:2359
+Variable: isert_conn
+2359->			pr_info("conn %p PI offload enabled\n", isert_conn);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:2365
+Variable: isert_conn
+2365->	pr_info("conn %p PI offload disabled\n", isert_conn);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:3310
+Variable: isert_conn
+3310->	pr_info("before login_req comp conn: %p\n", isert_conn);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:3330
+Variable: conn
+3330->	pr_info("before conn_login_comp conn: %p\n", conn);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:3335
+Variable: login->req
+3335->	pr_info("processing login->req: %p\n", login->req);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:3439
+Variable: isert_conn
+3439->	pr_info("Starting release conn %p\n", isert_conn);
+ =============================================
+drivers/infiniband/ulp/isert/ib_isert.c:3447
+Variable: isert_conn
+3447->	pr_info("Destroying conn %p\n", isert_conn);
+ =============================================
+drivers/infiniband/ulp/srpt/ib_srpt.c:2623
+Variable: cm_id
+2623->	printk(KERN_INFO "Received IB REJ for cm_id %p.\n", cm_id);
+ =============================================
+drivers/infiniband/ulp/srpt/ib_srpt.c:2658
+Variable: cm_id
+2658->	printk(KERN_INFO "Received IB TimeWait exit for cm_id %p.\n", cm_id);
+ =============================================
+drivers/infiniband/ulp/srpt/ib_srpt.c:2710
+Variable: cm_id
+2710->	printk(KERN_INFO "Received InfiniBand DREP message for cm_id %p.\n",
+2711	       cm_id);
+ =============================================
+drivers/isdn/hisax/hfc_pci.c:75
+Variable: cs->hw.hfcpci.pci_io
+75->	printk(KERN_INFO "HiSax: release hfcpci at %p\n",
+76	       cs->hw.hfcpci.pci_io);
+Function: release_io_hfcpci <- hfcpci_card_msg 
+ =============================================
+drivers/isdn/hisax/hfc_pci.c:1721
+Variable: cs->hw.hfcpci.fifos
+1721->	printk(KERN_INFO
+1722	       "HFC-PCI: defined at mem %p fifo %p(%lx) IRQ %d HZ %d\n",
+1723	       cs->hw.hfcpci.pci_io,
+1724	       cs->hw.hfcpci.fifos,
+1725	       (u_long)cs->hw.hfcpci.dma,
+1726	       cs->irq, HZ);
+Function: setup_hfcpci
+ =============================================
+drivers/media/pci/cx23885/cx23885-core.c:598
+Variable: risc->cpu
+598->	printk(KERN_INFO "%s: risc disasm: %p [dma=0x%08lx]\n",
+599	       dev->name, risc->cpu, (unsigned long)risc->dma);
+ =============================================
+drivers/media/pci/cx23885/cx23885-vbi.c:175
+Variable: buf
+175->		printk("%s/0: [%p/%d] timeout - dma=0x%08lx\n", dev->name,
+176		       buf, buf->vb.i, (unsigned long)buf->risc.dma);
+ =============================================
+drivers/media/pci/cx88/cx88-vbi.c:134
+Variable: buf
+134->		printk("%s/0: [%p/%d] timeout - dma=0x%08lx\n", dev->core->name,
+135		       buf, buf->vb.i, (unsigned long)buf->risc.dma);
+ =============================================
+drivers/media/pci/cx88/cx88-video.c:1429
+Variable: buf
+1429->		printk("%s/0: [%p/%d] timeout - dma=0x%08lx\n", core->name,
+1430		       buf, buf->vb.i, (unsigned long)buf->risc.dma);
+ =============================================
+drivers/media/pci/saa7164/saa7164-core.c:1074
+Variable:dev
+1074->		seq_printf(m, "%s = %p\n", dev->name, dev);
+ =============================================
+drivers/media/usb/stk1160/stk1160-v4l.c:629
+Variable: buf
+629->		stk1160_info("buffer [%p/%d] aborted\n",
+630				buf, buf->vb.v4l2_buf.index);
+ =============================================
+drivers/message/fusion/mptbase.c:2131
+Variable: pdev
+2131->	printk(MYIOC_s_INFO_FMT "pci-suspend: pdev=0x%p, slot=%s, Entering "
+2132	    "operating state [D%d]\n", ioc->name, pdev, pci_name(pdev),
+2133	    device_state);
+ =============================================
+drivers/message/fusion/mptbase.c:2172
+Variable: pdev
+2172->	printk(MYIOC_s_INFO_FMT "pci-resume: pdev=0x%p, slot=%s, Previous "
+2173	    "operating state [D%d]\n", ioc->name, pdev, pci_name(pdev),
+2174	    device_state);
+ =============================================
+drivers/message/fusion/mptbase.c:6758
+Variable: (void *)ioc_req_frames, (void *)(ulong)ioc->req_frames_dma
+6758->	seq_printf(m, "  RequestFrames @ 0x%p (Dma @ 0x%p)\n",
+6759					(void *)ioc->req_frames, (void *)(ulong)ioc->req_frames_dma);
+ =============================================
+drivers/message/fusion/mptbase.c:6771
+Variable: (void *)ioc->alloc, (void *)(ulong)ioc->alloc_dma
+6771->	seq_printf(m, "  Frames   @ 0x%p (Dma @ 0x%p)\n",
+6772					(void *)ioc->alloc, (void *)(ulong)ioc->alloc_dma);
+ =============================================
+drivers/mtd/devices/pmc551.c:802
+Variable: priv->start, priv->start + priv->asize
+802->		printk(KERN_NOTICE "Mapped %dMiB of memory from 0x%p to 0x%p\n",
+803			priv->asize >> 20,
+804			priv->start, priv->start + priv->asize);
+ =============================================
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sp.c:589
+Variable: next
+589->			DP(BNX2X_MSG_SP, "copied element number %d to address %p element was:\n",
+590			   counter, next);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )
+ =============================================
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sp.c:4552
+Variable: init->cxts[cos]
+4552->		DP(BNX2X_MSG_SP, "context pointer %p\n", init->cxts[cos]);
+4553		bnx2x_set_ctx_validation(bp, init->cxts[cos], o->cids[cos]);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )
+ =============================================
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sriov.c:1320
+Variable: bp->vfdb->vfqs
+1320->	DP(BNX2X_MSG_IOV, "bp->vfdb->vfqs was %p\n", bp->vfdb->vfqs);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )
+ =============================================
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sriov.c:1409
+Variable: cxt->addr
+1409->			cxt->addr = BNX2X_PCI_ALLOC(&cxt->mapping, cxt->size);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.h
+#define BNX2X_PCI_ALLOC(y, size) void *x = dma_zalloc_coheren(...), DP(...., x);
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )
+ =============================================
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sriov.c:1502
+Variable: base_cxt
+1502->		DP(BNX2X_MSG_IOV,
+1503		   "VF[%d] Max IGU SBs: %d, base vf cid 0x%x, base cid 0x%x, base cxt %p\n",
+1504		   vf->abs_vfid, vf_sb_count(vf), base_vf_cid,
+1505		   BNX2X_FIRST_VF_CID + base_vf_cid, base_cxt);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )
+ =============================================
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_sriov.c:2029
+Variable: q->cxt
+2029->		DP(BNX2X_MSG_IOV, "VFQ[%d:%d]: index %d, cid 0x%x, cxt %p\n",
+2030		   vf->abs_vfid, i, q->index, q->cid, q->cxt);
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )
+ =============================================
+drivers/net/ethernet/dnet.c:910
+Variable: mem_base
+910->	dev_info(&pdev->dev, "Dave DNET at 0x%p (0x%08x) irq %d %pM\n",
+911	       bp->regs, mem_base, dev->irq, dev->dev_addr);
+ =============================================
+drivers/net/ethernet/intel/ixgbe/ixgbe_main.c:582
+Variable: tx_buffer->next_to_watch
+582->		pr_info(" %5d %5X %5X %016llX %08X %p %016llX\n",
+583			   n, tx_ring->next_to_use, tx_ring->next_to_clean,
+584			   (u64)dma_unmap_addr(tx_buffer, dma),
+585			   dma_unmap_len(tx_buffer, len),
+586			   tx_buffer->next_to_watch,
+587			   (u64)tx_buffer->time_stamp);
+ =============================================
+drivers/net/ethernet/intel/ixgbe/ixgbe_main.c:646
+Variable: tx_buffer->skb
+646->				pr_info("T [0x%03X]    %016llX %016llX %016llX %08X %p %016llX %p",
+647					i,
+648					le64_to_cpu(u0->a),
+649					le64_to_cpu(u0->b),
+650					(u64)dma_unmap_addr(tx_buffer, dma),
+651					dma_unmap_len(tx_buffer, len),
+652					tx_buffer->next_to_watch,
+653					(u64)tx_buffer->time_stamp,
+654					tx_buffer->skb,
+655					ring_desc);
+ =============================================
+drivers/net/ethernet/intel/ixgbe/ixgbe_main.c:758
+Variable: rx_buffer_info->skb
+758->				pr_info("RWB[0x%03X]     %016llX "
+759					"%016llX ---------------- %p", i,
+760					le64_to_cpu(u0->a),
+761					le64_to_cpu(u0->b),
+762					rx_buffer_info->skb);
+ =============================================
+drivers/net/ethernet/intel/ixgbe/ixgbe_main.c:764
+Variable: rx_buffer_info->skb
+764->				pr_info("R  [0x%03X]     %016llX "
+765					"%016llX %016llX %p", i,
+766					le64_to_cpu(u0->a),
+767					le64_to_cpu(u0->b),
+768					(u64)rx_buffer_info->dma,
+769					rx_buffer_info->skb);
+ =============================================
+drivers/net/irda/vlsi_ir.c:310
+Variable: r->rd[0].hw
+310->	seq_printf(seq, "size %u / mask 0x%04x / len %u / dir %d / hw %p\n",
+311		r->size, r->mask, r->len, r->dir, r->rd[0].hw);
+ =============================================
+drivers/net/irda/vlsi_ir.c:338
+Variable: rd->buf
+338->		seq_printf(seq, "skb=%p data=%p hw=%p\n", rd->skb, rd->buf, rd->hw);
+ =============================================
+drivers/net/wan/lmc/lmc_main.c:510
+Variable: data
+510->                    printk("%s: Starting load of data Len: %d at 0x%p == 0x%p\n", dev->name, xc.len, xc.data, data);
+ =============================================
+drivers/nfc/nfcmrvl/usb.c:156
+Variable: urb
+156->	nfc_info(priv->dev, "urb %p status %d count %d",
+157		 urb, urb->status, urb->actual_length);
+ =============================================
+drivers/nfc/nfcmrvl/usb.c:296
+Variable: intf, id
+296->	nfc_info(&udev->dev, "intf %p id %p", intf, id);
+ =============================================
+drivers/nfc/nfcmrvl/usb.c:351
+Variable: intf
+351->	nfc_info(&drv_data->udev->dev, "intf %p", intf);
+ =============================================
+drivers/nfc/nfcmrvl/usb.c:363
+Variable: intf
+363->	nfc_info(&drv_data->udev->dev, "intf %p", intf);
+ =============================================
+drivers/nfc/nfcmrvl/usb.c:404
+Variable: intf
+404->	nfc_info(&drv_data->udev->dev, "intf %p", intf);
+ =============================================
+drivers/scsi/arcmsr/arcmsr_hba.c:918
+Variable: acb, pCCB, pCCB->acb
+918->		printk(KERN_NOTICE "arcmsr%d: isr get an illegal ccb command \
+919				done acb = '0x%p'"
+920				"ccb = '0x%p' ccbacb = '0x%p' startdone = 0x%x"
+921				" ccboutstandingcount = %d \n"
+922				, acb->host->host_no
+923				, acb
+924				, pCCB
+925				, pCCB->acb
+926				, pCCB
+ =============================================
+drivers/scsi/arcmsr/arcmsr_hba.c:2331
+Variable: ccb
+2331->				printk(KERN_NOTICE "arcmsr%d: scsi id = %d lun = %d ccb = '0x%p'"
+2332					" poll command abort successfully \n"
+2333					, acb->host->host_no
+2334					, ccb->pcmd->device->id
+2335					, ccb->pcmd->device->lun
+2336					, ccb);
+ =============================================
+drivers/scsi/arcmsr/arcmsr_hba.c:2341
+Variable: ccb
+2341->			printk(KERN_NOTICE "arcmsr%d: polling get an illegal ccb"
+2342				" command done ccb = '0x%p'"
+2343				"ccboutstandingcount = %d \n"
+2344				, acb->host->host_no
+2345				, ccb
+2346				, atomic_read(&acb->ccboutstandingcount));
+ =============================================
+drivers/scsi/arcmsr/arcmsr_hba.c:2395
+Variable: ccb
+2395->				printk(KERN_NOTICE "arcmsr%d: scsi id = %d lun = %d ccb = '0x%p'"
+2396					" poll command abort successfully \n"
+2397					,acb->host->host_no
+2398					,ccb->pcmd->device->id
+2399					,ccb->pcmd->device->lun
+2400					,ccb);
+ =============================================
+drivers/scsi/arcmsr/arcmsr_hba.c:2405
+Variable: ccb
+2405->			printk(KERN_NOTICE "arcmsr%d: polling get an illegal ccb"
+2406				" command done ccb = '0x%p'"
+2407				"ccboutstandingcount = %d \n"
+2408				, acb->host->host_no
+2409				, ccb
+2410				, atomic_read(&acb->ccboutstandingcount));
+ =============================================
+drivers/scsi/arcmsr/arcmsr_hba.c:2452
+Variable: pCCB
+2452->				printk(KERN_NOTICE "arcmsr%d: scsi id = %d lun = %d ccb = '0x%p'"
+2453					" poll command abort successfully \n"
+2454					, acb->host->host_no
+2455					, pCCB->pcmd->device->id
+2456					, pCCB->pcmd->device->lun
+2457					, pCCB);
+ =============================================
+drivers/scsi/arcmsr/arcmsr_hba.c:2462
+Variable: pCCB
+2462->			printk(KERN_NOTICE "arcmsr%d: polling get an illegal ccb"
+2463				" command done ccb = '0x%p'"
+2464				"ccboutstandingcount = %d \n"
+2465				, acb->host->host_no
+2466				, pCCB
+2467				, atomic_read(&acb->ccboutstandingcount));
+ =============================================
+drivers/scsi/atp870u.c:3145
+Variable: pshost
+3145->	printk(KERN_INFO "scsi_host_put : %p\n",pshost);
+ =============================================
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:574
+Variable: csk
+574->	pr_info("csk 0x%p,%u,0x%lx,%u, status %u, %pI4:%u-%pI4:%u.\n",
+575		csk, csk->state, csk->flags, csk->atid, rpl->status,
+576		&csk->saddr.sin_addr.s_addr, ntohs(csk->saddr.sin_port),
+577		&csk->daddr.sin_addr.s_addr, ntohs(csk->daddr.sin_port));
+ =============================================
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:1060
+Variable: cdev
+1060->	pr_info("cdev 0x%p, offload up, added.\n", cdev);
+ =============================================
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:1274
+Variable: tdev
+1274->	pr_info("tdev 0x%p, nppods %u, bits %u, mask 0x%x,0x%x pkt %u/%u, "
+1275		"%u/%u.\n",
+1276		tdev, ddp->nppods, ddp->idx_bits, ddp->idx_mask,
+1277		ddp->rsvd_tag_mask, ddp->max_txsz, uinfo.max_txsz,
+1278		ddp->max_rxsz, uinfo.max_rxsz);
+ =============================================
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:1287
+Variable: cdev
+1287->		pr_info("0x%p close, f 0x%x.\n", cdev, cdev ? cdev->flags : 0);
+Function: cxgb3i_dev_close
+ =============================================
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:1305
+Variable: cdev
+1305->		pr_info("0x%p, updating.\n", cdev);
+ =============================================
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:1351
+Variable: cdev
+1351->	pr_info("cdev 0x%p, f 0x%x, t3dev 0x%p open, err %d.\n",
+1352		cdev, cdev ? cdev->flags : 0, t3dev, err);
+Function: cxgb3i_dev_open
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:706
+Variable: csk
+706->	pr_info("%pI4:%u-%pI4:%u, atid %u,%u, status %u, csk 0x%p,%u,0x%lx.\n",
+707		&csk->saddr.sin_addr.s_addr, ntohs(csk->saddr.sin_port),
+708		&csk->daddr.sin_addr.s_addr, ntohs(csk->daddr.sin_port),
+709		atid, tid, status, csk, csk->state, csk->flags);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1274
+Variable: cdev
+1274->	pr_info("cdev 0x%p, offload up, added.\n", cdev);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1476
+Variable: cdev
+1476->	pr_info("cxgb4i 0x%p tag: sw %u, rsvd %u,%u, mask 0x%x.\n",
+1477		cdev, cdev->tag_format.sw_bits, cdev->tag_format.rsvd_bits,
+1478		cdev->tag_format.rsvd_shift, cdev->tag_format.rsvd_mask);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1479
+Variable: cdev
+1479->	pr_info("cxgb4i 0x%p, nppods %u, bits %u, mask 0x%x,0x%x pkt %u/%u, "
+1480		" %u/%u.\n",
+1481		cdev, ddp->nppods, ddp->idx_bits, ddp->idx_mask,
+1482		ddp->rsvd_tag_mask, ddp->max_txsz, lldi->iscsi_iolen,
+1483		ddp->max_rxsz, lldi->iscsi_iolen);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1484
+Variable: cdev
+1484->	pr_info("cxgb4i 0x%p max payload size: %u/%u, %u/%u.\n",
+1485		cdev, cdev->tx_max_size, ddp->max_txsz, cdev->rx_max_size,
+1486		ddp->max_rxsz);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1501
+Variable:cdev
+1501->	pr_info("0x%p,0x%x, ports %u,%s, chan %u, q %u,%u, wr %u.\n",
+1502		cdev, lldi->adapter_type, lldi->nports,
+1503		lldi->ports[0]->name, lldi->nchan, lldi->ntxq,
+1504		lldi->nrxq, lldi->wr_cred);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1525
+Variable: cdev
+1525->	pr_info("cdev 0x%p,%s, pfvf %u.\n",
+1526		cdev, lldi->ports[0]->name, cdev->pfvf);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1573
+Variable: pgl->va
+1573->			pr_info("? FL 0x%p,RSS%#llx,FL %#llx,len %u.\n",
+1574				pgl->va, be64_to_cpu(*rsp),
+1575				be64_to_cpu(*(u64 *)pgl->va),
+1576				pgl->tot_len);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1607
+Variable: cdev
+1607->		pr_info("cdev 0x%p, UP.\n", cdev);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1611
+Variable: cdev
+1611->		pr_info("cdev 0x%p, RECOVERY.\n", cdev);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1615
+Variable: cdev
+1615->		pr_info("cdev 0x%p, DOWN.\n", cdev);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1618
+Variable: cdev
+1618->		pr_info("cdev 0x%p, DETACH.\n", cdev);
+ =============================================
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1622
+Variable: cdev
+1622->		pr_info("cdev 0x%p, unknown state %d.\n", cdev, state);
+ =============================================
+drivers/scsi/cxgbi/libcxgbi.c:636
+Variable: csk
+636->	pr_info("csk 0x%p,%u,%lx, %pI4:%u-%pI4:%u, err %d.\n",
+637			csk, csk->state, csk->flags,
+638			&csk->saddr.sin_addr.s_addr, csk->saddr.sin_port,
+639			&csk->daddr.sin_addr.s_addr, csk->daddr.sin_port,
+640			errno);
+ =============================================
+drivers/scsi/cxgbi/libcxgbi.c:774
+Variable: csk
+774->			pr_warn("csk 0x%p,%u,0x%lx,%u, cr %u,%u+%u, < %u.\n",
+775				csk, csk->state, csk->flags, csk->tid,
+776				credits, csk->wr_cred, csk->wr_una_cred,
+777				p->csum);
+ =============================================
+drivers/scsi/cxgbi/libcxgbi.c:791
+Variable: csk
+791->			pr_warn("csk 0x%p,%u,0x%lx,%u, snd_una %u/%u.",
+792				csk, csk->state, csk->flags, csk->tid, snd_una,
+793				csk->snd_una);
+ =============================================
+drivers/scsi/cxgbi/libcxgbi.c:1232
+Variable: gl
+1232->			pr_warn("tag 0x%x, idx %u, gl 0x%p, %u.\n",
+1233				tag, idx, gl, gl ? gl->nelem : 0);
+ =============================================
+drivers/scsi/dc395x.c:1213
+Variable: srb->segment_x
+1213->		printk("  sglist=%p cnt=%i idx=%i len=%zu\n",
+1214		       srb->segment_x, srb->sg_count, srb->sg_index,
+1215		       srb->total_xfer_length);
+ =============================================
+drivers/scsi/dc395x.c:3542
+Variable: p
+3542->			printk("G:%p(%02i-%i) ", p,
+3543			       p->device->id, p->device->lun);
+ =============================================
+drivers/scsi/dc395x.c:3572
+Variable: p
+3572->			printk("W:%p<%02i-%i>", p, p->device->id,
+3573			       p->device->lun);
+ =============================================
+drivers/scsi/dc395x.c:4716
+Variable: srb->cmd
+4716->			SPRINTF(" %p", srb->cmd);
+ =============================================
+drivers/scsi/dc395x.c:4722
+Variable: srb->cmd
+4722->			SPRINTF(" %p", srb->cmd);
+ =============================================
+drivers/scsi/esas2r/esas2r_init.c:636
+Variable: a->pcid
+636->		esas2r_log_dev(ESAS2R_LOG_INFO,
+637			       &(a->pcid->dev),
+638			       "pci_set_drv_data(%p, NULL) called",
+639			       a->pcid);
+ =============================================
+drivers/scsi/esas2r/esas2r_ioctl.c:1285
+Variable: hostdata, arg
+1285->	esas2r_log(ESAS2R_LOG_DEBG, "ioctl (%p, %x, %p)", hostdata, cmd, arg);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:406
+Variable: host
+406->	esas2r_log(ESAS2R_LOG_INFO, "scsi_host_alloc() OK host: %p", host);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:446
+Variable: pcid, host->hostdata
+446->	esas2r_log(ESAS2R_LOG_INFO, "pci_set_drvdata(%p, %p) called", pcid,
+447		   host->hostdata);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:547
+Variable: pdev, host
+547->	esas2r_log_dev(ESAS2R_LOG_INFO, &(pdev->dev),
+548		       "esas2r_remove(%p) called; "
+549		       "host:%p", pdev,
+550		       host);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:712
+Variable: m
+712->	esas2r_log(ESAS2R_LOG_DEBG, "esas2r_show_info (%p,%d)", m, sh->host_no);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:1051
+Variable: cmd
+1051->	esas2r_log(ESAS2R_LOG_INFO, "eh_abort (%p)", cmd);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:1159
+Variable: cmd
+1159->	esas2r_log(ESAS2R_LOG_INFO, "host_reset (%p)", cmd);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:1166
+Variable: cmd
+1166->	esas2r_log(ESAS2R_LOG_INFO, "bus_reset (%p)", cmd);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:1249
+Variable: cmd
+1249->	esas2r_log(ESAS2R_LOG_INFO, "device_reset (%p)", cmd);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:1257
+Variable: cmd
+1257->	esas2r_log(ESAS2R_LOG_INFO, "target_reset (%p)", cmd);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:1264
+Variable: dev
+1264->	esas2r_log(ESAS2R_LOG_INFO, "change_queue_depth %p, %d", dev, depth);
+ =============================================
+drivers/scsi/esas2r/esas2r_main.c:1273
+Variable: dev
+1273->	esas2r_log(ESAS2R_LOG_INFO, "change_queue_type %p, %d", dev, type);
+ =============================================
+drivers/scsi/megaraid/megaraid_sas_base.c:2171
+Variable: reset_cmd
+2171->				printk(KERN_NOTICE "%d:%p reset [%02x]\n",
+2172					reset_index, reset_cmd,
+2173					reset_cmd->scmd->cmnd[0]);
+ =============================================
+drivers/scsi/megaraid/megaraid_sas_base.c:2178
+Variable: reset_cmd
+2178->				printk(KERN_NOTICE "megasas:%p synch cmds"
+2179						"reset queue\n",
+2180						reset_cmd);
+ =============================================
+drivers/scsi/megaraid/megaraid_sas_base.c:2770
+Variable: cmd, cmd->scmd
+2770->			printk(KERN_NOTICE "megaraid_sas: command %p, %p:%d"
+2771				"detected to be pending while HBA reset.\n",
+2772					cmd, cmd->scmd, cmd->sync_cmd);
+ =============================================
+drivers/scsi/megaraid/megaraid_sas_base.c:2777
+Variable: cmd, cmd->scmd
+2777->				printk(KERN_NOTICE "megaraid_sas: cmd %p, %p:%d"
+2778					"was tried multiple times during reset."
+2779					"Shutting down the HBA\n",
+2780					cmd, cmd->scmd, cmd->sync_cmd);
+ =============================================
+drivers/scsi/megaraid/megaraid_sas_base.c:2794
+Variable: cmd
+2794->			printk(KERN_NOTICE "megasas: %p synchronous cmd"
+2795						"on the internal reset queue,"
+2796						"issue it again.\n", cmd);
+ =============================================
+drivers/scsi/megaraid/megaraid_sas_base.c:2802
+Variable: cmd
+2802->			printk(KERN_NOTICE "megasas: %p scsi cmd [%02x]"
+2803			"detected on the internal queue, issue again.\n",
+2804			cmd, cmd->scmd->cmnd[0]);
+ =============================================
+drivers/scsi/megaraid/megaraid_sas_base.c:2858
+Variable: cmd
+2858->			printk(KERN_NOTICE "megasas: moving cmd[%d]:%p:%d:%p"
+2859					"on the defer queue as internal\n",
+2860				defer_index, cmd, cmd->sync_cmd, cmd->scmd);
+ =============================================
+drivers/scsi/mpt2sas/mpt2sas_scsih.c:2777
+Variable: scmd
+2777->	printk(MPT2SAS_INFO_FMT "attempting host reset! scmd(%p)\n",
+2778	    ioc->name, scmd);
+ =============================================
+drivers/scsi/mpt2sas/mpt2sas_scsih.c:2784
+Variable: scmd
+2784->	printk(MPT2SAS_INFO_FMT "host reset: %s scmd(%p)\n",
+2785	    ioc->name, ((r == SUCCESS) ? "SUCCESS" : "FAILED"), scmd);
+ =============================================
+drivers/scsi/mpt2sas/mpt2sas_scsih.c:8284
+Variable: pdev
+8284->	printk(MPT2SAS_INFO_FMT "pdev=0x%p, slot=%s, entering "
+8285	    "operating state [D%d]\n", ioc->name, pdev,
+8286	    pci_name(pdev), device_state);
+ =============================================
+drivers/scsi/mpt2sas/mpt2sas_scsih.c:8308
+Variable: pdev
+8308->	printk(MPT2SAS_INFO_FMT "pdev=0x%p, slot=%s, previous "
+8309	    "operating state [D%d]\n", ioc->name, pdev,
+8310	    pci_name(pdev), device_state);
+ =============================================
+drivers/scsi/mpt3sas/mpt3sas_scsih.c:2438
+Variable: scmd
+2438->	pr_info(MPT3SAS_FMT "attempting host reset! scmd(%p)\n",
+2439	    ioc->name, scmd);
+ =============================================
+drivers/scsi/mpt3sas/mpt3sas_scsih.c:2445
+Variable: scmd
+2445->	pr_info(MPT3SAS_FMT "host reset: %s scmd(%p)\n",
+2446	    ioc->name, ((r == SUCCESS) ? "SUCCESS" : "FAILED"), scmd);
+ =============================================
+drivers/scsi/mpt3sas/mpt3sas_scsih.c:7883
+Variable: pdev
+7883->	pr_info(MPT3SAS_FMT
+7884		"pdev=0x%p, slot=%s, entering operating state [D%d]\n",
+7885		ioc->name, pdev, pci_name(pdev), device_state);
+ =============================================
+drivers/scsi/mpt3sas/mpt3sas_scsih.c:7907
+Variable: pdev
+7907->	pr_info(MPT3SAS_FMT
+7908		"pdev=0x%p, slot=%s, previous operating state [D%d]\n",
+7909		ioc->name, pdev, pci_name(pdev), device_state);
+ =============================================
+drivers/scsi/mvsas/mv_sas.c:1961
+Variable: task
+1961->		mv_printk("Release slot [%x] tag[%x], task [%p]:\n",
+1962			slot_idx, slot->slot_tag, task);
+ =============================================
+drivers/scsi/pm8001/pm8001_init.c:994
+Variable: pdev
+994->	pm8001_printk("pdev=0x%p, slot=%s, entering "
+995		      "operating state [D%d]\n", pdev,
+996		      pm8001_ha->name, device_state);
+ =============================================
+drivers/scsi/pm8001/pm8001_init.c:1019
+Variable: pdev
+1019->	pm8001_printk("pdev=0x%p, slot=%s, resuming from previous "
+1020		"operating state [D%d]\n", pdev, pm8001_ha->name, device_state);
+ =============================================
+drivers/scsi/qla2xxx/qla_dbg.c:672
+Variable: ha->fw_dump
+672->		ql_log(ql_log_info, vha, 0xd001,
+673		    "Firmware dump saved to temp buffer (%ld/%p), dump status flags (0x%lx).\n",
+674		    vha->host_no, ha->fw_dump, ha->fw_dump_cap_flags);
+ =============================================
+drivers/scsi/qla2xxx/qla_init.c:4434
+Variable: ha->mctp_dump
+4434->		ql_log(ql_log_info, vha, 0x5070,
+4435		    "Mctp dump capture for host (%ld/%p).\n",
+4436		    vha->host_no, ha->mctp_dump);
+ =============================================
+drivers/scsi/qla2xxx/qla_isr.c:2338
+Variable: sp
+2338->		ql_log(ql_log_warn, vha, 0x3025,
+2339		    "cmd is NULL: already returned to OS (sp=%p).\n", sp);
+ =============================================
+drivers/scsi/qla2xxx/qla_mr.c:1202
+Variable: fcport
+1202->				ql_log(ql_log_info, vha, 0x208d,
+1203				   "TGT-ID: New fcport Added: %p\n", fcport);
+ =============================================
+drivers/scsi/qla2xxx/qla_mr.c:1403
+Variable: ha
+1403->	ql_log(ql_log_info, vha, 0x0140,
+1404	    "%s Done done - ha=%p.\n", __func__, ha);
+ =============================================
+drivers/scsi/qla2xxx/qla_mr.c:2572
+Variable: sp
+2572->		ql_log(ql_log_warn, vha, 0x303b,
+2573		    "cmd is NULL: already returned to OS (sp=%p).\n", sp);
+ =============================================
+drivers/scsi/qla2xxx/qla_nx.c:4346
+Variable: ha->md_tmplt_hdr, ha->md_dump
+4346->	ql_log(ql_log_info, vha, 0xb044,
+4347	    "Firmware dump saved to temp buffer (%ld/%p %ld/%p).\n",
+4348	    vha->host_no, ha->md_tmplt_hdr, vha->host_no, ha->md_dump);
+ =============================================
+drivers/scsi/qla2xxx/qla_nx.c:4400
+Variable: ha->md_tmplt_hdr
+4400->		ql_log(ql_log_info, vha, 0xb048,
+4401		    "Free MiniDump template: %p, size (%d KB)\n",
+4402		    ha->md_tmplt_hdr, ha->md_template_size / 1024);
+ =============================================
+drivers/scsi/qla2xxx/qla_nx.c:4449
+Variable: ha->md_tmplt_hdr
+4449->				ql_log(ql_log_info, vha, 0xb04d,
+4450				    "Free MiniDump template: %p, size: (%d KB)\n",
+4451				    ha->md_tmplt_hdr,
+4452				    ha->md_template_size / 1024);
+ =============================================
+drivers/scsi/qla2xxx/tcm_qla2xxx.c:1591
+Variable: sess
+1591->		pr_info("Updating session %p from port %8phC loop_id %d -> %d s_id %x:%x:%x -> %x:%x:%x\n",
+1592		    sess, sess->port_name,
+1593		    sess->loop_id, loop_id, sess->s_id.b.domain,
+1594		    sess->s_id.b.area, sess->s_id.b.al_pa, s_id.b.domain,
+1595		    s_id.b.area, s_id.b.al_pa);
+ =============================================
+drivers/scsi/scsi_lib.c:98
+Variable: cmd
+98->	SCSI_LOG_MLQUEUE(1,
+99		 printk("Inserting command %p into mlqueue\n", cmd));
+ =============================================
+drivers/scsi/sg.c:1909
+Variable: schp->pages[k]
+1909->				SCSI_LOG_TIMEOUT(5, printk(
+1910				    "sg_remove_scat: k=%d, pg=0x%p\n",
+1911				    k, schp->pages[k]));
+ =============================================
+drivers/scsi/sg.c:2135
+Variable: sfp
+2135->	SCSI_LOG_TIMEOUT(3, printk("sg_add_sfp: sfp=0x%p\n", sfp));
+ =============================================
+drivers/staging/android/binder.c:3164
+Variable: t
+3164->	seq_printf(m,
+3165		   "%s %d: %pK from %d:%d to %d:%d code %x flags %x pri %ld r%d",
+3166		   prefix, t->debug_id, t,
+3167		   t->from ? t->from->proc->pid : 0,
+3168		   t->from ? t->from->pid : 0,
+3169		   t->to_proc ? t->to_proc->pid : 0,
+ =============================================
+drivers/staging/android/binder.c:3179
+Variable: t->buffer->data
+3179->	seq_printf(m, " size %zd:%zd data %pK\n",
+3180		   t->buffer->data_size, t->buffer->offsets_size,
+3181		   t->buffer->data);
+ =============================================
+drivers/staging/android/binder.c:3187
+Variable: buffer->data
+3187->	seq_printf(m, "%s %d: %p size %zd:%zd %s\n",
+3188		   prefix, buffer->debug_id, buffer->data,
+3189		   buffer->data_size, buffer->offsets_size,
+3190		   buffer->transaction ? "active" : "delivered");
+ =============================================
+drivers/staging/android/binder.c:3290
+Variable: ref->death
+3290->	seq_printf(m, "  ref %d: desc %d %snode %d s %d w %d d %p\n",
+3291		   ref->debug_id, ref->desc, ref->node->proc ? "" : "dead ",
+3292		   ref->node->debug_id, ref->strong, ref->weak, ref->death);
+ =============================================
+drivers/target/target_core_sbc.c:470
+Variable: buf + offset
+470->			pr_warn("Detected MISCOMPARE for addr: %p buf: %p\n",
+471				addr, buf + offset);
+ =============================================
+drivers/tty/nozomi.c:1618
+Variable: tport
+1618->	printk("noz: activated %d: %p\n", tty->index, tport);
+ =============================================
+drivers/tty/nozomi.c:1640
+Variable: tport
+1640->	printk("noz: shutdown %p\n", tport);
+ =============================================
+drivers/usb/core/devio.c:380
+Variable: userurb
+380->			dev_info(&udev->dev, "userurb %pK, ep%d %s-%s, "
+381					"actual_length %u status %d\n",
+382					userurb, ep, t, d, length,
+383					timeout_or_status);
+ =============================================
+drivers/usb/dwc2/gadget.c:2572
+Variable: ep
+2572->	dev_info(hsotg->dev, "%s(ep %p)\n", __func__, ep);
+ =============================================
+drivers/usb/dwc2/gadget.c:2630
+Variable: ep, req
+2630->	dev_info(hs->dev, "ep_dequeue(%p,%p)\n", ep, req);
+ =============================================
+drivers/usb/dwc2/gadget.c:2659
+Variable: ep
+2659->	dev_info(hs->dev, "%s(ep %p %s, %d)\n", __func__, ep, ep->name, value);
+ =============================================
+drivers/usb/dwc2/gadget.c:3269
+Variable: ep->queue.next, ep->queue.prev
+3269->	seq_printf(seq, "request list (%p,%p):\n",
+3270		   ep->queue.next, ep->queue.prev);
+ =============================================
+drivers/usb/dwc2/gadget.c:3280
+Variable: req, req->req.buf
+3280->		seq_printf(seq, "%c req %p: %d bytes @%p, ",
+3281			   req == ep->req ? '*' : ' ',
+3282			   req, req->req.length, req->req.buf);
+ =============================================
+drivers/usb/gadget/goku_udc.c:1191
+Variable: &req->req
+1191->			if (seq_printf(m,
+1192				"\treq %p len %u/%u buf %p\n",
+1193				&req->req, tmp, req->req.length,
+1194				req->req.buf) < 0)
+1195				goto done;
+ =============================================
+drivers/usb/gadget/gr_udc.c:171
+Variable: req, &req->req.buf
+171->		seq_printf(seq, "    0x%p: 0x%p %d %d\n", req,
+172			   &req->req.buf, req->req.actual, req->req.length);
+ =============================================
+drivers/usb/gadget/gr_udc.c:178
+Variable: desc->paddr
+178->			seq_printf(seq, "    %c 0x%p (0x%08x): 0x%05x 0x%08x\n",
+179				   desc == req->curr_desc ? 'c' : ' ',
+180				   desc, desc->paddr, desc->ctrl, desc->data);
+ =============================================
+drivers/usb/host/isp1362-hcd.c:2091
+Variable: ep
+2091->		seq_printf(s, "%p, ep%d%s, maxpacket %d:\n", ep, ep->epnum,
+ =============================================
+drivers/usb/host/isp1362-hcd.c:2113
+Variable: urb
+2113->			seq_printf(s, "  urb%p, %d/%d\n", urb,
+2114				   urb->actual_length,
+2115				   urb->transfer_buffer_length);
+ =============================================
+drivers/usb/host/isp1362-hcd.c:2128
+Variable: ep
+2128->		seq_printf(s, "   %d/%p (%sdev%d ep%d%s max %d)\n",
+2129			   ep->interval, ep,
+2130			   (ep->udev->speed == USB_SPEED_FULL) ? "" : "ls ",
+2131			   ep->udev->devnum, ep->epnum,
+2132			   (ep->epnum == 0) ? "" :
+2133			   ((ep->nextpid == USB_PID_IN) ?
+ =============================================
+drivers/usb/host/isp1362-hcd.c:2141
+Variable: ep
+2141->		seq_printf(s, "   %d/%p (%sdev%d ep%d%s max %d)\n",
+2142			   ep->interval, ep,
+2143			   (ep->udev->speed == USB_SPEED_FULL) ? "" : "ls ",
+2144			   ep->udev->devnum, ep->epnum,
+2145			   (ep->epnum == 0) ? "" :
+2146			   ((ep->nextpid == USB_PID_IN) ?
+ =============================================
+drivers/usb/host/sl811-hcd.c:1427
+Variable: sl811->active_a
+1427->	seq_printf(s, "A: qh%p ctl %02x sts %02x\n", sl811->active_a,
+1428		sl811_read(sl811, SL811_EP_A(SL11H_HOSTCTLREG)),
+1429		sl811_read(sl811, SL811_EP_A(SL11H_PKTSTATREG)));
+ =============================================
+drivers/usb/host/sl811-hcd.c:1430
+Variable: sl811->active_b
+1430->	seq_printf(s, "B: qh%p ctl %02x sts %02x\n", sl811->active_b,
+1431		sl811_read(sl811, SL811_EP_B(SL11H_HOSTCTLREG)),
+1432		sl811_read(sl811, SL811_EP_B(SL11H_PKTSTATREG)));
+ =============================================
+drivers/usb/host/sl811-hcd.c:1437
+Variable: ep
+1437->		seq_printf(s, "%s%sqh%p, ep%d%s, maxpacket %d"
+1438					" nak %d err %d\n",
+1439			(ep == sl811->active_a) ? "(A) " : "",
+1440			(ep == sl811->active_b) ? "(B) " : "",
+1441			ep, ep->epnum,
+1442			({ char *s; switch (ep->nextpid) {
+ =============================================
+drivers/usb/host/sl811-hcd.c:1452
+Variable: urb
+1452->			seq_printf(s, "  urb%p, %d/%d\n", urb,
+1453				urb->actual_length,
+1454				urb->transfer_buffer_length);
+ =============================================
+drivers/usb/host/sl811-hcd.c:1470
+Variable: ep
+1470->			seq_printf(s,
+1471				"   %s%sqh%d/%p (%sdev%d ep%d%s max %d) "
+1472					"err %d\n",
+1473				(ep == sl811->active_a) ? "(A) " : "",
+1474				(ep == sl811->active_b) ? "(B) " : "",
+1475				ep->period, ep,
+ =============================================
+drivers/usb/host/whci/debug.c:71
+Variable: urb
+71->			seq_printf(s, "  urb %p transferred: %d bytes\n", urb,
+72				urb->actual_length);
+ =============================================
+drivers/usb/misc/ftdi-elan.c:2782
+Variable: ftdi
+2782->			dev_info(&ftdi->udev->dev, "USB FDTI=%p JTAG interface %d now attached to ftdi%d\n",
+2783				 ftdi, iface_desc->desc.bInterfaceNumber,
+2784				 interface->minor);
+ =============================================
+drivers/usb/misc/ftdi-elan.c:2791
+Variable: ftdi
+2791->		dev_info(&ftdi->udev->dev, "USB FDTI=%p ELAN interface %d now activated\n",
+2792			 ftdi, iface_desc->desc.bInterfaceNumber);
+ =============================================
+drivers/video/fbdev/udlfb.c:920
+Variable: info
+920->	pr_notice("open /dev/fb%d user=%d fb_info=%p count=%d\n",
+921	    info->node, user, info, dev->fb_count);
+ =============================================
+drivers/video/fbdev/udlfb.c:1614
+Variable: dev
+1614->	pr_info("vid_%04x&pid_%04x&rev_%04x driver's dlfb_data struct at %p\n",
+1615		usbdev->descriptor.idVendor, usbdev->descriptor.idProduct,
+1616		usbdev->descriptor.bcdDevice, dev);
+ =============================================
+fs/btrfs/check-integrity.c:851
+Variable: superblock_bdev
+851->			printk_in_rcu(KERN_INFO "New initial S-block (bdev %p, %s)"
+852				     " @%llu (%s/%llu/%d)\n",
+853				     superblock_bdev,
+854				     rcu_str_deref(device->name), dev_bytenr,
+855				     dev_state->name, dev_bytenr,
+856				     superblock_mirror_num);
+ =============================================
+fs/ceph/debugfs.c:153
+Variable: di, dentry
+153->		seq_printf(s, "%p %p\t%.*s\n",
+154			   di, dentry, dentry->d_name.len, dentry->d_name.name);
+ =============================================
+fs/fscache/object-list.c:270
+Variable: cookie->netfs_data
+270->		seq_printf(m, "%-16s %s %2lx %16p",
+271			   cookie->def->name,
+272			   type,
+273			   cookie->flags,
+274			   cookie->netfs_data);
+ =============================================
+fs/nfs/inode.c:1298
+Variable: fh
+1298->		printk(KERN_DEFAULT "%s at %p is empty\n", caption, fh);
+ =============================================
+fs/nfs/inode.c:1302
+Variable: fb
+1302->	printk(KERN_DEFAULT "%s at %p is %u bytes, crc: 0x%08x:\n",
+1303	       caption, fh, fh->size, _nfs_display_fhandle_hash(fh));
+ =============================================
+fs/nfsd/nfs4state.c:5207
+Variable: net
+5207->	printk(KERN_INFO "NFSD: starting %ld-second grace period (net %p)\n",
+5208	       nn->nfsd4_grace, net);
+ =============================================
+fs/ocfs2/aops.c:145
+Variable: inode
+145->		mlog(ML_NOTICE, "get_block on system inode 0x%p (%lu)\n",
+146		     inode, inode->i_ino);
+ =============================================
+fs/ocfs2/cluster/heartbeat.c:626
+Variable: f
+626->		mlog(ML_HEARTBEAT, "calling funcs %p\n", f);
+ =============================================
+fs/ocfs2/cluster/heartbeat.c:2530
+Variable: hc
+2530->	mlog(ML_CLUSTER, "returning %d on behalf of %p for funcs %p\n",
+2531	     ret, __builtin_return_address(0), hc);
+ =============================================
+fs/ocfs2/cluster/heartbeat.c:2541
+Variable: hc
+2541->	mlog(ML_CLUSTER, "on behalf of %p for funcs %p\n",
+2542	     __builtin_return_address(0), hc);
+ =============================================
+fs/ocfs2/cluster/netdebug.c:147
+Variable: nst
+147->	seq_printf(seq, "%p:\n"
+148		   "  pid:          %lu\n"
+149		   "  tgid:         %lu\n"
+150		   "  process name: %s\n"
+151		   "  node:         %u\n"
+152		   "  sc:           %p\n"
+153		   "  message id:   %d\n"
+154		   "  message type: %u\n"
+155		   "  message key:  0x%08x\n"
+156		   "  sock acquiry: %lld usecs ago\n"
+157		   "  send start:   %lld usecs ago\n"
+158		   "  wait start:   %lld usecs ago\n",
+159		   nst, (unsigned long)task_pid_nr(nst->st_task),
+160		   (unsigned long)nst->st_task->tgid,
+161		   nst->st_task->comm, nst->st_node,
+162		   nst->st_sc, nst->st_id, nst->st_msg_type,
+163		   nst->st_msg_key,
+164		   (long long)sock,
+165		   (long long)send,
+166		   (long long)status);
+ =============================================
+fs/ocfs2/cluster/netdebug.c:352
+Variable: sc
+352->	seq_printf(seq, "%p:\n"
+353		   "  krefs:           %d\n"
+354		   "  sock:            %pI4:%u -> "
+355				      "%pI4:%u\n"
+356		   "  remote node:     %s\n"
+357		   "  page off:        %zu\n"
+358		   "  handshake ok:    %u\n"
+359		   "  timer:           %lld usecs\n"
+360		   "  data ready:      %lld usecs\n"
+361		   "  advance start:   %lld usecs\n"
+362		   "  advance stop:    %lld usecs\n"
+363		   "  func start:      %lld usecs\n"
+364		   "  func stop:       %lld usecs\n"
+365		   "  func key:        0x%08x\n"
+366		   "  func type:       %u\n",
+367		   sc,
+368		   atomic_read(&sc->sc_kref.refcount),
+369		   &saddr, inet ? ntohs(sport) : 0,
+370		   &daddr, inet ? ntohs(dport) : 0,
+371		   sc->sc_node->nd_name,
+372		   sc->sc_page_off,
+373		   sc->sc_handshake_ok,
+374		   (long long)ktime_to_us(sc->sc_tv_timer),
+375		   (long long)ktime_to_us(sc->sc_tv_data_ready),
+376		   (long long)ktime_to_us(sc->sc_tv_advance_start),
+377		   (long long)ktime_to_us(sc->sc_tv_advance_stop),
+378		   (long long)ktime_to_us(sc->sc_tv_func_start),
+379		   (long long)ktime_to_us(sc->sc_tv_func_stop),
+380		   sc->sc_msg_key,
+381		   sc->sc_msg_type);
+ =============================================
+fs/ocfs2/cluster/tcp.c:397
+Variable: sc
+397->	sclog(sc, "releasing\n");
+ =============================================
+fs/ocfs2/cluster/tcp.c:417
+Variable: sc
+417->	sclog(sc, "put\n");
+ =============================================
+fs/ocfs2/cluster/tcp.c:422
+Variable: sc
+422->	sclog(sc, "get\n");
+ =============================================
+fs/ocfs2/cluster/tcp.c:456
+Variable: sc
+456->	sclog(sc, "alloced\n");
+ =============================================
+fs/ocfs2/cluster/tcp.c:607
+Variable: sc
+607->		sclog(sc, "data_ready hit\n");
+ =============================================
+fs/ocfs2/cluster/tcp.c:632
+Variable: sc
+632->	sclog(sc, "state_change to %d\n", sk->sk_state);
+ =============================================
+fs/ocfs2/cluster/tcp.c:734
+Variable: sc
+734->	sclog(sc, "shutting down\n");
+ =============================================
+fs/ocfs2/cluster/tcp.c:866
+Variable: func
+866->		mlog(ML_TCP, "registered handler func %p type %u key %08x\n",
+867		     func, msg_type, key);
+ =============================================
+fs/ocfs2/cluster/tcp.c:892
+Variable: nmh->nh_func
+892->		mlog(ML_TCP, "unregistering handler func %p type %u key %08x\n",
+893		     nmh->nh_func, nmh->nh_msg_type, nmh->nh_key);
+ =============================================
+fs/ocfs2/cluster/tcp.c:1355
+Variable: sc
+1355->	sclog(sc, "receiving\n");
+ =============================================
+fs/ocfs2/cluster/tcp.c:1430
+Variable: sc
+1430->	sclog(sc, "ret = %d\n", ret);
+ =============================================
+fs/ocfs2/dlm/dlmdomain.c:568
+Variable: msg, data
+568->	mlog(0, "%p %u %p", msg, len, data);
+ =============================================
+fs/ocfs2/dlm/dlmdomain.c:1633
+Variable: dlm
+1633->	mlog(0, "%p", dlm);
+ =============================================
+fs/ocfs2/dlm/dlmdomain.c:2059
+Variable: dlm->recovery_map, &(dlm->recovery_map[0]]);
+2059->	mlog(0, "dlm->recovery_map=%p, &(dlm->recovery_map[0])=%p\n",
+2060		  dlm->recovery_map, &(dlm->recovery_map[0]));
+ =============================================
+fs/ocfs2/dlm/dlmlock.c:687
+Variable: lock, res
+687->		mlog(0, "creating lock: lock=%p res=%p\n", lock, res);
+ =============================================
+fs/ocfs2/dlm/dlmmaster.c:828
+Variable: res
+828->	mlog(0, "no lockres found, allocated our own: %p\n", res);
+ =============================================
+fs/ocfs2/dlm/dlmunlock.c:625
+Variable: lock, res
+625->	mlog(0, "lock=%p res=%p\n", lock, res);
+ =============================================
+fs/ocfs2/dlm/dlmunlock.c:666
+Variable: data
+666->		mlog(0, "calling unlockast(%p, %d)\n", data, status);
+ =============================================
+fs/ocfs2/dlmfs/dlmfs.c:383
+Variable: ip->ip_conn
+383->	mlog(0, "we're a directory, ip->ip_conn = 0x%p\n", ip->ip_conn);
+ =============================================
+fs/ocfs2/dlmglue.c:2725
+Variable: ret
+2725->			mlog(0, "End of list found, %p\n", ret);
+ =============================================
+fs/proc/base.c:304
+304->			seq_printf(m, "[<%pK>] %pS\n",
+305				   (void *)entries[i], (void *)entries[i]);
+Note: CVE-2018-17972
+ =============================================
+kernel/cgroup.c:5359
+Variable: cset
+5359->		seq_printf(seq, "css_set %p\n", cset);
+ =============================================
+kernel/time/timer_list.c:122
+Variable: base
+122->	SEQ_printf(m, "  .base:       %pK\n", base);
+ =============================================
+mm/percpu.c:1719
+Variable: base
+1719->	pr_info("PERCPU: Embedded %zu pages/cpu @%p s%zu r%zu d%zu u%zu\n",
+1720		PFN_DOWN(size_sum), base, ai->static_size, ai->reserved_size,
+1721		ai->dyn_size, ai->unit_size);
+Note: CVE-2018-5995
+ =============================================
+mm/percpu.c:1833
+Variable: vm.addr
+1833->	pr_info("PERCPU: %d %s pages/cpu @%p s%zu r%zu d%zu\n",
+1834		unit_pages, psize_str, vm.addr, ai->static_size,
+1835		ai->reserved_size, ai->dyn_size);
+ =============================================
+mm/vmalloc.c:2610
+Variable: v->addr, v->addr + v->size
+2610->	seq_printf(m, "0x%pK-0x%pK %7ld",
+2611		v->addr, v->addr + v->size, v->size);
+ =============================================
+net/atm/proc.c:194
+Variable: vcc
+194->	seq_printf(seq, "%pK ", vcc);
+ =============================================
+net/atm/proc.c:220
+Variable: vcc
+220->		seq_printf(seq, sizeof(void *) == 4 ?
+221			   "N/A@%pK%10s" : "N/A@%pK%2s", vcc, "");
+ =============================================
+net/bluetooth/af_bluetooth.c:622
+Variable: sk
+622->		seq_printf(seq,
+623			   "%pK %-6d %-6u %-6u %-6u %-6lu %-6lu",
+624			   sk,
+625			   atomic_read(&sk->sk_refcnt),
+626			   sk_rmem_alloc_get(sk),
+627			   sk_wmem_alloc_get(sk),
+ =============================================
+net/can/bcm.c:168
+Variable: sk->sk_socket
+168->	seq_printf(m, ">>> socket %pK", sk->sk_socket);
+ =============================================
+net/can/bcm.c:169
+Variable: sk
+169->	seq_printf(m, " / sk %pK", sk);
+ =============================================
+net/can/bcm.c:170
+Variable: bo
+170->	seq_printf(m, " / bo %pK", bo);
+ =============================================
+net/ipv4/fib_semantics.c:225
+Variable: fi
+225->		pr_warn("Freeing alive fib_info %p\n", fi);
+ =============================================
+net/ipv4/ping.c:1133
+Variable: sp
+1133->	seq_printf(f, "%5d: %08X:%04X %08X:%04X"
+1134		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d",
+1135		bucket, src, srcp, dest, destp, sp->sk_state,
+1136		sk_wmem_alloc_get(sp),
+1137		sk_rmem_alloc_get(sp),
+1138		0, 0L, 0,
+1139		from_kuid_munged(seq_user_ns(f), sock_i_uid(sp)),
+1140		0, sock_i_ino(sp),
+1141		refcount_read(&sp->sk_refcnt), sp,
+1142		atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv4/raw.c:1019
+Variable: sp
+1019->	seq_printf(seq, "%4d: %08X:%04X %08X:%04X"
+1020		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d\n",
+1021		i, src, srcp, dest, destp, sp->sk_state,
+1022		sk_wmem_alloc_get(sp),
+1023		sk_rmem_alloc_get(sp),
+1024		0, 0L, 0,
+1025		from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1026		0, sock_i_ino(sp),
+1027		refcount_read(&sp->sk_refcnt), sp, atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv4/tcp_ipv4.c:2338
+Variable: req
+2338->	seq_printf(f, "%4d: %08X:%04X %08X:%04X"
+2339		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %u %d %pK",
+2340		i,
+2341		ireq->ir_loc_addr,
+2342		ntohs(inet_sk(sk)->inet_sport),
+2343		ireq->ir_rmt_addr,
+2344		ntohs(ireq->ir_rmt_port),
+2345		TCP_SYN_RECV,
+2346		0, 0, /* could print option size, but that is af dependent. */
+2347		1,    /* timers active (only the expire timer) */
+2348		jiffies_delta_to_clock_t(delta),
+2349		req->num_timeout,
+2350		from_kuid_munged(seq_user_ns(f), uid),
+2451		0,  /* non standard timer */
+2352		0, /* open_requests have no inode */
+2353		atomic_read(&sk->sk_refcnt),
+2354		req);
+ =============================================
+net/ipv4/tcp_ipv4.c:2395
+Variable: sk
+2395->	seq_printf(f, "%4d: %08X:%04X %08X:%04X %02X %08X:%08X %02X:%08lX "
+2396			"%08X %5u %8d %lu %d %pK %lu %lu %u %u %d",
+2397		i, src, srcp, dest, destp, sk->sk_state,
+2398		tp->write_seq - tp->snd_una,
+2399		rx_queue,
+2400		timer_active,
+2401		jiffies_delta_to_clock_t(timer_expires - jiffies),
+2402		icsk->icsk_retransmits,
+2403		from_kuid_munged(seq_user_ns(f), sock_i_uid(sk)),
+2404		icsk->icsk_probes_out,
+2405		sock_i_ino(sk),
+2406		refcount_read(&sk->sk_refcnt), sk,
+2407		jiffies_to_clock_t(icsk->icsk_rto),
+2408		jiffies_to_clock_t(icsk->icsk_ack.ato),
+2409		(icsk->icsk_ack.quick << 1) | icsk->icsk_ack.pingpong,
+2410		tp->snd_cwnd,
+2411		state == TCP_LISTEN ?
+2412		    fastopenq->max_qlen :
+2413		    (tcp_in_initial_slowstart(tp) ? -1 : tp->snd_ssthresh));
+ =============================================
+net/ipv4/tcp_ipv4.c:2428
+Variable: tw
+2428->	seq_printf(f, "%4d: %08X:%04X %08X:%04X"
+2429		" %02X %08X:%08X %02X:%08lX %08X %5d %8d %d %d %pK",
+2430		i, src, srcp, dest, destp, tw->tw_substate, 0, 0,
+2431		3, jiffies_delta_to_clock_t(delta), 0, 0, 0, 0,
+2432		atomic_read(&tw->tw_refcnt), tw);
+ =============================================
+net/ipv4/udp.c:2438
+Variable: sp
+2438->	seq_printf(f, "%5d: %08X:%04X %08X:%04X"
+2439		" %02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d",
+2440		bucket, src, srcp, dest, destp, sp->sk_state,
+2441		sk_wmem_alloc_get(sp),
+2442		sk_rmem_alloc_get(sp),
+2443		0, 0L, 0,
+2444		from_kuid_munged(seq_user_ns(f), sock_i_uid(sp)),
+2445		0, sock_i_ino(sp),
+2446		refcount_read(&sp->sk_refcnt), sp,
+2447		atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv6/datagram.c:936
+Variable: sp
+936->	seq_printf(seq,
+937		   "%5d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+938		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d\n",
+939		   bucket,
+940		   src->s6_addr32[0], src->s6_addr32[1],
+941		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+942		   dest->s6_addr32[0], dest->s6_addr32[1],
+943		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+944		   sp->sk_state,
+945		   sk_wmem_alloc_get(sp),
+946		   rqueue,
+947		   0, 0L, 0,
+948		   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+949		   0,
+950		   sock_i_ino(sp),
+951		   refcount_read(&sp->sk_refcnt), sp,
+952		   atomic_read(&sp->sk_drops));
+ =============================================
+net/ipv6/tcp_ipv6.c:1775
+Variable: req
+1775->	seq_printf(seq,
+1776		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1777		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %d %d %pK\n",
+1778		   i,
+1779		   src->s6_addr32[0], src->s6_addr32[1],
+1780		   src->s6_addr32[2], src->s6_addr32[3],
+1781		   inet_rsk(req)->ir_num,
+1782		   dest->s6_addr32[0], dest->s6_addr32[1],
+1783		   dest->s6_addr32[2], dest->s6_addr32[3],
+1784		   ntohs(inet_rsk(req)->ir_rmt_port),
+1785		   TCP_SYN_RECV,
+1786		   0, 0, /* could print option size, but that is af dependent. */
+1787		   1,   /* timers active (only the expire timer) */
+1788		   jiffies_to_clock_t(ttd),
+1789		   req->num_timeout,
+1790		   from_kuid_munged(seq_user_ns(seq), uid),
+1791		   0,  /* non standard timer */
+1792		   0, /* open_requests have no inode */
+1793		   0, req);
+ =============================================
+net/ipv6/tcp_ipv6.c:1828
+Variable: sp
+1828->	seq_printf(seq,
+1829		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1830		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %lu %lu %u %u %d\n",
+1831		   i,
+1832		   src->s6_addr32[0], src->s6_addr32[1],
+1833		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+1834		   dest->s6_addr32[0], dest->s6_addr32[1],
+1835		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+1836		   sp->sk_state,
+1837		   tp->write_seq-tp->snd_una,
+1838		   (sp->sk_state == TCP_LISTEN) ? sp->sk_ack_backlog : (tp->rcv_nxt - tp->copied_seq),
+1839		   timer_active,
+1840		   jiffies_delta_to_clock_t(timer_expires - jiffies),
+1841		   icsk->icsk_retransmits,
+1842		   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+1843		   icsk->icsk_probes_out,
+1844		   sock_i_ino(sp),
+1845		   atomic_read(&sp->sk_refcnt), sp,
+1846		   jiffies_to_clock_t(icsk->icsk_rto),
+1847		   jiffies_to_clock_t(icsk->icsk_ack.ato),
+1848		   (icsk->icsk_ack.quick << 1) | icsk->icsk_ack.pingpong,
+1849		   tp->snd_cwnd,
+1850		   sp->sk_state == TCP_LISTEN ?
+1851			(fastopenq ? fastopenq->max_qlen : 0) :
+1852			(tcp_in_initial_slowstart(tp) ? -1 : tp->snd_ssthresh)
+1853		   );
+ =============================================
+net/ipv6/tcp_ipv6.c:1868
+Variable: tw
+1868->	seq_printf(seq,
+1869		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1870		   "%02X %08X:%08X %02X:%08lX %08X %5d %8d %d %d %pK\n",
+1871		   i,
+1872		   src->s6_addr32[0], src->s6_addr32[1],
+1873		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+1874		   dest->s6_addr32[0], dest->s6_addr32[1],
+1875		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+1876		   tw->tw_substate, 0, 0,
+1877		   3, jiffies_delta_to_clock_t(delta), 0, 0, 0, 0,
+1878		   atomic_read(&tw->tw_refcnt), tw);
+ =============================================
+net/key/af_key.c:3767
+Variable: s 
+3767->		seq_printf(f, "%pK %-6d %-6u %-6u %-6u %-6lu\n",
+3768			       s,
+3769			       atomic_read(&s->sk_refcnt),
+3770			       sk_rmem_alloc_get(s),
+3771			       sk_wmem_alloc_get(s),
+3772			       from_kuid_munged(seq_user_ns(f), sock_i_uid(s)),
+ =============================================
+net/netlink/af_netlink.c:2374
+Variable: s
+2374->		seq_printf(seq, "%pK %-3d %-6u %08x %-8d %-8d %d %-8d %-8d %-8lu\n",
+2375			   s,
+2376			   s->sk_protocol,
+2377			   nlk->portid,
+2378			   nlk->groups ? (u32)nlk->groups[0] : 0,
+2379			   sk_rmem_alloc_get(s),
+ =============================================
+net/packet/af_packet.c:4144
+Variable: s
+4144->		seq_printf(seq,
+4145			   "%pK %-6d %-4d %04x   %-5d %1d %-6u %-6u %-6lu\n",
+4146			   s,
+4147			   atomic_read(&s->sk_refcnt),
+4148			   s->sk_type,
+4149			   ntohs(po->num),
+ =============================================
+net/phonet/socket.c:606
+Variable:sk 
+606->		seq_printf(seq, "%2d %04X:%04X:%02X %02X %08X:%08X %5d %lu "
+607			"%d %pK %d",
+608			sk->sk_protocol, pn->sobject, pn->dobject,
+609			pn->resource, sk->sk_state,
+610			sk_wmem_alloc_get(sk), sk_rmem_alloc_get(sk),
+611			from_kuid_munged(seq_user_ns(seq), sock_i_uid(sk)),
+612			sock_i_ino(sk),
+613			refcount_read(&sk->sk_refcnt), sk,
+614			atomic_read(&sk->sk_drops));
+ =============================================
+net/sctp/probe.c:158
+Variable: asoc
+158->		printl("%p %5d %5d %5d %8d %5d ", asoc,
+159		       ep->base.bind_addr.port, asoc->peer.port,
+160		       asoc->pathmtu, asoc->peer.rwnd, asoc->unack_data);
+ =============================================
+net/sctp/proc.c:228
+Variable: sctp_sk(sk)->type sk->sk_state
+228->		seq_printf(seq, "%8pK %8pK %-3d %-3d %-4d %-5d %5u %5lu ", ep, sk,
+229			   sctp_sk(sk)->type, sk->sk_state, hash,
+230			   epb->bind_addr.port,
+231			   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sk)),
+232			   sock_i_ino(sk));
+ =============================================
+net/sctp/proc.c:336
+Variable: assoc, sk
+336->		seq_printf(seq,
+337			   "%8pK %8pK %-3d %-3d %-2d %-4d "
+338			   "%4d %8d %8d %7u %5lu %-5d %5d ",
+339			   assoc, sk, sctp_sk(sk)->type, sk->sk_state,
+340			   assoc->state, hash,
+341			   assoc->assoc_id,
+ =============================================
+net/unix/af_unix.c:2543
+Variable: s
+2543->		seq_printf(seq, "%pK: %08X %08X %08X %04X %02X %5lu",
+2544			s,
+2545			atomic_read(&s->sk_refcnt),
+2546			0,
+2547			s->sk_state == TCP_LISTEN ? __SO_ACCEPTCON : 0,
+2548			s->sk_type,
+ =============================================
+sound/core/timer.c:916
+Variable: timer
+916->		pr_warn("ALSA: timer %p is busy?\n", timer);
+ =============================================
+sound/pci/rme9652/hdsp.c:3418
+Variable: hdsp->capture_buffer, hdsp->playback_buffer
+3418->	snd_iprintf(buffer, "Buffers: capture %p playback %p\n",
+3419		    hdsp->capture_buffer, hdsp->playback_buffer);
+ =============================================
+sound/pci/rme9652/rme9652.c:1600
+Variable: rme9652->capture_buffer, rme9652->playback_buffer
+1600->	snd_iprintf(buffer, "Buffers: capture %p playback %p\n",
+1601		    rme9652->capture_buffer, rme9652->playback_buffer);
+ =============================================
+drivers/firmware/google/memconsole.c:74
+Variable: hdr
+74->	pr_info("BIOS console v1 EBDA structure found at %p\n", hdr);
+ =============================================
+drivers/firmware/google/memconsole.c:86
+Variable: hdr
+86->	pr_info("BIOS console v2 EBDA structure found at %p\n", hdr);
+ =============================================
+drivers/input/serio/arc_ps2.c:210
+Variable: arc_ps2->addr
+210->	dev_info(&pdev->dev, "irq = %d, address = 0x%p, ports = %i\n",
+211		 irq, arc_ps2->addr, ARC_PS2_PORTS);
+ =============================================
+drivers/isdn/hardware/eicon/divasproc.c:300
+Variable: a->resources.pci.addr[i]
+300->				seq_printf(m,
+301					   "Mem / I/O %d : 0x%x / mapped : 0x%lx",
+302					   i, a->resources.pci.bar[i],
+303					   (unsigned long) a->resources.
+304					   pci.addr[i]);
+ =============================================
+drivers/isdn/hisax/telespci.c:325
+Variable: cs->hw.teles0.mem_base
+325->	printk(KERN_INFO
+326	       "HiSax: Teles PCI config irq:%d mem:%p\n",
+327	       cs->irq,
+328	       cs->hw.teles0.membase);
+329
+330	setup_isac(cs);
+ =============================================
+drivers/media/common/saa7146/saa7146_core.c:447
+Variable: dev->mem
+447->	pr_info("found saa7146 @ mem %p (revision %d, irq %d) (0x%04x,0x%04x)\n",
+448		dev->mem, dev->revision, pci->irq,
+449		pci->subsystem_vendor, pci->subsystem_device);
+ =============================================
+drivers/media/pci/ivtv/ivtvfb.c:1131
+Variable: oi->video_base
+1131->	IVTVFB_INFO("Framebuffer at 0x%lx, mapped to 0x%p, size %dk\n",
+1132			oi->video_pbase, oi->video_vbase,
+1133			oi->video_buffer_size / 1024);
+1134
+ =============================================
+drivers/media/v4l2-core/v4l2-ioctl.c:338
+Variable: p->base
+338->	pr_cont("capability=0x%x, flags=0x%x, base=0x%p, width=%u, "
+339		"height=%u, pixelformat=%c%c%c%c, "
+340		"bytesperline=%u, sizeimage=%u, colorspace=%d\n",
+341			p->capability, p->flags, p->base,
+342			p->fmt.width, p->fmt.height,
+343			(p->fmt.pixelformat & 0xff),
+ =============================================
+drivers/mfd/sm501.c:1344
+1344->	dev_info(sm->dev, "SM501 At %p: Version %08lx, %ld Mb, IRQ %d\n",
+1345		 sm->regs, devid, (unsigned long)mem_avail >> 20, sm->irq);
+ =============================================
+drivers/misc/atmel-ssc.c:190
+190->	dev_info(&pdev->dev, "Atmel SSC device at 0x%p (irq %d)\n",
+191			ssc->regs, ssc->irq);
+ =============================================
+drivers/misc/cb710/core.c:272
+272->	dev_info(&pdev->dev, "id %d, IO 0x%p, IRQ %d\n",
+273		chip->platform_id, chip->iobase, pdev->irq);
+ =============================================
+drivers/misc/vmw_vmci/vmci_guest.c:484
+484->	dev_info(&pdev->dev, "Found VMCI PCI device at %#lx, irq %u\n",
+485		 (unsigned long)iobase, pdev->irq);
+ =============================================
+drivers/mtd/devices/docg3.c:1915
+1915->		doc_info("Found a G3 DiskOnChip at addr %p, floor %d\n",
+1916			 docg3->cascade->base, floor);
+ =============================================
+drivers/net/can/at91_can.c:1377
+1377->	dev_info(&pdev->dev, "device registered (reg_base=%p, irq=%d)\n",
+1378		 priv->reg_base, dev->irq);
+ =============================================
+drivers/net/can/c_can/c_can_platform.c:318
+318->	dev_info(&pdev->dev, "%s device registered (regs=%p, irq=%d)\n",
+319		 KBUILD_MODNAME, priv->base, dev->irq);
+ =============================================
+drivers/net/can/cc770/cc770_isa.c:278
+278->	dev_info(&pdev->dev, "device registered (reg_base=0x%p, irq=%d)\n",
+279		 priv->reg_base, dev->irq);
+ =============================================
+drivers/net/can/sja1000/ems_pci.c:348
+348->			dev_info(&pdev->dev, "Channel #%d at 0x%p, irq %d\n",
+349					i + 1, priv->reg_base, dev->irq);
+ =============================================
+drivers/net/can/sja1000/kvaser_pci.c:269
+269->	dev_info(&pdev->dev, "reg_base=%p conf_addr=%p irq=%d\n",
+270		 priv->reg_base, board->conf_addr, dev->irq);
+ =============================================
+drivers/net/can/sja1000/peak_pci.c:672
+672->		dev_info(&pdev->dev,
+673			 "%s at reg_base=0x%p cfg_base=0x%p irq=%d\n",
+674			 dev->name, priv->reg_base, chan->cfg_base, dev->irq);
+ =============================================
+drivers/net/can/sja1000/plx_pci.c:602
+602->			dev_info(&pdev->dev, "Channel #%d at 0x%p, irq %d "
+603				 "registered as %s\n", i + 1, priv->reg_base,
+604				 dev->irq, dev->name);
+ =============================================
+drivers/net/can/sja1000/sja1000_isa.c:219
+219->	dev_info(&pdev->dev, "%s device registered (reg_base=0x%p, irq=%d)\n",
+220		 DRV_NAME, priv->reg_base, dev->irq);
+ =============================================
+drivers/net/can/sja1000/sja1000_platform.c:226
+226->	dev_info(&pdev->dev, "%s device registered (reg_base=%p, irq=%d)\n",
+227		 DRV_NAME, priv->reg_base, dev->irq);
+ =============================================
+drivers/net/ethernet/3com/3c59x.c:1163
+1163->	pr_info("%s: 3Com %s %s at %p.\n",
+1164	       print_name,
+1165	       pdev ? "PCI" : "EISA",
+1166	       vci->name,
+1167	       ioaddr);
+ =============================================
+drivers/net/ethernet/brocade/bna/bnad.c:3488
+3488->	pr_info("bar0 mapped to %p, len %llu\n", bnad->bar0,
+3489	       (unsigned long long) bnad->mmio_len);
+ =============================================
+drivers/net/ethernet/brocade/bna/bnad.c:3610
+3610->	pr_info("bnad_pci_probe : (0x%p, 0x%p) PCI Func : (%d)\n",
+3611	       pdev, pcidev_id, PCI_FUNC(pdev->devfn));
+ =============================================
+drivers/net/ethernet/dec/tulip/de2104x.c:2076
+2076->	netdev_info(dev, "%s at %p, %pM, IRQ %d\n",
+2077		    de->de21040 ? "21040" : "21041",
+2078		    regs, dev->dev_addr, pdev->irq);
+ =============================================
+drivers/net/ethernet/fealnx.c:667
+667->	printk(KERN_INFO "%s: %s at %p, %pM, IRQ %d.\n",
+668	       dev->name, skel_netdrv_tbl[chip_id].chip_name, ioaddr,
+669	       dev->dev_addr, irq);
+ =============================================
+drivers/net/ethernet/intel/igb/igb_main.c:406
+Variable: buffer_info->next_to_watch
+406->		pr_info(" %5d %5X %5X %016llX %04X %p %016llX\n",
+407			n, tx_ring->next_to_use, tx_ring->next_to_clean,
+408			(u64)dma_unmap_addr(buffer_info, dma),
+409			dma_unmap_len(buffer_info, len),
+410			buffer_info->next_to_watch,
+411			(u64)buffer_info->time_stamp);
+ =============================================
+drivers/net/ethernet/intel/igb/igb_main.c:454
+Variable: buffer_info->next_to_watch, buffer_info->skb
+454->			pr_info("T [0x%03X]    %016llX %016llX %016llX %04X  %p %016llX %p%s\n",
+455				i, le64_to_cpu(u0->a),
+456				le64_to_cpu(u0->b),
+457				(u64)dma_unmap_addr(buffer_info, dma),
+458				dma_unmap_len(buffer_info, len),
+459				buffer_info->next_to_watch,
+460				(u64)buffer_info->time_stamp,
+461				buffer_info->skb, next_desc);
+ =============================================
+drivers/net/ethernet/packetengines/hamachi.c:739
+739->	printk(KERN_INFO "%s: %s type %x at %p, %pM, IRQ %d.\n",
+740		   dev->name, chip_tbl[chip_id].name, readl(ioaddr + ChipRev),
+741		   ioaddr, dev->dev_addr, irq);
+ =============================================
+drivers/net/ethernet/qlogic/qla3xxx.c:3408
+3408->	netdev_info(ndev, "mem  IO base address adjusted = 0x%p\n",
+3409		    qdev->mem_map_registers);
+ =============================================
+drivers/net/ethernet/realtek/8139cp.c:2013
+2013->	netdev_info(dev, "RTL-8139C+ at 0x%p, %pM, IRQ %d\n",
+2014		    regs, dev->dev_addr, pdev->irq);
+ =============================================
+drivers/net/ethernet/realtek/8139too.c:1038
+1038->	netdev_info(dev, "%s at 0x%p, %pM, IRQ %d\n",
+1039		    board_info[ent->driver_data].name,
+1040		    ioaddr, dev->dev_addr, pdev->irq);
+ =============================================
+drivers/net/ethernet/sis/sis190.c:1894
+1894->		netdev_info(dev, "%s: %s at %p (IRQ: %d), %pM\n",
+1895			    pci_name(pdev),
+1896			    sis_chip_info[ent->driver_data].name,
+1897			    ioaddr, pdev->irq, dev->dev_addr);
+ =============================================
+drivers/net/ethernet/sis/sis900.c:559
+559->	printk(KERN_INFO "%s: %s at 0x%p, IRQ %d, %pM\n",
+560	       net_dev->name, card_name, ioaddr, pci_dev->irq,
+561	       net_dev->dev_addr);
+ =============================================
+drivers/net/ethernet/stmicro/stmmac/dwmac1000_core.c:70
+70->	pr_info("\tDWMAC1000 regs (base addr = 0x%p)\n", ioaddr);
+ =============================================
+drivers/net/ethernet/stmicro/stmmac/dwmac100_core.c:48
+48->	pr_info("\t----------------------------------------------\n"
+49		"\t  DWMAC 100 CSR (base addr = 0x%p)\n"
+50		"\t----------------------------------------------\n", ioaddr);
+ =============================================
+drivers/net/ethernet/via/via-rhine.c:999
+999->	netdev_info(dev, "VIA %s at 0x%lx, %pM, IRQ %d\n",
+1000		    name, (long)ioaddr, dev->dev_addr, rp->irq);
+ =============================================
+drivers/net/wireless/ath/ath9k/ahb.c:145
+145->	wiphy_info(hw->wiphy, "%s mem=0x%lx, irq=%d\n",
+146		   hw_name, (unsigned long)mem, irq);
+ =============================================
+drivers/net/wireless/ath/ath9k/pci.c:876
+876->	wiphy_info(hw->wiphy, "%s mem=0x%lx, irq=%d\n",
+877		   hw_name, (unsigned long)sc->mem, pdev->irq);
+ =============================================
+drivers/net/wireless/ath/wil6210/pcie_bus.c:141
+Variable: csr
+141->	dev_info(&pdev->dev, "CSR at %pR -> 0x%p\n", &pdev->resource[0], csr);
+ =============================================
+drivers/scsi/cxgbi/libcxgbi.c:1558
+Variable: skb
+1558->		pr_info("skb 0x%p, off %u, %d, TCP_SKB_DONE.\n",
+1559			skb, offset, offloaded);
+ =============================================
+drivers/scsi/cxgbi/libcxgbi.c:2477
+Variable: csk
+2477->		pr_info("csk 0x%p is closing.\n", csk);
+2478		goto release_conn;
+ =============================================
+drivers/scsi/dpt_i2o.c:1054
+Variable: base_addr_virt
+1054->		printk(KERN_INFO "Adaptec I2O RAID controller"
+1055				 " %d at %p size=%x irq=%d%s\n", 
+1056			hba_count-1, base_addr_virt,
+1057			hba_map0_area_size, pDev->irq,
+1058			dma64 ? " (64-bit DMA)" : "");
+ =============================================
+drivers/scsi/dpt_i2o.c:1063
+Variable: base_addr_virt
+1063->		printk(KERN_INFO"     BAR0 %p - size= %x\n",base_addr_virt,hba_map0_area_size);
+ =============================================
+drivers/scsi/dpt_i2o.c:1064
+Variable: msg_addr_virt
+1064->		printk(KERN_INFO"     BAR1 %p - size= %x\n",msg_addr_virt,hba_map1_area_size);
+ =============================================
+drivers/scsi/ips.c:2056
+Variable: ha->mem_ptr
+2056->		seq_printf(m,
+2057			  "\tShared memory address             : 0x%lx\n",
+2058			  (unsigned long)ha->mem_ptr);
+ =============================================
+drivers/scsi/mpt2sas/mpt2sas_base.c:1550
+Variable: chip_phys, ioc->chip
+1550->	printk(MPT2SAS_INFO_FMT "iomem(0x%016llx), mapped(0x%p), size(%d)\n",
+1551	    ioc->name, (unsigned long long)chip_phys, ioc->chip, memap_sz);
+ =============================================
+drivers/scsi/mpt3sas/mpt3sas_base.c:1864
+Variable: chip_phys, ioc->chip
+1864->	pr_info(MPT3SAS_FMT "iomem(0x%016llx), mapped(0x%p), size(%d)\n",
+1865	    ioc->name, (unsigned long long)chip_phys, ioc->chip, memap_sz);
+ =============================================
+drivers/spi/spi-altera.c:253
+Variable: hw->base
+253->	dev_info(&pdev->dev, "base %p, irq %d\n", hw->base, hw->irq);
+ =============================================
+drivers/spi/spi-oc-tiny.c:316
+Variable: hw->base
+316->	dev_info(&pdev->dev, "base %p, irq %d\n", hw->base, hw->irq);
+ =============================================
+drivers/spi/spi-xilinx.c:431
+Variable: re->start, xspi->regs
+431->	dev_info(&pdev->dev, "at 0x%08llX mapped to 0x%p, irq=%d\n",
+432		(unsigned long long)res->start, xspi->regs, xspi->irq);
+ =============================================
+drivers/staging/cxt1e1/hwprobe.c:76
+76->	pr_info("%s: %s at v/p=%lx/%lx (%02x:%02x.%x) irq %d\n",
+77		hi->devname, "MUSYCC",
+78		(unsigned long) hi->addr_mapped[0], hi->addr[0],
+79		hi->pci_busno, (u_int8_t) PCI_SLOT(pdev->devfn),
+80		(u_int8_t) PCI_FUNC(pdev->devfn), pdev->irq);
+ =============================================
+drivers/staging/cxt1e1/hwprobe.c:83
+83->	pr_info("%s: %s at v/p=%lx/%lx (%02x:%02x.%x) irq %d\n",
+84		hi->devname, "EBUS  ",
+85		(unsigned long) hi->addr_mapped[1], hi->addr[1],
+86		hi->pci_busno, (u_int8_t) PCI_SLOT(pdev->devfn),
+87		(u_int8_t) PCI_FUNC(pdev->devfn), pdev->irq);
+ =============================================
+drivers/staging/rts5208/rtsx.c:930
+930->	dev_info(&pci->dev, "Original address: 0x%lx, remapped address: 0x%lx\n",
+931		 (unsigned long)(dev->addr), (unsigned long)(dev->remap_addr));
+ =============================================
+drivers/staging/xgifb/XGI_main_26.c:1779
+1779->	dev_info(&pdev->dev,
+1780		 "Framebuffer at 0x%Lx, mapped to 0x%p, size %dk\n",
+1781		 (u64) xgifb_info->video_base,
+1782		 xgifb_info->video_vbase,
+1783		 xgifb_info->video_size / 1024);
+ =============================================
+drivers/staging/xgifb/XGI_main_26.c:1785
+1785->	dev_info(&pdev->dev,
+1786		 "MMIO at 0x%Lx, mapped to 0x%p, size %ldk\n",
+1787		 (u64) xgifb_info->mmio_base, xgifb_info->mmio_vbase,
+1788		 xgifb_info->mmio_size / 1024);
+ =============================================
+drivers/usb/dwc2/gadget.c:3447
+3447->	dev_info(dev, "regs %p, irq %d\n", hsotg->regs, hsotg->irq);
+ =============================================
+drivers/usb/gadget/goku_udc.c:1765
+1765->	INFO(dev, "irq %d, pci mem %p\n", pdev->irq, base);
+ =============================================
+drivers/usb/gadget/gr_udc.c:2202
+2202->		dev_info(dev->dev, "regs: %p, irqs %d, %d, %d\n", dev->regs,
+2203			 dev->irq, dev->irqi, dev->irqo);
+ =============================================
+drivers/usb/gadget/gr_udc.c:2205
+2205->		dev_info(dev->dev, "regs: %p, irq %d\n", dev->regs, dev->irq);
+ =============================================
+drivers/usb/gadget/net2272.c:2271
+2271->	dev_info(dev->dev, "irq %i, mem %p, chip rev %04x, dma %s\n",
+2272		dev->irq, dev->base_addr, dev->chiprev,
+2273		dma_mode_string());
+ =============================================
+drivers/usb/gadget/net2280.c:2828
+2828->	INFO (dev, "irq %d, pci mem %p, chip rev %04x\n",
+2829			pdev->irq, base, dev->chiprev);
+ =============================================
+drivers/usb/phy/phy-msm-usb.c:1610
+1610->	dev_info(&pdev->dev, "OTG regs = %p\n", motg->regs);
+ =============================================
+drivers/video/fbdev/efifb.c:228
+228->	printk(KERN_INFO "efifb: framebuffer at 0x%lx, mapped to 0x%p, "
+229	       "using %dk, total %dk\n",
+230	       efifb_fix.smem_start, info->screen_base,
+231	       size_remap/1024, size_total/1024);
+ =============================================
+drivers/video/fbdev/neofb.c:1691
+1691->		printk(KERN_INFO "neofb: mapped io at %p\n",
+1692		       par->mmio_vbase);
+ =============================================
+drivers/video/fbdev/neofb.c:1733
+1733->		printk(KERN_INFO "neofb: mapped framebuffer at %p\n",
+1734		       info->screen_base);
+ =============================================
+drivers/video/fbdev/s1d13xxxfb.c:875
+875->	printk(KERN_INFO PFX "regs mapped at 0x%p, fb %d KiB mapped at 0x%p\n",
+876	       default_par->regs, info->fix.smem_len / 1024, info->screen_base);
+ =============================================
+drivers/video/fbdev/savage/savagefb_driver.c:1737
+1737->		printk(KERN_INFO "savagefb: mapped io at %p\n",
+1738			par->mmio.vbase);
+ =============================================
+drivers/video/fbdev/savage/savagefb_driver.c:1784
+1784->		printk(KERN_INFO "savagefb: mapped framebuffer at %p, "
+1785		       "pbase == %x\n", par->video.vbase, par->video.pbase);
+ =============================================
+drivers/video/fbdev/simplefb.c:230
+230->	dev_info(&pdev->dev, "framebuffer at 0x%lx, 0x%x bytes, mapped to 0x%p\n",
+231			     info->fix.smem_start, info->fix.smem_len,
+232			     info->screen_base);
+ =============================================
+drivers/video/fbdev/sis/sis_main.c:6219
+6219->	printk(KERN_INFO "sisfb: Video RAM at 0x%lx, mapped to 0x%lx, size %ldk\n",
+6220		ivideo->video_base, (unsigned long)ivideo->video_vbase, ivideo->video_size / 1024);
+ =============================================
+drivers/video/fbdev/sis/sis_main.c:6227
+6227->	printk(KERN_INFO "sisfb: MMIO at 0x%lx, mapped to 0x%lx, size %ldk\n",
+6228		ivideo->mmio_base, (unsigned long)ivideo->mmio_vbase, ivideo->mmio_size / 1024);
+ =============================================
+drivers/video/fbdev/uvesafb.c:1765
+Variable: info->screen_base
+1765->	printk(KERN_INFO "uvesafb: framebuffer at 0x%lx, mapped to 0x%p, "
+1766			"using %dk, total %dk\n", info->fix.smem_start,
+1767			info->screen_base, info->fix.smem_len/1024,
+1768			par->vbe_ib.total_memory * 64);
+ =============================================
+drivers/video/fbdev/vesafb.c:328
+Variable: pmi_pal
+328->		printk(KERN_INFO "vesafb: pmi: set display start = %p, set palette = %p\n",pmi_start,pmi_pal);
+ =============================================
+drivers/video/fbdev/vesafb.c:469
+Variable: info->screen_base
+469->	printk(KERN_INFO "vesafb: framebuffer at 0x%lx, mapped to 0x%p, "
+470	       "using %dk, total %dk\n",
+471	       vesafb_fix.smem_start, info->screen_base,
+472	       size_remap/1024, size_total/1024);
+ =============================================
+drivers/video/fbdev/vga16fb.c:1333
+Variable: info->screen_base
+1333->	printk(KERN_INFO "vga16fb: mapped to 0x%p\n", info->screen_base);
+ =============================================
+fs/dlm/debug_fs.c:82
+Variable: res
+82->	rv = seq_printf(s, "\nResource %p Name (len=%d) \"",
+83			res, res->res_length);
+Function: print_format1(struct dlm_rsb *res, struct seq_file *s)
+406 print_format1(ri->rsb, seq);
+Function: table_seq_show
+ =============================================
+fs/dlm/debug_fs.c:278
+Variable: r
+278->	rv = seq_printf(s, "rsb %p %d %x %lx %d %d %u %d ",
+279			r,
+280			r->res_nodeid,
+281			r->res_first_lkid,
+282			r->res_flags,
+283			!list_empty(&r->res_root_list),
+Function: print_format3(struct dlm_rsb *r, struct seq_file *s)
+422 print_format3(ri->rsb, seq);
+Function: table_seq_show
+ =============================================
+fs/dlm/debug_fs.c:355
+Variable: r
+355->	rv = seq_printf(s, "rsb %p %d %d %d %d %lu %lx %d ",
+356			r,
+Function: print_format4(struct dlm_rsb *r, struct seq_file *s)
+429 print_format4(ri->rsb, seq);
+Function: table_seq_show
+ =============================================
+sound/pci/rme9652/hdsp.c:3420
+Variable: hdsp->iobase
+3420->	snd_iprintf(buffer, "IRQ: %d Registers bus: 0x%lx VM: 0x%lx\n",
+3421		    hdsp->irq, hdsp->port, (unsigned long)hdsp->iobase);
+ =============================================
+sound/pci/rme9652/rme9652.c:1602
+Variable: rme9652->iobase
+1602->	snd_iprintf(buffer, "IRQ: %d Registers bus: 0x%lx VM: 0x%lx\n",
+1603		    rme9652->irq, rme9652->port, (unsigned long)rme9652->iobase);
+ =============================================
+#GlobalVariable
+drivers/atm/idt77252.c:3751
+Variable: idt77252_init
+3751->	printk("%s: at %p\n", __func__, idt77252_init);
+ =============================================
+drivers/block/floppy.c:1813
+Variable: fd_timer.work.func
+Value: fd_timer_workfn
+1813->		pr_info("delayed work.function=%p expires=%ld\n",
+1814		       fd_timer.work.func,
+1815		       fd_timer.timer.expires - jiffies);
+Definition:
+988 static DECLARE_DELAYED_WORK(fd_timer, fd_timer_workfn);
+ =============================================
+drivers/block/floppy.c:1817
+Variable: fd_timeout.work.func
+Value: floppy_shutdown
+1817->		pr_info("timer_function=%p expires=%ld\n",
+1818		       fd_timeout.work.func,
+1819		       fd_timeout.timer.expires - jiffies);
+Definition:
+636 static DECLARE_DELAYED_WORK(fd_timeout, floppy_shutdown);
+ =============================================
+drivers/block/floppy.c:1821
+Variable: cont
+Type: const struct cont_t
+1821->	pr_info("cont=%p\n", cont);
+Note: Global object
+ =============================================
+drivers/scsi/be2iscsi/be_main.c:5778
+Variable: &beiscsi_iscsi_transport
+Type: struct iscsi_transport
+5778->	printk(KERN_INFO "In beiscsi_module_init, tt=%p\n",
+5779	       &beiscsi_iscsi_transport);
+Note: Global object
+ =============================================
+drivers/isdn/hisax/config.c:1297
+Variable: HiSax_reportcard
+[Patch]
+accepted-patches/print_gv/001-isdn-hisax-config
+ =============================================
+drivers/staging/rtl8712/rtl871x_ioctl_linux.c:1960
+Variable: phandler->handler
+Type: unsigned int (*handler)(struct oid_par_priv *poid_par_priv)
+1960->		netdev_info(dev, "r8712u: %s: err!, subcode=%d, oid=%d, handler=%p\n",
+1961			    __func__, poidparam->subcode, phandler->oid,
+1962			    phandler->handler);
+ =============================================
+#COPY_TO_USER
+drivers/atm/iphase.c:2764
+Variable: iadev
+[Patch]
+accepted-patches/copy_to_user/002-atm-iphase
+ =============================================
+drivers/tty/rocket.c:1328
+Variable: info
+[Patch]
+accepted-patches/copy_to_user/001-tty-rocket
+ =============================================

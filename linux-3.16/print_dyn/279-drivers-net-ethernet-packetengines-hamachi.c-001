@@ -1,0 +1,4 @@
+drivers/net/ethernet/packetengines/hamachi.c:739
+739->	printk(KERN_INFO "%s: %s type %x at %p, %pM, IRQ %d.\n",
+740		   dev->name, chip_tbl[chip_id].name, readl(ioaddr + ChipRev),
+741		   ioaddr, dev->dev_addr, irq);

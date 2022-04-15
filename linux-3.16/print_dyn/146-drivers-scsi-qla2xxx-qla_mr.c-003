@@ -1,0 +1,4 @@
+drivers/scsi/qla2xxx/qla_mr.c:2572
+Variable: sp
+2572->		ql_log(ql_log_warn, vha, 0x303b,
+2573		    "cmd is NULL: already returned to OS (sp=%p).\n", sp);

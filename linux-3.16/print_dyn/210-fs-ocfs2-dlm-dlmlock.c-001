@@ -1,0 +1,3 @@
+fs/ocfs2/dlm/dlmlock.c:687
+Variable: lock, res
+687->		mlog(0, "creating lock: lock=%p res=%p\n", lock, res);

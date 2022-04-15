@@ -1,0 +1,5 @@
+drivers/media/common/saa7146/saa7146_core.c:447
+Variable: dev->mem
+447->	pr_info("found saa7146 @ mem %p (revision %d, irq %d) (0x%04x,0x%04x)\n",
+448		dev->mem, dev->revision, pci->irq,
+449		pci->subsystem_vendor, pci->subsystem_device);

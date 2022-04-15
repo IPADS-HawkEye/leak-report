@@ -1,0 +1,6 @@
+mm/percpu.c:2510
+Variable: base
+2510->	pr_info("Embedded %zu pages/cpu @%p s%zu r%zu d%zu u%zu\n",
+2511		PFN_DOWN(size_sum), base, ai->static_size, ai->reserved_size,
+2512		ai->dyn_size, ai->unit_size);
+Note: CVE-2018-5995

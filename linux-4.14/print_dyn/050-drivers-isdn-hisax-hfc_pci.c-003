@@ -1,0 +1,9 @@
+drivers/isdn/hisax/hfc_pci.c:1719
+Variable: cs->hw.hfcpci.fifos
+1719->	printk(KERN_INFO
+1720	       "HFC-PCI: defined at mem %p fifo %p(%lx) IRQ %d HZ %d\n",
+1721	       cs->hw.hfcpci.pci_io,
+1722	       cs->hw.hfcpci.fifos,
+1723	       (u_long)cs->hw.hfcpci.dma,
+1724	       cs->irq, HZ);
+Function: setup_hfcpci

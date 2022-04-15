@@ -1,0 +1,4 @@
+sound/pci/rme9652/rme9652.c:1602
+Variable: rme9652->iobase
+1602->	snd_iprintf(buffer, "IRQ: %d Registers bus: 0x%lx VM: 0x%lx\n",
+1603		    rme9652->irq, rme9652->port, (unsigned long)rme9652->iobase);

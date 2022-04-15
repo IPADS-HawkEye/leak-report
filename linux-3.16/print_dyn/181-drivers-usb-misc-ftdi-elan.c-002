@@ -1,0 +1,4 @@
+drivers/usb/misc/ftdi-elan.c:2791
+Variable: ftdi
+2791->		dev_info(&ftdi->udev->dev, "USB FDTI=%p ELAN interface %d now activated\n",
+2792			 ftdi, iface_desc->desc.bInterfaceNumber);

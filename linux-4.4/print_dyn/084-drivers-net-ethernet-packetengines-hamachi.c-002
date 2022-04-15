@@ -1,0 +1,3 @@
+drivers/net/ethernet/packetengines/hamachi.c:1063
+Variable: hmp->tx_ring
+1063->		printk(KERN_DEBUG"  Tx ring %p: ", hmp->tx_ring);

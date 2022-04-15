@@ -1,0 +1,11 @@
+drivers/net/ethernet/qlogic/qed/qed_vf.c:79
+Variable: &zone_data->non_trigger.vf_pf_msg_addr, &zone_data->trigger
+79->	DP_VERBOSE(p_hwfn,
+80		   QED_MSG_IOV,
+81		   "VF -> PF [%02x] message: [%08x, %08x] --> %p, %08x --> %p\n",
+...
+86		   &zone_data->non_trigger.vf_pf_msg_addr,
+87		   *((u32 *)&trigger), &zone_data->trigger);
+Definition:
+include/linux/qed/qed_if.h:602
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

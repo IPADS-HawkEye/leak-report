@@ -1,0 +1,4 @@
+drivers/scsi/cxgbi/libcxgbi.c:1474
+Variable: gl
+1474->			pr_warn("tag 0x%x, idx %u, gl 0x%p, %u.\n",
+1475				tag, idx, gl, gl ? gl->nelem : 0);

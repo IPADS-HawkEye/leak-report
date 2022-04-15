@@ -1,0 +1,5 @@
+drivers/misc/mic/scif/scif_debugfs.c:118
+Variable: ep
+118->		seq_printf(s, "ep %p remote windows\n", ep);
+119		scif_display_all_windows(&ep->rma_info.remote_reg_list, s);
+120		mutex_unlock(&ep->rma_info.rma_lock);

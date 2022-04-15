@@ -1,0 +1,3 @@
+drivers/scsi/dc395x.c:4704
+Variable: srb->cmd
+4704->			seq_printf(m, " %p", srb->cmd);

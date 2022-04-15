@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:3205
+Variable: cmd
+3205->			dev_notice(&instance->pdev->dev, "%p unexpected cmd on the"
+3206				"internal reset defer list while re-issue!!\n",
+3207				cmd);

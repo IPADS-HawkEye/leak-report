@@ -1,0 +1,8 @@
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:532
+Variable: instance
+532->	vchiq_log_trace(vchiq_arm_log_level,
+533		"vchiq_ioctl - instance %pK, cmd %s, arg %lx",
+534		instance,
+535		((_IOC_TYPE(cmd) == VCHIQ_IOC_MAGIC) &&
+536		(_IOC_NR(cmd) <= VCHIQ_IOC_MAX)) ?
+537		ioctl_names[_IOC_NR(cmd)] : "<invalid>", arg);

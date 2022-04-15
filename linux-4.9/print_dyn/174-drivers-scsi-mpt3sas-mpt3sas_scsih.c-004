@@ -1,0 +1,5 @@
+drivers/scsi/mpt3sas/mpt3sas_scsih.c:8950
+Variable: ioc->name
+8950->	pr_info(MPT3SAS_FMT
+8951		"pdev=0x%p, slot=%s, previous operating state [D%d]\n",
+8952		ioc->name, pdev, pci_name(pdev), device_state);

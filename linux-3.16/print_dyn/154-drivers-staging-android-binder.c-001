@@ -1,0 +1,8 @@
+drivers/staging/android/binder.c:3164
+Variable: t
+3164->	seq_printf(m,
+3165		   "%s %d: %pK from %d:%d to %d:%d code %x flags %x pri %ld r%d",
+3166		   prefix, t->debug_id, t,
+3167		   t->from ? t->from->proc->pid : 0,
+3168		   t->from ? t->from->pid : 0,
+3169		   t->to_proc ? t->to_proc->pid : 0,

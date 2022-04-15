@@ -1,0 +1,4 @@
+drivers/usb/gadget/function/f_cdev.c:1582
+Variable: port->name
+1582->	pr_info("port_name:%s (%pK) portno:(%d)\n",
+1583			port->name, port, port->port_num);

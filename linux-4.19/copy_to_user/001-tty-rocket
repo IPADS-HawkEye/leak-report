@@ -1,0 +1,4 @@
+drivers/tty/rocket.c:1287
+Variable: info
+[Patch]
+accepted-patches/copy_to_user/001-tty-rocket

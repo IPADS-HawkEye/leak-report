@@ -1,0 +1,5 @@
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:1342
+Variable: cdev
+1342->	pr_info("cdev 0x%p, f 0x%x, t3dev 0x%p open, err %d.\n",
+1343		cdev, cdev ? cdev->flags : 0, t3dev, err);
+Function: cxgb3i_dev_open

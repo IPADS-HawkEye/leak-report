@@ -1,0 +1,7 @@
+drivers/net/ethernet/qlogic/qed/qed_int.c:2228
+Variable: p_hwfn
+2228->	DP_VERBOSE(p_hwfn, NETIF_MSG_INTR, "DPC Called! (hwfn %p %d)\n",
+2229		   p_hwfn, p_hwfn->my_id);
+Definition:
+include/linux/qed/qed_if.h:602
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

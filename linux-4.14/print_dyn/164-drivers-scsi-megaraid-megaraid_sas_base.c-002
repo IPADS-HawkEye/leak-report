@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:2596
+Variable: reset_cmd
+2596->				dev_notice(&instance->pdev->dev, "%p synch cmds"
+2597						"reset queue\n",
+2598						reset_cmd);

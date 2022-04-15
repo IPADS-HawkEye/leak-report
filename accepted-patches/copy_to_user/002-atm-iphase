@@ -1,0 +1,34 @@
+From 55c0dd8adda8f25a0bdc7b58a2dbe70b59a3dfbe Mon Sep 17 00:00:00 2001
+From: 
+Date: 
+Subject: atm: iphase: Avoid copying pointers to user space.
+
+Remove the MEMDUMP_DEV case in ia_ioctl to avoid copy
+pointers to user space.
+
+Signed-off-by: 
+Signed-off-by: 
+---
+ drivers/atm/iphase.c | 6 ------
+ 1 file changed, 6 deletions(-)
+
+diff --git a/drivers/atm/iphase.c b/drivers/atm/iphase.c
+index 5278c57..302cf0b 100644
+--- a/drivers/atm/iphase.c
++++ b/drivers/atm/iphase.c
+@@ -2767,12 +2767,6 @@ static int ia_ioctl(struct atm_dev *dev, unsigned int cmd, void __user *arg)
+    case MEMDUMP:
+    {
+ 	switch (ia_cmds.sub_cmd) {
+-       	  case MEMDUMP_DEV:     
+-	     if (!capable(CAP_NET_ADMIN)) return -EPERM;
+-	     if (copy_to_user(ia_cmds.buf, iadev, sizeof(IADEV)))
+-                return -EFAULT;
+-             ia_cmds.status = 0;
+-             break;
+           case MEMDUMP_SEGREG:
+ 	     if (!capable(CAP_NET_ADMIN)) return -EPERM;
+              tmps = (u16 __user *)ia_cmds.buf;
+-- 
+cgit v1.1
+

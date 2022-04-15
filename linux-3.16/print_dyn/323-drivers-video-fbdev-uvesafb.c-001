@@ -1,0 +1,6 @@
+drivers/video/fbdev/uvesafb.c:1765
+Variable: info->screen_base
+1765->	printk(KERN_INFO "uvesafb: framebuffer at 0x%lx, mapped to 0x%p, "
+1766			"using %dk, total %dk\n", info->fix.smem_start,
+1767			info->screen_base, info->fix.smem_len/1024,
+1768			par->vbe_ib.total_memory * 64);

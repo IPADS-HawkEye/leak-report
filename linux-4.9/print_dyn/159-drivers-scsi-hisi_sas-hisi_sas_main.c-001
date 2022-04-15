@@ -1,0 +1,4 @@
+drivers/scsi/hisi_sas/hisi_sas_main.c:574
+Variable: task
+574->		dev_info(dev, "Release slot [%d:%d], task [%p]:\n",
+575			 slot->dlvry_queue, slot->dlvry_queue_slot, task);

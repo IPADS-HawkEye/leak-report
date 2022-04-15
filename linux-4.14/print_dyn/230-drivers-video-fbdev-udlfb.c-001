@@ -1,0 +1,4 @@
+drivers/video/fbdev/udlfb.c:910
+Variable: info
+910->	pr_notice("open /dev/fb%d user=%d fb_info=%p count=%d\n",
+911	    info->node, user, info, dev->fb_count);

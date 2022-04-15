@@ -1,0 +1,4 @@
+drivers/usb/dwc3/debugfs.c:754
+Variable: trb
+754->		seq_printf(s, "trb:0x%pK bph:0x%x bpl:0x%x size:0x%x ctrl: %x\n",
+755			trb, trb->bph, trb->bpl, trb->size, trb->ctrl);

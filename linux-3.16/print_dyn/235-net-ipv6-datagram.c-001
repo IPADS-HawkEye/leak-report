@@ -1,0 +1,19 @@
+net/ipv6/datagram.c:936
+Variable: sp
+936->	seq_printf(seq,
+937		   "%5d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+938		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %lu %d %pK %d\n",
+939		   bucket,
+940		   src->s6_addr32[0], src->s6_addr32[1],
+941		   src->s6_addr32[2], src->s6_addr32[3], srcp,
+942		   dest->s6_addr32[0], dest->s6_addr32[1],
+943		   dest->s6_addr32[2], dest->s6_addr32[3], destp,
+944		   sp->sk_state,
+945		   sk_wmem_alloc_get(sp),
+946		   rqueue,
+947		   0, 0L, 0,
+948		   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sp)),
+949		   0,
+950		   sock_i_ino(sp),
+951		   refcount_read(&sp->sk_refcnt), sp,
+952		   atomic_read(&sp->sk_drops));

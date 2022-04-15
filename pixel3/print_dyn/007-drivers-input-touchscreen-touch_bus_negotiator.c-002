@@ -1,0 +1,3 @@
+drivers/input/touchscreen/touch_bus_negotiator.c:250
+Variable: tbn
+250->	dev_info(tbn->dev, "destructing bus negotiator: %p\n", tbn);

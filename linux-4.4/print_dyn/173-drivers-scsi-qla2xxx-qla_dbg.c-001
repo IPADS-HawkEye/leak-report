@@ -1,0 +1,5 @@
+drivers/scsi/qla2xxx/qla_dbg.c:670
+Variable: ha->fw_dump
+670->		ql_log(ql_log_info, vha, 0xd001,
+671		    "Firmware dump saved to temp buffer (%ld/%p), dump status flags (0x%lx).\n",
+672		    vha->host_no, ha->fw_dump, ha->fw_dump_cap_flags);

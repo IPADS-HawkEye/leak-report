@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:2794
+Variable: cmd
+2794->			printk(KERN_NOTICE "megasas: %p synchronous cmd"
+2795						"on the internal reset queue,"
+2796						"issue it again.\n", cmd);

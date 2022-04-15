@@ -1,0 +1,4 @@
+drivers/dma/qcom/hidma_dbg.c:46
+Variable: tre->callback
+Type: void (*callback)(void *data)
+46->	seq_printf(s, "callback=%p\n", tre->callback);

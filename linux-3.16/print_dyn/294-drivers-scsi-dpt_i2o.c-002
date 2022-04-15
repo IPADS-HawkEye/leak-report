@@ -1,0 +1,3 @@
+drivers/scsi/dpt_i2o.c:1063
+Variable: base_addr_virt
+1063->		printk(KERN_INFO"     BAR0 %p - size= %x\n",base_addr_virt,hba_map0_area_size);

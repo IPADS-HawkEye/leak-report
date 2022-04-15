@@ -1,0 +1,4 @@
+drivers/usb/host/isp1362-hcd.c:2145
+Variable: ep
+2145->		seq_printf(s, "   %d/%p (%sdev%d ep%d%s max %d)\n",
+2146			   ep->interval, ep,

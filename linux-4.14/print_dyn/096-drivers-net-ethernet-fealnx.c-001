@@ -1,0 +1,2 @@
+drivers/net/ethernet/fealnx.c:1210
+Variable: np->rx_ring

@@ -1,0 +1,8 @@
+drivers/block/floppy.c:1818
+Variable: fd_timeout.work.func
+Value: floppy_shutdown
+1818->		pr_info("timer_function=%p expires=%ld\n",
+1819		       fd_timeout.work.func,
+1820		       fd_timeout.timer.expires - jiffies);
+Definition:
+637 static DECLARE_DELAYED_WORK(fd_timeout, floppy_shutdown);

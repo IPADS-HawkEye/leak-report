@@ -1,0 +1,4 @@
+drivers/message/fusion/mptscsih.c:1943
+Variable: SCpnt
+1943->	printk(MYIOC_s_INFO_FMT "host reset: %s (sc=%p)\n",
+1944	    ioc->name, ((retval == 0) ? "SUCCESS" : "FAILED" ), SCpnt);

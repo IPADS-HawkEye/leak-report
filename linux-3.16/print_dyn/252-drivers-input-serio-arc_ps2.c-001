@@ -1,0 +1,4 @@
+drivers/input/serio/arc_ps2.c:210
+Variable: arc_ps2->addr
+210->	dev_info(&pdev->dev, "irq = %d, address = 0x%p, ports = %i\n",
+211		 irq, arc_ps2->addr, ARC_PS2_PORTS);

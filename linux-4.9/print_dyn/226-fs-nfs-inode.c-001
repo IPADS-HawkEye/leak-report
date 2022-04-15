@@ -1,0 +1,3 @@
+fs/nfs/inode.c:1417
+Variable: fh
+1417->		printk(KERN_DEFAULT "%s at %p is empty\n", caption, fh);

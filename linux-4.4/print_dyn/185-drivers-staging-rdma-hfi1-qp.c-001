@@ -1,0 +1,8 @@
+drivers/staging/rdma/hfi1/qp.c:1644
+Variable: sde, send_context
+1644->	seq_printf(s,
+1645		   "N %d %s QP%u R %u %s %u %u %u f=%x %u %u %u %u %u PSN %x %x %x %x %x (%u %u %u %u %u %u) QP%u LID %x SL %u MTU %d %u %u %u SDE %p,%u\n",
+1646		   iter->n,
+...
+1672		   sde,
+Function: qb_iter_print <- _qp_stats_seq_show

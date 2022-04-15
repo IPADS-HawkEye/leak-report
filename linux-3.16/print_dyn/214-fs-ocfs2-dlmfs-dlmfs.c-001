@@ -1,0 +1,3 @@
+fs/ocfs2/dlmfs/dlmfs.c:383
+Variable: ip->ip_conn
+383->	mlog(0, "we're a directory, ip->ip_conn = 0x%p\n", ip->ip_conn);

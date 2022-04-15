@@ -1,0 +1,6 @@
+drivers/scsi/libsas/sas_ata.c:441
+Variable: task
+441->		SAS_DPRINTK("%s: Task %p already finished.\n", __func__,
+442			    task);
+definition:
+#define SAS_DPRINTK(fmt, ...) printk(KERN_DEBUG "sas: " fmt, ## __VA_ARGS__)

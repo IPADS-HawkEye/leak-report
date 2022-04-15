@@ -1,0 +1,5 @@
+drivers/video/fbdev/msm/mdss_debug_xlog.c:454
+Variable: dump_addr
+454->			pr_info("%s: start_addr:0x%pK end_addr:0x%pK reg_addr=0x%pK\n",
+455				dump_name, dump_addr, dump_addr + (u32)len * 16,
+456				addr);

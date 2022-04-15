@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:2171
+Variable: reset_cmd
+2171->				printk(KERN_NOTICE "%d:%p reset [%02x]\n",
+2172					reset_index, reset_cmd,
+2173					reset_cmd->scmd->cmnd[0]);

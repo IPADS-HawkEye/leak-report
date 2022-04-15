@@ -1,0 +1,5 @@
+drivers/gpu/drm/amd/amdgpu/amdgpu_virt.c:256
+Variable: adev->virt.mm_table.gpu_addr, adev->virt.mm_table.cpu_addr
+256->	DRM_INFO("MM table gpu addr = 0x%llx, cpu addr = %p.\n",
+257		 adev->virt.mm_table.gpu_addr,
+258		 adev->virt.mm_table.cpu_addr);

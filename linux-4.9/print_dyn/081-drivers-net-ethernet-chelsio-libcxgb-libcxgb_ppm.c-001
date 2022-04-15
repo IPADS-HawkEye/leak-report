@@ -1,0 +1,4 @@
+drivers/net/ethernet/chelsio/libcxgb/libcxgb_ppm.c:396
+Variable: ppm_pp, ppm
+396->		pr_info("ippm: %s, ppm 0x%p,0x%p already initialized, %u/%u.\n",
+397			ndev->name, ppm_pp, ppm, ppm->ppmax, ppmax);

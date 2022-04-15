@@ -1,0 +1,6 @@
+drivers/scsi/qla2xxx/qla_nx.c:4449
+Variable: ha->md_tmplt_hdr
+4449->				ql_log(ql_log_info, vha, 0xb04d,
+4450				    "Free MiniDump template: %p, size: (%d KB)\n",
+4451				    ha->md_tmplt_hdr,
+4452				    ha->md_template_size / 1024);

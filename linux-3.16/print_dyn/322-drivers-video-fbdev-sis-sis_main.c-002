@@ -1,0 +1,3 @@
+drivers/video/fbdev/sis/sis_main.c:6227
+6227->	printk(KERN_INFO "sisfb: MMIO at 0x%lx, mapped to 0x%lx, size %ldk\n",
+6228		ivideo->mmio_base, (unsigned long)ivideo->mmio_vbase, ivideo->mmio_size / 1024);

@@ -1,0 +1,4 @@
+drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c:1551
+Variable: instance
+[patch]
+accepted-patches/print_dyn/006-staging-vc04_services-interface-vchiq_arm-vchiq_arm

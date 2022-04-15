@@ -1,0 +1,2 @@
+drivers/usb/dwc2/gadget.c:3447
+3447->	dev_info(dev, "regs %p, irq %d\n", hsotg->regs, hsotg->irq);

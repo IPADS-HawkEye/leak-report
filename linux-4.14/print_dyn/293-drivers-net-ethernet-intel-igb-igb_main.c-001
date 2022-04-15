@@ -1,0 +1,8 @@
+drivers/net/ethernet/intel/igb/igb_main.c:410
+Variable: buffer_info->next_to_watch
+410->		pr_info(" %5d %5X %5X %016llX %04X %p %016llX\n",
+411			n, tx_ring->next_to_use, tx_ring->next_to_clean,
+412			(u64)dma_unmap_addr(buffer_info, dma),
+413			dma_unmap_len(buffer_info, len),
+414			buffer_info->next_to_watch,
+415			(u64)buffer_info->time_stamp);

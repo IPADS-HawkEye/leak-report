@@ -1,0 +1,5 @@
+drivers/infiniband/hw/qib/qib_iba7322.c:3370
+Variable: &n->notify
+3370->		qib_devinfo(dd->pcidev,
+3371			"set notifier irq %d rcv %d notify %p\n",
+3372			n->notify.irq, n->rcv, &n->notify);

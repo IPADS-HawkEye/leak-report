@@ -1,0 +1,6 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:2777
+Variable: cmd, cmd->scmd
+2777->				printk(KERN_NOTICE "megaraid_sas: cmd %p, %p:%d"
+2778					"was tried multiple times during reset."
+2779					"Shutting down the HBA\n",
+2780					cmd, cmd->scmd, cmd->sync_cmd);

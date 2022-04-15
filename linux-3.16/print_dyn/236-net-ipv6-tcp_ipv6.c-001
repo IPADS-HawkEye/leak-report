@@ -1,0 +1,21 @@
+net/ipv6/tcp_ipv6.c:1775
+Variable: req
+1775->	seq_printf(seq,
+1776		   "%4d: %08X%08X%08X%08X:%04X %08X%08X%08X%08X:%04X "
+1777		   "%02X %08X:%08X %02X:%08lX %08X %5u %8d %d %d %pK\n",
+1778		   i,
+1779		   src->s6_addr32[0], src->s6_addr32[1],
+1780		   src->s6_addr32[2], src->s6_addr32[3],
+1781		   inet_rsk(req)->ir_num,
+1782		   dest->s6_addr32[0], dest->s6_addr32[1],
+1783		   dest->s6_addr32[2], dest->s6_addr32[3],
+1784		   ntohs(inet_rsk(req)->ir_rmt_port),
+1785		   TCP_SYN_RECV,
+1786		   0, 0, /* could print option size, but that is af dependent. */
+1787		   1,   /* timers active (only the expire timer) */
+1788		   jiffies_to_clock_t(ttd),
+1789		   req->num_timeout,
+1790		   from_kuid_munged(seq_user_ns(seq), uid),
+1791		   0,  /* non standard timer */
+1792		   0, /* open_requests have no inode */
+1793		   0, req);

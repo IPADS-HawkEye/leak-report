@@ -1,0 +1,5 @@
+drivers/gpu/drm/drm_vm.c:697
+Variable: high_memory
+697->	seq_printf(m, "vma use count: %lu, high_memory = %pK, 0x%pK\n",
+698		   vma_count, high_memory,
+699		   (void *)(unsigned long)virt_to_phys(high_memory));

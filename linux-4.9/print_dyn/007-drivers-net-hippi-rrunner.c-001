@@ -1,0 +1,4 @@
+drivers/net/hippi/rrunner.c:1303
+Variable: rrpriv->tx_skbuff[cons]->data
+[Patch]
+accepted-patches/print_dyn/005-net-hippi-rrunner

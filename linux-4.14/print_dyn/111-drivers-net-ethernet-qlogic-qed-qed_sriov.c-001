@@ -1,0 +1,11 @@
+drivers/net/ethernet/qlogic/qed/qed_sriov.c:522
+Variable: p_iov_info->mbx_msg_virt_addr, p_iov_info->mbx_msg_phys_addr
+522->	DP_VERBOSE(p_hwfn,
+523		   QED_MSG_IOV,
+524		   "PF's Requests mailbox [%p virt 0x%llx phys],  Response mailbox [%p virt 0x%llx phys] Bulletins [%p virt 0x%llx phys]\n",
+525		   p_iov_info->mbx_msg_virt_addr,
+526		   (u64) p_iov_info->mbx_msg_phys_addr,
+527		   p_iov_info->mbx_reply_virt_addr,
+Definition:
+include/linux/qed/qed_if.h:783
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

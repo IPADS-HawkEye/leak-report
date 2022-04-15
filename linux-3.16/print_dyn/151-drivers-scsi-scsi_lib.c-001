@@ -1,0 +1,4 @@
+drivers/scsi/scsi_lib.c:98
+Variable: cmd
+98->	SCSI_LOG_MLQUEUE(1,
+99		 printk("Inserting command %p into mlqueue\n", cmd));

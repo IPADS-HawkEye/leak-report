@@ -1,0 +1,4 @@
+drivers/nfc/nfcmrvl/usb.c:156
+Variable: urb
+156->	nfc_info(priv->dev, "urb %p status %d count %d",
+157		 urb, urb->status, urb->actual_length);

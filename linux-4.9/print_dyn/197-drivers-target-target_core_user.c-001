@@ -1,0 +1,4 @@
+drivers/target/target_core_user.c:621
+Variable: cmd->se_cmd
+621->		pr_warn("TCMU: Userspace set UNKNOWN_OP flag on se_cmd %p\n",
+622			cmd->se_cmd);

@@ -1,0 +1,3 @@
+drivers/infiniband/ulp/isert/ib_isert.c:2359
+Variable: isert_conn
+2359->			pr_info("conn %p PI offload enabled\n", isert_conn);

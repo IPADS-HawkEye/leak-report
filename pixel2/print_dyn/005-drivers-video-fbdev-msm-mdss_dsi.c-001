@@ -1,0 +1,5 @@
+drivers/video/fbdev/msm/mdss_dsi.c:4123
+Variable: ctrl->ctrl_base
+4123->	pr_info("%s: ctrl_base=%pK ctrl_size=%x phy_base=%pK phy_size=%x\n",
+4124		__func__, ctrl->ctrl_base, ctrl->reg_size, ctrl->phy_io.base,
+4125		ctrl->phy_io.len);

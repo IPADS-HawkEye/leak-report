@@ -1,0 +1,8 @@
+drivers/gpu/drm/msm/msm_gem.c:802
+Variable: msm_obj->vaddr
+802->	seq_printf(m, "%08x: %c %2d (%2d) %08llx %p %zu%s\n",
+803
+804			msm_obj->flags, is_active(msm_obj) ? 'A' : 'I',
+805			obj->name, obj->refcount.refcount.counter,
+806			off, msm_obj->vaddr, obj->size, madv);
+807

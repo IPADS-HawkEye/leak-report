@@ -1,0 +1,6 @@
+drivers/media/pci/netup_unidvb/netup_unidvb_core.c:673
+Variable: dma->addr_virt
+673->	dev_info(dev, "%s(): DMA%d buffer virt/phys 0x%p/0x%llx size %d\n",
+674		__func__, num, dma->addr_virt,
+675		(unsigned long long)dma->addr_phys,
+676		dma->ring_buffer_size);

@@ -1,0 +1,3 @@
+kernel/time/timer_list.c:131
+Variable: base
+131->	SEQ_printf(m, "  .base:       %pK\n", base);

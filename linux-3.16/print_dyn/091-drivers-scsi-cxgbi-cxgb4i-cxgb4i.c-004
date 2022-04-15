@@ -1,0 +1,7 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1479
+Variable: cdev
+1479->	pr_info("cxgb4i 0x%p, nppods %u, bits %u, mask 0x%x,0x%x pkt %u/%u, "
+1480		" %u/%u.\n",
+1481		cdev, ddp->nppods, ddp->idx_bits, ddp->idx_mask,
+1482		ddp->rsvd_tag_mask, ddp->max_txsz, lldi->iscsi_iolen,
+1483		ddp->max_rxsz, lldi->iscsi_iolen);

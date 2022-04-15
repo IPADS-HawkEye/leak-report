@@ -1,0 +1,5 @@
+drivers/scsi/cxgbi/cxgb4i/cxgb4i.c:1476
+Variable: cdev
+1476->	pr_info("cxgb4i 0x%p tag: sw %u, rsvd %u,%u, mask 0x%x.\n",
+1477		cdev, cdev->tag_format.sw_bits, cdev->tag_format.rsvd_bits,
+1478		cdev->tag_format.rsvd_shift, cdev->tag_format.rsvd_mask);

@@ -1,0 +1,14 @@
+net/sctp/proc.c:342
+Variable: assoc, sk
+342->	seq_printf(seq,
+343		   "%8pK %8pK %-3d %-3d %-2d %-4d "
+344		   "%4d %8d %8d %7u %5lu %-5d %5d ",
+345		   assoc, sk, sctp_sk(sk)->type, sk->sk_state,
+346		   assoc->state, 0,
+347		   assoc->assoc_id,
+348		   assoc->sndbuf_used,
+349		   atomic_read(&assoc->rmem_alloc),
+350		   from_kuid_munged(seq_user_ns(seq), sock_i_uid(sk)),
+351		   sock_i_ino(sk),
+352		   epb->bind_addr.port,
+353		   assoc->peer.port);

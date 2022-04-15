@@ -1,0 +1,4 @@
+drivers/scsi/esas2r/esas2r_main.c:442
+Variable: pcid, host->hostdata
+442->	esas2r_log(ESAS2R_LOG_INFO, "pci_set_drvdata(%p, %p) called", pcid,
+443		   host->hostdata);

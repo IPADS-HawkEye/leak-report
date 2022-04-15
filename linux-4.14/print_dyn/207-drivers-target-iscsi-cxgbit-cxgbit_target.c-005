@@ -1,0 +1,4 @@
+drivers/target/iscsi/cxgbit/cxgbit_target.c:1546
+Variable: csk
+1546->		pr_info("csk 0x%p, tid 0x%x, seq 0x%x != 0x%x.\n",
+1547			csk, csk->tid, pdu_cb->seq, csk->rcv_nxt);

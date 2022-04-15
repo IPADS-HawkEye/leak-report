@@ -1,0 +1,7 @@
+drivers/scsi/dpt_i2o.c:1054
+Variable: base_addr_virt
+1054->		printk(KERN_INFO "Adaptec I2O RAID controller"
+1055				 " %d at %p size=%x irq=%d%s\n", 
+1056			hba_count-1, base_addr_virt,
+1057			hba_map0_area_size, pDev->irq,
+1058			dma64 ? " (64-bit DMA)" : "");

@@ -1,0 +1,4 @@
+drivers/scsi/mpt2sas/mpt2sas_base.c:1550
+Variable: chip_phys, ioc->chip
+1550->	printk(MPT2SAS_INFO_FMT "iomem(0x%016llx), mapped(0x%p), size(%d)\n",
+1551	    ioc->name, (unsigned long long)chip_phys, ioc->chip, memap_sz);

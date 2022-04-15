@@ -1,0 +1,10 @@
+drivers/net/ethernet/qlogic/qed/qed_roce.c:2558
+Variable:rx_buf_addr
+2558->	DP_VERBOSE(cdev,
+2559		   QED_MSG_LL2,
+2560		   "roce ll2 rx complete: bus_addr=%p, len=%d, data_len_err=%d\n",
+2561		   (void *)(uintptr_t)rx_buf_addr,
+2562		   data_length, data_length_error);
+Definition:
+include/linux/qed/qed_if.h:602
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

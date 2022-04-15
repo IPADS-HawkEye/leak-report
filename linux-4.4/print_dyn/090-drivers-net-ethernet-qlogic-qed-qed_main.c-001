@@ -1,0 +1,8 @@
+drivers/net/ethernet/qlogic/qed/qed_main.c:552
+Variable: p_hwfn->sp_dpc
+552->			DP_VERBOSE(cdev, NETIF_MSG_IFDOWN,
+553				   "Disabled sp taskelt [hwfn %d] at %p\n",
+554				   i, p_hwfn->sp_dpc);
+Definition:
+include/linux/qed/qed_if.h:309
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

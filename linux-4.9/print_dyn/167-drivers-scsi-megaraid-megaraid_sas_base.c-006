@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:3297
+Variable: cmd
+3297->			dev_notice(&instance->pdev->dev, "%p synchronous cmd"
+3298						"on the internal reset queue,"
+3299						"issue it again.\n", cmd);

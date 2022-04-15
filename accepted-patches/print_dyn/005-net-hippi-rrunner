@@ -1,0 +1,36 @@
+From fa8b9e8bea50c226559381b1ea2dee7329031625 Mon Sep 17 00:00:00 2001
+From: 
+Date: 
+Subject: net: hippi:Fix misuse of %x in rrunner.c
+
+The pointer should be printed with %p or %px rather than
+cast to unsigned long type and printed with %08lx.
+Change %08lx to %p to print the pointer.
+
+Signed-off-by: 
+Signed-off-by: 
+---
+ drivers/net/hippi/rrunner.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/net/hippi/rrunner.c b/drivers/net/hippi/rrunner.c
+index 029206e4..0f7025f 100644
+--- a/drivers/net/hippi/rrunner.c
++++ b/drivers/net/hippi/rrunner.c
+@@ -1298,11 +1298,11 @@ static void rr_dump(struct net_device *dev)
+ 	if (rrpriv->tx_skbuff[cons]){
+ 		len = min_t(int, 0x80, rrpriv->tx_skbuff[cons]->len);
+ 		printk("skbuff for cons %i is valid - dumping data (0x%x bytes - skbuff len 0x%x)\n", cons, len, rrpriv->tx_skbuff[cons]->len);
+-		printk("mode 0x%x, size 0x%x,\n phys %08Lx, skbuff-addr %08lx, truesize 0x%x\n",
++		printk("mode 0x%x, size 0x%x,\n phys %08Lx, skbuff-addr %p, truesize 0x%x\n",
+ 		       rrpriv->tx_ring[cons].mode,
+ 		       rrpriv->tx_ring[cons].size,
+ 		       (unsigned long long) rrpriv->tx_ring[cons].addr.addrlo,
+-		       (unsigned long)rrpriv->tx_skbuff[cons]->data,
++		       rrpriv->tx_skbuff[cons]->data,
+ 		       (unsigned int)rrpriv->tx_skbuff[cons]->truesize);
+ 		for (i = 0; i < len; i++){
+ 			if (!(i & 7))
+-- 
+cgit v1.1
+

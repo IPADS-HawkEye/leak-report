@@ -1,0 +1,4 @@
+sound/pci/rme9652/hdsp.c:3349
+Variable: hdsp->capture_buffer, hdsp->playback_buffer
+3349->	snd_iprintf(buffer, "Buffers: capture %p playback %p\n",
+3350		    hdsp->capture_buffer, hdsp->playback_buffer);

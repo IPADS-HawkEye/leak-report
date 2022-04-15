@@ -1,0 +1,6 @@
+drivers/block/DAC960.c:1931
+Variable: Controller->BaseAddress
+1931->  DAC960_Info("  PCI Address: 0x%X mapped at 0x%lX, IRQ Channel: %d\n",
+1932	      Controller, Controller->PCI_Address,
+1933	      (unsigned long) Controller->BaseAddress,
+1934	      Controller->IRQ_Channel);

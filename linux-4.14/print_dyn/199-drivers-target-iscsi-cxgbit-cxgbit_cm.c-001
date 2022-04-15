@@ -1,0 +1,6 @@
+drivers/target/iscsi/cxgbit/cxgbit_cm.c:1777
+Variable: csk
+1777->			pr_warn("csk 0x%p,%u, cr %u,%u+%u, < %u.\n",
+1778				csk,  csk->tid,
+1779				credits, csk->wr_cred, csk->wr_una_cred,
+1780				csum);

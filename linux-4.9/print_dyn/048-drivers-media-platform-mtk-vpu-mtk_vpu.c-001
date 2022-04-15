@@ -1,0 +1,6 @@
+drivers/media/platform/mtk-vpu/mtk_vpu.c:685
+Variable: vpu->extmem[fw_type].va, vpu->extmem[fw_type].pa
+685->	dev_info(dev, "%s extend memory phy=0x%llx virt=0x%p\n",
+686		 fw_type ? "Data" : "Program",
+687		 (unsigned long long)vpu->extmem[fw_type].pa,
+688		 vpu->extmem[fw_type].va);

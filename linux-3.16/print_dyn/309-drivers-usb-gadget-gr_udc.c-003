@@ -1,0 +1,3 @@
+drivers/usb/gadget/gr_udc.c:2202
+2202->		dev_info(dev->dev, "regs: %p, irqs %d, %d, %d\n", dev->regs,
+2203			 dev->irq, dev->irqi, dev->irqo);

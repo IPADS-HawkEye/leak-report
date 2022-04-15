@@ -1,0 +1,3 @@
+net/sunrpc/svcsock.c:778
+Variable: sk
+778->			printk("svc: socket %p: no user data\n", sk);

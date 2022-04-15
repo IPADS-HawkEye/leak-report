@@ -1,0 +1,4 @@
+drivers/target/target_core_sbc.c:555
+Variable: buf + offset
+555->			pr_warn("Detected MISCOMPARE for addr: %p buf: %p\n",
+556				addr, buf + offset);

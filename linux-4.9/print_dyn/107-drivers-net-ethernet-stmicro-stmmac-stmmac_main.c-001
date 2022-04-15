@@ -1,0 +1,4 @@
+drivers/net/ethernet/stmicro/stmmac/stmmac_main.c:2603
+Variable: p
+2603->				pr_info("\tdesc: %p [entry %d] buff=0x%x\n",
+2604					p, entry, des);

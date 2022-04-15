@@ -1,0 +1,8 @@
+drivers/net/ethernet/intel/ixgbe/ixgbe_main.c:582
+Variable: tx_buffer->next_to_watch
+582->		pr_info(" %5d %5X %5X %016llX %08X %p %016llX\n",
+583			   n, tx_ring->next_to_use, tx_ring->next_to_clean,
+584			   (u64)dma_unmap_addr(tx_buffer, dma),
+585			   dma_unmap_len(tx_buffer, len),
+586			   tx_buffer->next_to_watch,
+587			   (u64)tx_buffer->time_stamp);

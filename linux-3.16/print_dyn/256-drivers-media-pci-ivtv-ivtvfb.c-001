@@ -1,0 +1,6 @@
+drivers/media/pci/ivtv/ivtvfb.c:1131
+Variable: oi->video_base
+1131->	IVTVFB_INFO("Framebuffer at 0x%lx, mapped to 0x%p, size %dk\n",
+1132			oi->video_pbase, oi->video_vbase,
+1133			oi->video_buffer_size / 1024);
+1134

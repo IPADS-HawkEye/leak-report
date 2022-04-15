@@ -1,0 +1,5 @@
+drivers/usb/host/sl811-hcd.c:1427
+Variable: sl811->active_a
+1427->	seq_printf(s, "A: qh%p ctl %02x sts %02x\n", sl811->active_a,
+1428		sl811_read(sl811, SL811_EP_A(SL11H_HOSTCTLREG)),
+1429		sl811_read(sl811, SL811_EP_A(SL11H_PKTSTATREG)));

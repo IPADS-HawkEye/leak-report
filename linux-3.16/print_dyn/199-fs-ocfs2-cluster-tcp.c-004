@@ -1,0 +1,3 @@
+fs/ocfs2/cluster/tcp.c:456
+Variable: sc
+456->	sclog(sc, "alloced\n");

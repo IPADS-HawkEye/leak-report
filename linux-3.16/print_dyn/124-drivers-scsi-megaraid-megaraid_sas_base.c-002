@@ -1,0 +1,5 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:2178
+Variable: reset_cmd
+2178->				printk(KERN_NOTICE "megasas:%p synch cmds"
+2179						"reset queue\n",
+2180						reset_cmd);

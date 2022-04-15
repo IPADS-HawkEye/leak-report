@@ -1,0 +1,3 @@
+kernel/module.c:3983
+Variable: mod->module_core
+3983->	seq_printf(m, " 0x%pK", mod->module_core);

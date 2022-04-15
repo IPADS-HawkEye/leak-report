@@ -1,0 +1,4 @@
+drivers/net/ethernet/dec/tulip/de2104x.c:2076
+2076->	netdev_info(dev, "%s at %p, %pM, IRQ %d\n",
+2077		    de->de21040 ? "21040" : "21041",
+2078		    regs, dev->dev_addr, pdev->irq);

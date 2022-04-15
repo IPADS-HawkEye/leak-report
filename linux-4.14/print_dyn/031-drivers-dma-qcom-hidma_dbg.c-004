@@ -1,0 +1,3 @@
+drivers/dma/qcom/hidma_dbg.c:130
+Variable: &dmadev->dev_trca
+130->	seq_printf(s, "dev_trca=%p\n", &dmadev->dev_trca);

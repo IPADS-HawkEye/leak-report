@@ -1,0 +1,8 @@
+drivers/infiniband/hw/usnic/usnic_ib_verbs.c:439
+Variable: context
+439->	usnic_info("domain 0x%p allocated for context 0x%p and device %s\n",
+440			pd, context, ibdev->name);
+Definition: 
+drivers/infiniband/hw/usnic/usnic_log.h
+#define usnic_info(args...) ... usnic_printk(KERN_INFO, args)
+#define usnic_printk ... printk

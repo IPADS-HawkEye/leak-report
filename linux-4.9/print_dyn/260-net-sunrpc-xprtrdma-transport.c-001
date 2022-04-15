@@ -1,0 +1,3 @@
+net/sunrpc/xprtrdma/transport.c:248
+Variable: sprt
+248->	pr_info("rpcrdma: injecting transport disconnect on xprt=%p\n", xprt);

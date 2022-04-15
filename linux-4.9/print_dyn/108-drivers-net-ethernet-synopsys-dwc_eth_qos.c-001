@@ -1,0 +1,4 @@
+drivers/net/ethernet/synopsys/dwc_eth_qos.c:695
+Variable: index
+695->	pr_info("%s DMA Descriptor #%d@%p Contents:\n", tx ? "TX" : "RX",
+696		index, dd);

@@ -1,0 +1,5 @@
+drivers/scsi/qla2xxx/qla_nvme.c:97
+Variable: handle
+97->	ql_log(ql_log_info, vha, 0x2104,
+98	    "%s: handle %p, idx =%d, qsize %d\n",
+99	    __func__, handle, qidx, qsize);

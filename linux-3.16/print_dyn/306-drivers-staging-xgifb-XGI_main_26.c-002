@@ -1,0 +1,5 @@
+drivers/staging/xgifb/XGI_main_26.c:1785
+1785->	dev_info(&pdev->dev,
+1786		 "MMIO at 0x%Lx, mapped to 0x%p, size %ldk\n",
+1787		 (u64) xgifb_info->mmio_base, xgifb_info->mmio_vbase,
+1788		 xgifb_info->mmio_size / 1024);

@@ -1,0 +1,4 @@
+drivers/scsi/dc395x.c:3572
+Variable: p
+3572->			printk("W:%p<%02i-%i>", p, p->device->id,
+3573			       p->device->lun);

@@ -1,0 +1,3 @@
+drivers/tty/nozomi.c:1618
+Variable: tport
+1618->	printk("noz: activated %d: %p\n", tty->index, tport);

@@ -1,0 +1,6 @@
+drivers/target/iscsi/cxgbit/cxgbit_main.c:485
+Variable: gl->va
+485->			pr_info("? FL 0x%p,RSS%#llx,FL %#llx,len %u.\n",
+486				gl->va, be64_to_cpu(*rsp),
+487				get_unaligned_be64(gl->va),
+488				gl->tot_len);

@@ -1,0 +1,5 @@
+drivers/block/floppy.c:1822
+Variable: cont
+Type: const struct cont_t
+Note: Global object
+1822->	pr_info("cont=%p\n", cont);

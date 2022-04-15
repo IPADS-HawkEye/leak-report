@@ -1,0 +1,21 @@
+net/ipv4/tcp_ipv4.c:2238
+Variable: sk
+2238->	seq_printf(f, "%4d: %08X:%04X %08X:%04X %02X %08X:%08X %02X:%08lX "
+2239			"%08X %5u %8d %lu %d %pK %lu %lu %u %u %d",
+2240		i, src, srcp, dest, destp, seq_state,
+2241		tp->write_seq - tp->snd_una,
+2242		rx_queue,
+2243		timer_active,
+2244		jiffies_delta_to_clock_t(timer_expires - jiffies),
+2245		icsk->icsk_retransmits,
+2246		from_kuid_munged(seq_user_ns(f), sock_i_uid(sk)),
+2247		icsk->icsk_probes_out,
+2248		sock_i_ino(sk),
+2249		refcount_read(&sk->sk_refcnt), sk,
+2250		jiffies_to_clock_t(icsk->icsk_rto),
+2251		jiffies_to_clock_t(icsk->icsk_ack.ato),
+2252		(icsk->icsk_ack.quick << 1) | icsk->icsk_ack.pingpong,
+2253		tp->snd_cwnd,
+2254		state == TCP_LISTEN ?
+2255		    fastopenq->max_qlen :
+2256		    (tcp_in_initial_slowstart(tp) ? -1 : tp->snd_ssthresh));

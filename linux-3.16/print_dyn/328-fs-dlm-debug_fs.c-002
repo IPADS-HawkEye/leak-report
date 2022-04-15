@@ -1,0 +1,11 @@
+fs/dlm/debug_fs.c:278
+Variable: r
+278->	rv = seq_printf(s, "rsb %p %d %x %lx %d %d %u %d ",
+279			r,
+280			r->res_nodeid,
+281			r->res_first_lkid,
+282			r->res_flags,
+283			!list_empty(&r->res_root_list),
+Function: print_format3(struct dlm_rsb *r, struct seq_file *s)
+422 print_format3(ri->rsb, seq);
+Function: table_seq_show

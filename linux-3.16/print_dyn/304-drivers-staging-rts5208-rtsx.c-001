@@ -1,0 +1,3 @@
+drivers/staging/rts5208/rtsx.c:930
+930->	dev_info(&pci->dev, "Original address: 0x%lx, remapped address: 0x%lx\n",
+931		 (unsigned long)(dev->addr), (unsigned long)(dev->remap_addr));

@@ -1,0 +1,9 @@
+drivers/net/ethernet/qlogic/qede/qede_main.c:3163
+Variable: &edev->fp_arr[i]
+3163->		DP_VERBOSE(edev, NETIF_MSG_INTR,
+3164			   "Requested fp irq for %s [entry %d]. Cookie is at %p\n",
+3165			   edev->fp_array[i].name, i,
+3166			   &edev->fp_array[i]);
+Definition:
+include/linux/qed/qed_if.h:602
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

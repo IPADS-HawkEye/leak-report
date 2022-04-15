@@ -1,0 +1,6 @@
+drivers/scsi/megaraid/megaraid_sas_base.c:3172
+Variable: cmd, cmd->scmd
+3172->				dev_notice(&instance->pdev->dev, "cmd %p, %p:%d"
+3173					"was tried multiple times during reset."
+3174					"Shutting down the HBA\n",
+3175					cmd, cmd->scmd, cmd->sync_cmd);

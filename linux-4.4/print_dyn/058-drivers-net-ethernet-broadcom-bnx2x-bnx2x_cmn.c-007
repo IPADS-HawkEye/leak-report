@@ -1,0 +1,13 @@
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c:4195
+Variable: pbd_e2
+4195->		DP(NETIF_MSG_TX_QUEUED,
+4196		   "PBD (E2) @%p  dst %x %x %x src %x %x %x parsing_data %x\n",
+4197		   pbd_e2,
+4198		   pbd_e2->data.mac_addr.dst_hi,
+4199		   pbd_e2->data.mac_addr.dst_mid,
+4200		   pbd_e2->data.mac_addr.dst_lo,
+Deinition:
+drivers/net/ethernet/broadcom/bnx2x/bnx2x.h
+#define DP(__mask, fmt, ...)
+	DP_INNER(fmt, ##__VA_ARGS__);
+#define DP_INNER(fmt, ...) pr_notice( ... )

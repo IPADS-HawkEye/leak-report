@@ -1,0 +1,4 @@
+drivers/atm/iphase.c:2829
+Variable: (long)skb_peek(&iadev->tx_backlog)
+[Patch]
+accepted-patches/print_dyn/001-atm-iphase

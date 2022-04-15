@@ -1,0 +1,7 @@
+arch/arm64/mm/init.c:374
+374->	pr_notice("Virtual kernel memory layout:\n"
+375#ifdef CONFIG_KASAN
+376		  "    kasan   : 0x%16lx - 0x%16lx   (%6ld GB)\n"
+377#endif
+378		  "    modules : 0x%16lx - 0x%16lx   (%6ld MB)\n"
+379		  "    vmalloc : 0x%16lx - 0x%16lx   (%6ld GB)\n"

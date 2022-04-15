@@ -1,0 +1,49 @@
+From 29973f8a88b001ebc605c88cdee124f7256ecdbf Mon Sep 17 00:00:00 2001
+From: 
+Date: 
+Subject: tty: rocket: Remove RCPK_GET_STRUCT ioctl
+
+If the cmd is RCPK_GET_STRUCT, copy_to_user will copy
+info to user space. As info->port.ops is the address of
+a constant object rocket_port_ops (assigned in init_r_port),
+a kernel address leakage happens.
+
+Remove the RCPK_GET_STRUCT ioctl.
+
+Signed-off-by: 
+Signed-off-by: 
+---
+ drivers/tty/rocket.c | 4 ----
+ drivers/tty/rocket.h | 1 -
+ 2 files changed, 5 deletions(-)
+
+diff --git a/drivers/tty/rocket.c b/drivers/tty/rocket.c
+index b121d8f..b6543e2 100644
+--- a/drivers/tty/rocket.c
++++ b/drivers/tty/rocket.c
+@@ -1283,10 +1283,6 @@ static int rp_ioctl(struct tty_struct *tty,
+ 		return -ENXIO;
+ 
+ 	switch (cmd) {
+-	case RCKP_GET_STRUCT:
+-		if (copy_to_user(argp, info, sizeof (struct r_port)))
+-			ret = -EFAULT;
+-		break;
+ 	case RCKP_GET_CONFIG:
+ 		ret = get_config(info, argp);
+ 		break;
+diff --git a/drivers/tty/rocket.h b/drivers/tty/rocket.h
+index d056020..d62ed65 100644
+--- a/drivers/tty/rocket.h
++++ b/drivers/tty/rocket.h
+@@ -71,7 +71,6 @@ struct rocket_version {
+ /*
+  * Rocketport ioctls -- "RP"
+  */
+-#define RCKP_GET_STRUCT		0x00525001
+ #define RCKP_GET_CONFIG		0x00525002
+ #define RCKP_SET_CONFIG		0x00525003
+ #define RCKP_GET_PORTS		0x00525004
+-- 
+cgit v1.1
+

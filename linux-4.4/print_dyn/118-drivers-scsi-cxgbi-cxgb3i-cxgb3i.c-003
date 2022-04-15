@@ -1,0 +1,7 @@
+drivers/scsi/cxgbi/cxgb3i/cxgb3i.c:1277
+Variable: tdev
+1277->	pr_info("tdev 0x%p, nppods %u, bits %u, mask 0x%x,0x%x pkt %u/%u, "
+1278		"%u/%u.\n",
+1279		tdev, ddp->nppods, ddp->idx_bits, ddp->idx_mask,
+1280		ddp->rsvd_tag_mask, ddp->max_txsz, uinfo.max_txsz,
+1281		ddp->max_rxsz, uinfo.max_rxsz);

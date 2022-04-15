@@ -1,0 +1,3 @@
+drivers/net/ethernet/packetengines/hamachi.c:1058
+Variable: hmp->rx_ring
+1058->		printk(KERN_DEBUG "  Rx ring %p: ", hmp->rx_ring);

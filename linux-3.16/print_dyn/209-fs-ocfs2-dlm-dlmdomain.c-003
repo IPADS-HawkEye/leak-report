@@ -1,0 +1,4 @@
+fs/ocfs2/dlm/dlmdomain.c:2059
+Variable: dlm->recovery_map, &(dlm->recovery_map[0]]);
+2059->	mlog(0, "dlm->recovery_map=%p, &(dlm->recovery_map[0])=%p\n",
+2060		  dlm->recovery_map, &(dlm->recovery_map[0]));

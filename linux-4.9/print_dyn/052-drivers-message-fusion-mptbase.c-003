@@ -1,0 +1,4 @@
+drivers/message/fusion/mptbase.c:6752
+Variable: (void *)ioc_req_frames, (void *)(ulong)ioc->req_frames_dma
+6752->	seq_printf(m, "  RequestFrames @ 0x%p (Dma @ 0x%p)\n",
+6753					(void *)ioc->req_frames, (void *)(ulong)ioc->req_frames_dma);

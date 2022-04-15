@@ -1,0 +1,4 @@
+fs/ceph/debugfs.c:153
+Variable: di, dentry
+153->		seq_printf(s, "%p %p\t%.*s\n",
+154			   di, dentry, dentry->d_name.len, dentry->d_name.name);

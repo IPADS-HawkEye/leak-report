@@ -1,0 +1,4 @@
+drivers/net/irda/vlsi_ir.c:310
+Variable: r->rd[0].hw
+310->	seq_printf(seq, "size %u / mask 0x%04x / len %u / dir %d / hw %p\n",
+311		r->size, r->mask, r->len, r->dir, r->rd[0].hw);

@@ -1,0 +1,11 @@
+net/phonet/socket.c:606
+Variable:sk 
+606->		seq_printf(seq, "%2d %04X:%04X:%02X %02X %08X:%08X %5d %lu "
+607			"%d %pK %d",
+608			sk->sk_protocol, pn->sobject, pn->dobject,
+609			pn->resource, sk->sk_state,
+610			sk_wmem_alloc_get(sk), sk_rmem_alloc_get(sk),
+611			from_kuid_munged(seq_user_ns(seq), sock_i_uid(sk)),
+612			sock_i_ino(sk),
+613			refcount_read(&sk->sk_refcnt), sk,
+614			atomic_read(&sk->sk_drops));

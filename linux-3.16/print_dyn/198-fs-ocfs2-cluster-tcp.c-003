@@ -1,0 +1,3 @@
+fs/ocfs2/cluster/tcp.c:422
+Variable: sc
+422->	sclog(sc, "get\n");

@@ -1,0 +1,6 @@
+drivers/usb/dwc3/debugfs.c:713
+Variable: req
+713->		seq_printf(s,
+714			"req:0x%pK len:%d sts:%d dma:%pa nsg:%d trb:0x%pK\n",
+715			req, req->request.length, req->request.status,
+716			&req->request.dma, req->request.num_sgs, req->trb);

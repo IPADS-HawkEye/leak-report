@@ -1,0 +1,5 @@
+drivers/gpu/drm/nouveau/nouveau_fbcon.c:437
+Variable: nvbo
+437->	NV_INFO(drm, "allocated %dx%d fb: 0x%llx, bo %p\n",
+438		nouveau_fb->base.width, nouveau_fb->base.height,
+439		nvbo->bo.offset, nvbo);

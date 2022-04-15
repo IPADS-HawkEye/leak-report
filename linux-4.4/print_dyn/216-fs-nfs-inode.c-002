@@ -1,0 +1,4 @@
+fs/nfs/inode.c:1382
+Variable: fb
+1382->	printk(KERN_DEFAULT "%s at %p is %u bytes, crc: 0x%08x:\n",
+1383	       caption, fh, fh->size, _nfs_display_fhandle_hash(fh));

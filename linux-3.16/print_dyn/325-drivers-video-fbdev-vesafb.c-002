@@ -1,0 +1,6 @@
+drivers/video/fbdev/vesafb.c:469
+Variable: info->screen_base
+469->	printk(KERN_INFO "vesafb: framebuffer at 0x%lx, mapped to 0x%p, "
+470	       "using %dk, total %dk\n",
+471	       vesafb_fix.smem_start, info->screen_base,
+472	       size_remap/1024, size_total/1024);

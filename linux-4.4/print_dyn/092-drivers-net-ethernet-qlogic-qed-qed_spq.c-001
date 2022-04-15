@@ -1,0 +1,7 @@
+drivers/net/ethernet/qlogic/qed/qed_spq.c:832
+Variable: p_ent->comp_cb.cookie
+832->	DP_VERBOSE(p_hwfn, QED_MSG_SPQ, "Complete: func %p cookie %p)\n",
+833		   p_ent->comp_cb.function, p_ent->comp_cb.cookie);
+Definition:
+include/linux/qed/qed_if.h:309
+#define DP_VERBOSE(cdev, module, fmt, ...) ... pr_notice(..., ## __VA_ARGS__);

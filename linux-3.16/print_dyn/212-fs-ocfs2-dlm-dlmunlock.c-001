@@ -1,0 +1,3 @@
+fs/ocfs2/dlm/dlmunlock.c:625
+Variable: lock, res
+625->	mlog(0, "lock=%p res=%p\n", lock, res);
